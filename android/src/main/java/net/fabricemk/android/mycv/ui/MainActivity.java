@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv;
+package net.fabricemk.android.mycv.ui;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -24,6 +24,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import net.fabricemk.android.mycv.R;
+
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
@@ -41,12 +43,13 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // load saved navigation state if present
         if (null == savedInstanceState) {
-            mNavItemId = R.id.drawer_home;
+            mNavItemId = R.id.drawer_contact;
         } else {
             mNavItemId = savedInstanceState.getInt(NAV_ITEM_ID);
         }
@@ -65,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements
         mDrawerToggle.syncState();
 
         navigate(mNavItemId);
+    }
+
+    private void initToolbar() {
+
     }
 
     private void navigate(final int itemId) {

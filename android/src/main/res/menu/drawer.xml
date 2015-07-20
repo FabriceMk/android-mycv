@@ -1,20 +1,46 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:checkableBehavior="single">
-
+    <group android:id="@+id/grp1">
         <item
-            android:id="@+id/drawer_home"
+            android:id="@+id/drawer_contact"
             android:checked="true"
-            android:title="@string/title_section1"/>
+            android:icon="@drawable/ic_account"
+            android:title="@string/contact"/>
+    </group>
+
+    <group android:id="@+id/grp2">
+        <item
+            android:id="@+id/drawer_career"
+            android:icon="@drawable/ic_school"
+            android:title="@string/career"/>
 
         <item
-            android:id="@+id/drawer_favourite"
-            android:title="@string/title_section2"/>
+            android:id="@+id/drawer_skills"
+            android:icon="@drawable/ic_responsive"
+            android:title="@string/skills"/>
+    </group>
 
+    <group android:id="@+id/grp3">
+        <item
+            android:id="@+id/drawer_hobbies"
+            android:icon="@drawable/ic_gamepad_variant"
+            android:title="@string/hobbies"/>
+
+        <item
+            android:id="@+id/drawer_trips"
+            android:icon="@drawable/ic_airplane"
+            android:title="@string/trips"/>
+    </group>
+
+    <group android:id="@+id/grp4">
         <item
             android:id="@+id/drawer_settings"
-            android:title="@string/title_section3"/>
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"/>
 
+        <item
+            android:id="@+id/drawer_about"
+            android:icon="@drawable/ic_information"
+            android:title="@string/about"/>
     </group>
 </menu>
