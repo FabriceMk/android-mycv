@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:checked="true"
+            android:title="@string/title_section1"/>
+
+        <item
+            android:id="@+id/drawer_favourite"
+            android:title="@string/title_section2"/>
+
+        <item
+            android:id="@+id/drawer_settings"
+            android:title="@string/title_section3"/>
+
+    </group>
+</menu>
