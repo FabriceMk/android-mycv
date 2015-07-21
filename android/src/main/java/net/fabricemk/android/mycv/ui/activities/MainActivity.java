@@ -1,8 +1,9 @@
-package net.fabricemk.android.mycv.ui;
+package net.fabricemk.android.mycv.ui.activities;
 
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Handler;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -46,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        CollapsingToolbarLayout collapsingToolbar =
+                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbar.setTitle(getString(R.string.my_full_name_short));
 
         // load saved navigation state if present
         if (null == savedInstanceState) {
