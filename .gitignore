@@ -31,4 +31,4 @@ proguard/
 *.iml
 
 # Windows stuff
-Thumbs.db
+*Thumbs.db
