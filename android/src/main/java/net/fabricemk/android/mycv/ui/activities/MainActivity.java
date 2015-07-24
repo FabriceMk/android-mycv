@@ -1,6 +1,5 @@
 package net.fabricemk.android.mycv.ui.activities;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -8,22 +7,10 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 import net.fabricemk.android.mycv.R;
 
@@ -41,16 +28,13 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_drawer);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(getString(R.string.my_full_name_short));
 
         // load saved navigation state if present
         if (null == savedInstanceState) {
@@ -81,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private void navigate(final int itemId) {
         // perform the actual navigation logic, updating the main content fragment etc
+
     }
 
     @Override
@@ -129,7 +114,5 @@ public class MainActivity extends AppCompatActivity implements
         super.onSaveInstanceState(outState);
         outState.putInt(NAV_ITEM_ID, mNavItemId);
     }
-
-
 
 }

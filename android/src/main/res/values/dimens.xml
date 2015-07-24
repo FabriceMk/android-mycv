@@ -21,5 +21,10 @@
     <dimen name="elevation_high">12dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
     <dimen name="fab_compat_margin">16dp</dimen>
+
+
+    <dimen name="details_space">8dp</dimen>
+    <dimen name="details_list_item_height">72dp</dimen>
+    <dimen name="details_list_item_icon">56dp</dimen>
 </resources>
 
