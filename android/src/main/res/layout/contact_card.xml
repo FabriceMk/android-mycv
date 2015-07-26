@@ -21,27 +21,31 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:text="@string/contact"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
             <!-- TEMP -->
             <!-- Name -->
-            <include layout="@layout/contact_item"/>
+            <include layout="@layout/contact_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_list_item_height"
+                android:id="@+id/name_item"
+            />
 
             <!-- Mail -->
-            <include layout="@layout/contact_item"/>
-
-            <!-- Phone -->
-            <include layout="@layout/contact_item"/>
+            <include layout="@layout/contact_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_list_item_height"
+                android:id="@+id/mail_item"
+            />
 
             <!-- Site -->
-            <include layout="@layout/contact_item"/>
-
-            <!-- TMP -->
-            <include layout="@layout/contact_item"/>
-            <!-- TMP -->
-            <include layout="@layout/contact_item"/>
+            <include layout="@layout/contact_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_list_item_height"
+                android:id="@+id/site_item"
+            />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,22 +54,25 @@
                 android:gravity="center">
 
                 <Button
-                    android:layout_width="@dimen/details_list_item_icon"
-                    android:layout_height="@dimen/details_list_item_icon"
+                    android:layout_width="@dimen/social_button"
+                    android:layout_height="@dimen/social_button"
                     android:layout_margin="@dimen/spacing_medium"
-                    android:background="@drawable/social_googleplus"/>
+                    android:background="@drawable/social_googleplus"
+                    android:id="@+id/googleplus_item"/>
 
                 <Button
-                    android:layout_width="@dimen/details_list_item_icon"
-                    android:layout_height="@dimen/details_list_item_icon"
+                    android:layout_width="@dimen/social_button"
+                    android:layout_height="@dimen/social_button"
                     android:layout_margin="@dimen/spacing_medium"
-                    android:background="@drawable/social_github"/>
+                    android:background="@drawable/social_github"
+                    android:id="@+id/github_item"/>
 
                 <Button
-                    android:layout_width="@dimen/details_list_item_icon"
-                    android:layout_height="@dimen/details_list_item_icon"
+                    android:layout_width="@dimen/social_button"
+                    android:layout_height="@dimen/social_button"
                     android:layout_margin="@dimen/spacing_medium"
-                    android:background="@drawable/social_linkedin"/>
+                    android:background="@drawable/social_linkedin"
+                    android:id="@+id/linkedin_item"/>
 
 
             </LinearLayout>

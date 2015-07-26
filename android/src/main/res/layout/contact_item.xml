@@ -5,7 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="@dimen/details_list_item_height"
-    android:paddingLeft="@dimen/spacing_large">
+    android:paddingLeft="@dimen/spacing_medium"
+    android:background="@drawable/item_white_background"
+    android:clickable="true">
 
 
     <ImageView
@@ -15,21 +17,22 @@
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginRight="@dimen/spacing_xlarge"
         tools:src="@drawable/ic_account"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:id="@+id/row_1"
-        android:layout_alignTop="@+id/icon"
         android:layout_toRightOf="@+id/icon"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/spacing_large"
         tools:text="First row"/>
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -37,5 +40,5 @@
         android:layout_below="@+id/row_1"
         android:layout_toRightOf="@+id/icon"
         android:layout_alignRight="@+id/row_1"
-        tools:text="Second row"/>
+        tools:text="Second row"/>-->
 </RelativeLayout>

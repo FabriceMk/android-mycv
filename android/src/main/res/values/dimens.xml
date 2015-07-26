@@ -25,6 +25,7 @@
 
     <dimen name="details_space">8dp</dimen>
     <dimen name="details_list_item_height">72dp</dimen>
-    <dimen name="details_list_item_icon">56dp</dimen>
+    <dimen name="details_list_item_icon">24dp</dimen>
+    <dimen name="social_button">48dp</dimen>
 </resources>
 

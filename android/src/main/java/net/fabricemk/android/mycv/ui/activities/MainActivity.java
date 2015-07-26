@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +12,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.view.View;
+import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
+import net.fabricemk.android.mycv.fragments.ContactFragment;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
@@ -63,8 +67,17 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
+    /**
+     * Navigation logic
+     * @param itemId
+     */
     private void navigate(final int itemId) {
-        // perform the actual navigation logic, updating the main content fragment etc
+
+        if (findViewById(R.id.content) != null) {
+            Fragment contactFragment = new ContactFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content, contactFragment).commit();
+        }
 
     }
 
