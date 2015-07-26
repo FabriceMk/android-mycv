@@ -1,5 +1,6 @@
 package net.fabricemk.android.mycv.ui.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
+import net.fabricemk.android.mycv.fragments.CareerFragment;
 import net.fabricemk.android.mycv.fragments.ContactFragment;
 
 public class MainActivity extends AppCompatActivity implements
@@ -74,10 +76,23 @@ public class MainActivity extends AppCompatActivity implements
     private void navigate(final int itemId) {
 
         if (findViewById(R.id.content) != null) {
-            Fragment contactFragment = new ContactFragment();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content, contactFragment).commit();
+
+            switch (itemId) {
+                case R.id.drawer_contact:
+                    Fragment contactFragment = new ContactFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content, contactFragment).commit();
+                    return;
+                case R.id.drawer_career:
+                    Fragment careerFragment = new CareerFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content, careerFragment).commit();
+                    return;
+
+            }
+
         }
+
 
     }
 

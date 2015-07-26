@@ -11,7 +11,7 @@
 
     <!-- A Coordinator Layout used as a super-powered FrameLayout
      with a lot of handy stuff for handling Material Design scrolling -->
-    <android.support.design.widget.CoordinatorLayout
+<!--    <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -19,15 +19,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- The AppBarLayout works with the CoordinatorLayout used
-         to handle the scrolling of the Toolbar -->
+        &lt;!&ndash; The AppBarLayout works with the CoordinatorLayout used
+         to handle the scrolling of the Toolbar &ndash;&gt;
         <android.support.design.widget.AppBarLayout
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <!-- Toolbar instead of ActionBar so the drawer can slide on top -->
+            &lt;!&ndash; Toolbar instead of ActionBar so the drawer can slide on top &ndash;&gt;
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -35,9 +35,7 @@
                 android:minHeight="?attr/actionBarSize"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
-                app:layout_scrollFlags="scroll|enterAlways"
-                />
-
+                app:layout_scrollFlags="scroll|enterAlways"/>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
@@ -48,17 +46,41 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <!-- Real content goes here -->
-            <FrameLayout
-                android:id="@+id/content"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
         </android.support.v4.widget.NestedScrollView>
 
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
 
-    </android.support.design.widget.CoordinatorLayout>
+
+    </android.support.design.widget.CoordinatorLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+        <!-- Real content goes here -->
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
