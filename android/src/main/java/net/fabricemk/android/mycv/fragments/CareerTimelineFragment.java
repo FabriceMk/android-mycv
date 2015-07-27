@@ -15,12 +15,29 @@ import net.fabricemk.android.mycv.models.CareerItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CareerTimelineFragment extends Fragment {
+public class CareerTimelineFragment extends Fragment
+        implements IPageable {
+
+    String title;
 
     RecyclerView recycler;
     CareerTimelineAdapter adapter;
 
     List<CareerItem> data;
+
+    public static CareerTimelineFragment newInstance(String title) {
+        CareerTimelineFragment fragment = new CareerTimelineFragment();
+        Bundle args = new Bundle();
+        args.putString("TITLE", title);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        title = getArguments().getString("TITLE");
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,5 +95,9 @@ public class CareerTimelineFragment extends Fragment {
         data.add(item1);
         data.add(item2);
 
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
