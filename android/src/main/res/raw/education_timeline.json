@@ -1,16 +1,16 @@
 [
   {
     "school": "Universite Paris VI",
-    "diploma": "Master Degree of Computer Science",
+    "diploma": "Master's Degree of Computer Science",
     "startDate": "2007",
     "endDate": "2009",
     "description": "Artifical Intelligence"
   },
   {
-    "school": "ILObjects",
-    "diploma": "Software Engineer",
+    "school": "Universite Paris VI",
+    "diploma": "Bachelor's Degree",
     "startDate": "2004",
-    "endDate": "2006",
+    "endDate": "2007",
     "description": ""
   }
 ]

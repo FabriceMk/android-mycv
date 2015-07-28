@@ -18,6 +18,11 @@
             android:id="@+id/drawer_skills"
             android:icon="@drawable/ic_responsive"
             android:title="@string/skills"/>
+
+        <item
+            android:id="@+id/drawer_trips"
+            android:icon="@drawable/ic_airplane"
+            android:title="@string/trips"/>
     </group>
 
     <group android:id="@+id/grp3">
@@ -25,11 +30,6 @@
             android:id="@+id/drawer_hobbies"
             android:icon="@drawable/ic_gamepad_variant"
             android:title="@string/hobbies"/>
-
-        <item
-            android:id="@+id/drawer_trips"
-            android:icon="@drawable/ic_airplane"
-            android:title="@string/trips"/>
     </group>
 
     <group android:id="@+id/grp4">
