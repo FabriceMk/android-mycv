@@ -1,0 +1,23 @@
+[
+  {
+    "company": "Appturbo",
+    "position": "CTO/Lead Developer",
+    "startDate": "2012-03-05",
+    "endDate": "2015-03-27",
+    "description": "As a CTO, I have built the IT team (5-10 people), the IT infrastructure, the different development methods and I also have participated to the conception of the different IT products of the company. I was also in charge of the strategic decisions for the IT department and ensure that the IT could support the rapid growth of the company. I also have mainly worked as a Back-end Lead Developer (PHP/MySQL, CodeIgniter) and as the main Android Developer (Java, corresponding APIs...)."
+  },
+  {
+    "company": "ILObjects",
+    "position": "Software Engineer",
+    "startDate": "2010-09-01",
+    "endDate": "2012-03-01",
+    "description": "I have developed an Android application dedicated to students having work scheduling problems. I also have worked on the conception of a professional software aimed to Industrial Products Designers. The software aimed to vizualize and edit Conceptual Graphs"
+  },
+  {
+    "company": "AsAnAngel",
+    "position": "Software Engineer Internship",
+    "startDate": "2009-04-01",
+    "endDate": "2009-10-01",
+    "description": "I have worked on the refactoring and the optimization of a syntax and semantic parser written in Python for an advanced chatterbot. This chatterbot used many techniques from Artificial Intelligence in several domains: NLP, Knowledge Engineering (ontologies) and Semantic Web (RDF-OWL, Wordnet...)"
+  }
+]

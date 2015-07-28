@@ -1,0 +1,16 @@
+[
+  {
+    "school": "Universite Paris VI",
+    "diploma": "Master Degree of Computer Science",
+    "startDate": "2007",
+    "endDate": "2009",
+    "description": "Artifical Intelligence"
+  },
+  {
+    "school": "ILObjects",
+    "diploma": "Software Engineer",
+    "startDate": "2004",
+    "endDate": "2006",
+    "description": ""
+  }
+]

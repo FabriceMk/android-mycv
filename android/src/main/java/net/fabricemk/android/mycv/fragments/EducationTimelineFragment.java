@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.EducationTimelineAdapter;
 import net.fabricemk.android.mycv.models.EducationItem;
+import net.fabricemk.android.mycv.parsers.EducationJsonParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,25 +70,7 @@ public class EducationTimelineFragment extends Fragment
     }
 
     private void initData() {
-        data = new ArrayList<>();
-
-        EducationItem item1 = new EducationItem();
-        item1.setSchool("Universite Paris VI");
-        item1.setDiploma("Master Degree of Computer Science");
-        item1.setStartDate("2007");
-        item1.setEndDate("2009");
-        item1.setDescription("Artifical Intelligence");
-
-        EducationItem item2 = new EducationItem();
-        item2.setSchool("Universite Paris VI");
-        item2.setDiploma("License of Computer Science");
-        item2.setStartDate("2004");
-        item2.setEndDate("2006");
-        item2.setDescription("");
-
-
-        data.add(item1);
-        data.add(item2);
+        data = EducationJsonParser.parseLocal(getActivity());
 
     }
 
