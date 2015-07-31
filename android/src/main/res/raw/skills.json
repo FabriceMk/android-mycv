@@ -1,0 +1,131 @@
+[
+  {
+    "type": "mobile",
+    "content":
+            [
+              {
+                "name": "Android Development",
+                "icon": "",
+                "description": ""
+              }
+            ]
+  }
+  ,
+  {
+    "type": "language",
+    "content":
+            [
+              {
+                "name": "Java",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Ruby",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "PHP",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Python",
+                "icon": "",
+                "description": ""
+              }
+            ]
+  },
+  {
+    "type": "web",
+    "content":
+            [
+              {
+                "name": "Ruby on Rails",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Sinatra",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "CodeIgniter",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "HTML",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Javascript",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Sass",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Amazon Web Services",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Google App Engine",
+                "icon": "",
+                "description": ""
+              }
+            ]
+  }
+  ,
+  {
+    "type": "tools",
+    "content":
+            [
+              {
+                "name": "Git",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "IntelliJ",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Gulp",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "Photoshop",
+                "icon": "",
+                "description": ""
+              }
+            ]
+  },
+  {
+    "type": "otherSkills",
+    "content":
+            [
+              {
+                "name": "Artificial Intelligence",
+                "icon": "",
+                "description": ""
+              },
+              {
+                "name": "System Administration",
+                "icon": "",
+                "description": ""
+              }
+            ]
+  }
+
+
+]
