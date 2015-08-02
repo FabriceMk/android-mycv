@@ -11,6 +11,8 @@ public class SkillSubset {
 
     private List<Skill> skills;
 
+    private int order;
+
     public String getSubsetName() {
         return subsetName;
     }
@@ -25,5 +27,13 @@ public class SkillSubset {
 
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
 }

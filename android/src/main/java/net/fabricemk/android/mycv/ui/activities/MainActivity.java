@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.fragments.CareerFragment;
 import net.fabricemk.android.mycv.fragments.ContactFragment;
+import net.fabricemk.android.mycv.fragments.SkillFragment;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
@@ -87,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements
                     Fragment careerFragment = new CareerFragment();
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content, careerFragment).commit();
+                    return;
+                case R.id.drawer_skills:
+                    Fragment skillFragment = new SkillFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content, skillFragment).commit();
                     return;
 
             }

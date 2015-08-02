@@ -1,64 +1,67 @@
 [
   {
-    "type": "mobile",
+    "type": "Mobile Development",
+    "order": 0,
     "skills":
             [
               {
                 "name": "Android Development",
-                "icon": "",
+                "icon": "android",
                 "description": ""
               }
             ]
   }
   ,
   {
-    "type": "language",
+    "type": "Programming Languages",
+    "order": 10,
     "skills":
             [
               {
                 "name": "Java",
-                "icon": "",
+                "icon": "java",
                 "description": ""
               },
               {
                 "name": "Ruby",
-                "icon": "",
+                "icon": "ruby",
                 "description": ""
               },
               {
                 "name": "PHP",
-                "icon": "",
+                "icon": "php",
                 "description": ""
               },
               {
                 "name": "Python",
-                "icon": "",
+                "icon": "python",
                 "description": ""
               }
             ]
   },
   {
-    "type": "web",
+    "type": "Web Development",
+    "order": 20,
     "skills":
             [
               {
                 "name": "Ruby on Rails",
-                "icon": "",
+                "icon": "ror",
                 "description": ""
               },
               {
                 "name": "Sinatra",
-                "icon": "",
+                "icon": "sinatra",
                 "description": ""
               },
               {
                 "name": "CodeIgniter",
-                "icon": "",
+                "icon": "codeigniter",
                 "description": ""
               },
               {
                 "name": "HTML",
-                "icon": "",
+                "icon": "html",
                 "description": ""
               },
               {
@@ -68,50 +71,52 @@
               },
               {
                 "name": "Sass",
-                "icon": "",
+                "icon": "sass",
                 "description": ""
               },
               {
                 "name": "Amazon Web Services",
-                "icon": "",
+                "icon": "aws",
                 "description": ""
               },
               {
                 "name": "Google App Engine",
-                "icon": "",
+                "icon": "gae",
                 "description": ""
               }
             ]
   }
   ,
   {
-    "type": "tools",
+    "type": "Tools",
+    "order": 30,
     "skills":
             [
               {
                 "name": "Git",
-                "icon": "",
+                "icon": "git",
                 "description": ""
               },
               {
                 "name": "IntelliJ",
-                "icon": "",
+                "icon": "intellij",
                 "description": ""
               },
               {
                 "name": "Gulp",
-                "icon": "",
+                "icon": "gulp",
                 "description": ""
               },
               {
                 "name": "Photoshop",
-                "icon": "",
+                "icon": "photoshop",
                 "description": ""
               }
             ]
   },
   {
-    "type": "otherSkills",
+    "type": "Other Skills",
+    "order": 40,
     "skills":
             [
               {
@@ -125,6 +130,28 @@
                 "description": ""
               }
             ]
+  },
+  {
+    "type": "Spoken Languages",
+    "order": 50,
+    "skills":
+    [
+      {
+        "name": "French",
+        "icon": "",
+        "description": "Native"
+      },
+      {
+        "name": "English",
+        "icon": "",
+        "description": "Full Professional Proficiency"
+      },
+      {
+        "name": "Japanese",
+        "icon": "",
+        "description": "JLPT N3"
+      }
+    ]
   }
 
 
