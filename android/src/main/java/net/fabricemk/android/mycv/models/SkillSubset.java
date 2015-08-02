@@ -7,7 +7,23 @@ import java.util.List;
 public class SkillSubset {
 
     @SerializedName("type")
-    String subsetName;
+    private String subsetName;
 
-    List<Skill> skills;
+    private List<Skill> skills;
+
+    public String getSubsetName() {
+        return subsetName;
+    }
+
+    public void setSubsetName(String subsetName) {
+        this.subsetName = subsetName;
+    }
+
+    public List<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
+    }
 }

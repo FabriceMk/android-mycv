@@ -1,7 +1,7 @@
 [
   {
     "type": "mobile",
-    "content":
+    "skills":
             [
               {
                 "name": "Android Development",
@@ -13,7 +13,7 @@
   ,
   {
     "type": "language",
-    "content":
+    "skills":
             [
               {
                 "name": "Java",
@@ -39,7 +39,7 @@
   },
   {
     "type": "web",
-    "content":
+    "skills":
             [
               {
                 "name": "Ruby on Rails",
@@ -86,7 +86,7 @@
   ,
   {
     "type": "tools",
-    "content":
+    "skills":
             [
               {
                 "name": "Git",
@@ -112,7 +112,7 @@
   },
   {
     "type": "otherSkills",
-    "content":
+    "skills":
             [
               {
                 "name": "Artificial Intelligence",

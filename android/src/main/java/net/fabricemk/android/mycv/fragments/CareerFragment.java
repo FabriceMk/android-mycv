@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.CareerPagerAdapter;
+import net.fabricemk.android.mycv.parsers.SkillJsonParser;
 
 public class CareerFragment extends Fragment {
 
