@@ -29,7 +29,7 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
     Map<String, SkillSubset> skillList;
     List<Skill> flatSkillList;
 
-    private AdapterViewCompat.OnItemClickListener onItemClickListener;
+    private OnItemClickListener onItemClickListener;
 
     public SkillListAdapter(Map<String, SkillSubset> skillList) {
         this.skillList = skillList;
@@ -53,6 +53,8 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
     @Override
     public SkillItemViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.skill_list_item, viewGroup, false);
+        v.setOnClickListener(this);
+
         SkillItemViewHolder viewHolder = new SkillItemViewHolder(v);
 
         ctxt = viewGroup.getContext();
@@ -62,15 +64,18 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
 
     @Override
     public void onBindViewHolder(SkillItemViewHolder holder, int position) {
+        Skill skill = flatSkillList.get(position);
+
         holder.text.setText(flatSkillList.get(position).getName());
 
-        int resourceId = mappingIconIdFromName(flatSkillList.get(position).getIcon());
-
+        int resourceId = mappingIconIdFromName(skill.getIcon());
         Glide.with(ctxt)
                 .load(resourceId)
                 .centerCrop()
                 .crossFade()
                 .into(holder.icon);
+
+        holder.itemView.setTag(skill);
     }
 
     @Override
@@ -84,13 +89,17 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
         if (onItemClickListener != null) {
             new Handler().postDelayed(new Runnable() {
                 @Override public void run() {
-                    //onItemClickListener.onItemClick(v, (Skill) v.getTag());
+                    onItemClickListener.onItemClick(v, (Skill) v.getTag());
                 }
             }, 200);
         }
     }
 
-    private int mappingIconIdFromName(String name) {
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public static int mappingIconIdFromName(String name) {
         int iconId = R.drawable.ic_web; // Temp
 
         switch (name) {
