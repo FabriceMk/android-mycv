@@ -66,7 +66,7 @@
               },
               {
                 "name": "Javascript",
-                "icon": "",
+                "icon": "javascript",
                 "description": ""
               },
               {
@@ -121,12 +121,12 @@
             [
               {
                 "name": "Artificial Intelligence",
-                "icon": "",
+                "icon": "ai",
                 "description": ""
               },
               {
                 "name": "System Administration",
-                "icon": "",
+                "icon": "sysadmin",
                 "description": ""
               }
             ]
@@ -138,17 +138,17 @@
     [
       {
         "name": "French",
-        "icon": "",
+        "icon": "fr",
         "description": "Native"
       },
       {
         "name": "English",
-        "icon": "",
+        "icon": "en",
         "description": "Full Professional Proficiency"
       },
       {
         "name": "Japanese",
-        "icon": "",
+        "icon": "jp",
         "description": "JLPT N3"
       }
     ]

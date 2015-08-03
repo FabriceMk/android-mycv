@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.models.SkillSubset;
@@ -60,11 +62,15 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
 
     @Override
     public void onBindViewHolder(SkillItemViewHolder holder, int position) {
-        List<Skill> temp = new ArrayList<>(flatSkillList);
+        holder.text.setText(flatSkillList.get(position).getName());
 
-        holder.text.setText(temp.get(position).getName());
+        int resourceId = mappingIconIdFromName(flatSkillList.get(position).getIcon());
 
-        holder.icon.setImageResource(mappingIconIdFromName(temp.get(position).getIcon()));
+        Glide.with(ctxt)
+                .load(resourceId)
+                .centerCrop()
+                .crossFade()
+                .into(holder.icon);
     }
 
     @Override
@@ -92,6 +98,7 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
             case "java": iconId = R.drawable.skill_java; break;
             case "php": iconId = R.drawable.skill_php; break;
             case "html": iconId = R.drawable.skill_html; break;
+            case "javascript": iconId = R.drawable.skill_javascript; break;
             case "ruby": iconId = R.drawable.skill_ruby; break;
             case "python": iconId = R.drawable.skill_python; break;
             case "ror": iconId = R.drawable.skill_ror; break;
@@ -104,7 +111,11 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
             case "gulp": iconId = R.drawable.skill_gulp; break;
             case "intellij": iconId = R.drawable.skill_intellij; break;
             case "photoshop": iconId = R.drawable.skill_photoshop; break;
-
+            case "sysadmin": iconId = R.drawable.skill_sysadmin; break;
+            case "ai": iconId = R.drawable.skill_ia; break;
+            case "fr": iconId = R.drawable.flag_france; break;
+            case "en": iconId = R.drawable.flag_uk; break;
+            case "jp": iconId = R.drawable.flag_japan; break;
 
         }
 
