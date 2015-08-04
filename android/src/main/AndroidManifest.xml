@@ -18,7 +18,7 @@
         </activity>
 
         <activity
-            android:name=".ui.activities.SkillDetailsActivity" >
+            android:name=".ui.activities.SkillDetailsActivity">
         </activity>
     </application>
 

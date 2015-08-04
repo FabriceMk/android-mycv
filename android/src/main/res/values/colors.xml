@@ -2,7 +2,7 @@
 <resources>
 
     <color name="primary">@color/indigo_500</color>
-    <color name="primaryDark">@color/indigo_700</color>
+    <color name="primary_dark">@color/indigo_700</color>
     <color name="accent">@color/pink_A200</color>
     <color name="accent_translucent">#80FF80AB</color>
 

@@ -8,7 +8,6 @@
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="navigation_drawer_width">240dp</dimen>
-
     <dimen name="navigation_drawer_header_height">172dp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
@@ -28,5 +27,9 @@
     <dimen name="details_list_item_height">72dp</dimen>
     <dimen name="details_list_item_icon">24dp</dimen>
     <dimen name="social_button">48dp</dimen>
+
+    <dimen name="std_expanded_title_margin_start">48dp</dimen>
+    <dimen name="std_expanded_title_margin_end">64dp</dimen>
+    <dimen name="header_image_max_height">256dp</dimen>
 </resources>
 
