@@ -20,6 +20,9 @@
         <activity
             android:name=".ui.activities.SkillDetailsActivity">
         </activity>
+        <activity
+            android:name=".ui.activities.AboutActivity">
+        </activity>
     </application>
 
 </manifest>

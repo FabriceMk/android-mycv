@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity implements
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content, skillFragment).commit();
                     return;
+                case R.id.drawer_about:
+                    Intent intent = new Intent(this, AboutActivity.class);
+                    startActivity(intent);
+                    return;
 
             }
 
