@@ -12,6 +12,8 @@ public class CareerItem {
 
     String description;
 
+    String icon;
+
 
 
     public String getCompany() {
@@ -52,5 +54,13 @@ public class CareerItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

@@ -15,43 +15,65 @@
         app:cardUseCompatPadding="true"
         android:id="@+id/cv">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/spacing_large"
-            android:orientation="vertical">
+            android:padding="@dimen/spacing_large">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/career_item_company"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 tools:text="Company"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/career_item_company"
                 android:id="@+id/career_item_position"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 tools:text="Position"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/career_item_startdate"
+                android:layout_below="@+id/career_item_position"
+                android:id="@+id/career_item_date"
                 tools:text="2012"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/career_item_enddate"
-                tools:text="2015"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/career_item_date"
                 android:id="@+id/career_item_description"
+                android:paddingTop="24dp"
+                android:paddingBottom="@dimen/spacing_large"
                 tools:text="@string/lorem_ipsum"/>
 
-        </LinearLayout>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/career_item_icon"
+                android:scaleType="fitCenter"
+                app:riv_corner_radius="40dip"
+                app:riv_border_width="0dip"
+                tools:src="@drawable/skill_android"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/career_item_details_button"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/career_item_description"
+                android:textColor="@color/primary"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:text="@string/details"/>
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 

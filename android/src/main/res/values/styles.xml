@@ -20,6 +20,69 @@
         <item name="rippleColor">@android:color/white</item>
     </style>
 
+    <!-- Material Fonts Size -->
+    <style name="FontDisplay4">
+        <item name="android:textSize">112sp</item>
+        <item name="android:textColor">@color/black_alpha54</item>
+    </style>
+
+    <style name="FontDisplay3">
+        <item name="android:textSize">56sp</item>
+        <item name="android:textColor">@color/black_alpha54</item>
+    </style>
+
+    <style name="FontDisplay2">
+        <item name="android:textSize">45sp</item>
+        <item name="android:textColor">@color/black_alpha54</item>
+    </style>
+
+    <style name="FontDisplay1">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/black_alpha54</item>
+    </style>
+
+    <style name="FontHeadline">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+    </style>
+
+    <style name="FontTitle">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FontSubhead2">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+    </style>
+
+    <style name="FontSubhead1">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+    </style>
+
+    <style name="FontBody2">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FontBody1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+    </style>
+
+    <style name="FontCaption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black_alpha54</item>
+    </style>
+
+    <style name="FontButton">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black_alpha87</item>
+    </style>
+
 
 
 </resources>
