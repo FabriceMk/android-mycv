@@ -1,14 +1,14 @@
 [
   {
     "school": "Universite Paris VI",
-    "diploma": "Master's Degree of Computer Science",
+    "diploma": "Master's Degree of Computer Science (Major: Artificial Intelligence)",
     "startDate": "2007",
     "endDate": "2009",
-    "description": "Artifical Intelligence"
+    "description": "The 'Artificial Intelligence and Decision (IAD)' specialization provides theoretical and practical tuition and covers the main fields of artificial intelligence and decision-making such as:\n- information and decision systems\n- multi-agent systems\n- logic modeling\n- decision theory\n- symbolic and numeric learning\n- adaptive agents\n- modeling of complex systems\n- discrete or continuous optimization\n- operational research"
   },
   {
     "school": "Universite Paris VI",
-    "diploma": "Bachelor's Degree",
+    "diploma": "Bachelor's Degree of Computer Science",
     "startDate": "2004",
     "endDate": "2007",
     "description": ""

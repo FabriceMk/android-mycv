@@ -24,22 +24,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/education_item_school"/>
+                android:id="@+id/education_item_school"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                tools:text="School"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/education_item_diploma"/>
+                android:id="@+id/education_item_diploma"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                tools:text="Diploma"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/education_item_startdate"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/education_item_enddate"/>
+                android:id="@+id/education_item_date"
+                tools:text="2005 - 2009"/>
 
             <TextView
                 android:layout_width="wrap_content"

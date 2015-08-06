@@ -1,5 +1,6 @@
 package net.fabricemk.android.mycv.adapters;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,8 @@ import net.fabricemk.android.mycv.models.EducationItem;
 import java.util.List;
 
 public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTimelineAdapter.EducationItemViewHolder> {
+
+    Context ctxt;
 
     List<EducationItem> educationList;
 
@@ -29,16 +32,24 @@ public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTime
     public EducationItemViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.education_list_item, viewGroup, false);
         EducationItemViewHolder viewHolder = new EducationItemViewHolder(v);
+
+        ctxt = viewGroup.getContext();
+
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(EducationItemViewHolder educationItemViewHolder, int i) {
-        educationItemViewHolder.school.setText(educationList.get(i).getSchool());
-        educationItemViewHolder.diploma.setText(educationList.get(i).getDiploma());
-        educationItemViewHolder.startDate.setText(educationList.get(i).getStartDate());
-        educationItemViewHolder.endDate.setText(educationList.get(i).getEndDate());
-        educationItemViewHolder.description.setText(educationList.get(i).getDescription());
+        EducationItem item = educationList.get(i);
+
+        educationItemViewHolder.school.setText(item.getSchool());
+        educationItemViewHolder.diploma.setText(item.getDiploma());
+
+        String date = String.format(ctxt.getString(R.string.school_date),
+                item.getStartDate(), item.getEndDate());
+        educationItemViewHolder.date.setText(date);
+
+        educationItemViewHolder.description.setText(item.getDescription());
 
     }
 
@@ -52,8 +63,7 @@ public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTime
         CardView cv;
         TextView school;
         TextView diploma;
-        TextView startDate;
-        TextView endDate;
+        TextView date;
         TextView description;
 
         EducationItemViewHolder(View itemView) {
@@ -61,8 +71,7 @@ public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTime
             cv          = (CardView)itemView.findViewById(R.id.cv);
             school      = (TextView)itemView.findViewById(R.id.education_item_school);
             diploma     = (TextView)itemView.findViewById(R.id.education_item_diploma);
-            startDate   = (TextView)itemView.findViewById(R.id.education_item_startdate);
-            endDate     = (TextView)itemView.findViewById(R.id.education_item_enddate);
+            date = (TextView)itemView.findViewById(R.id.education_item_date);
             description = (TextView)itemView.findViewById(R.id.education_item_description);
         }
     }
