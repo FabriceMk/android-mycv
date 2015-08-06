@@ -12,6 +12,8 @@ public class CareerItem {
 
     String description;
 
+    String details;
+
     String icon;
 
 
@@ -54,6 +56,14 @@ public class CareerItem {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     public String getIcon() {

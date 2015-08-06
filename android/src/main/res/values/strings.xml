@@ -45,7 +45,7 @@ Aliquam non euismod nibh, nec varius nunc. Mauris vel turpis imperdiet, tincidun
 
     <string name="no_title">No Title</string>
 
-    <string name="skill_date">%1$s until %2$s</string>
+    <string name="career_date">%1$s until %2$s</string>
     <string name="school_date">%1$s - %2$s</string>
 
     <string name="details">More details</string>

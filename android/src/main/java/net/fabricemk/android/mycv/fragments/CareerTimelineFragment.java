@@ -2,6 +2,7 @@ package net.fabricemk.android.mycv.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,11 +13,13 @@ import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.CareerTimelineAdapter;
 import net.fabricemk.android.mycv.models.CareerItem;
 import net.fabricemk.android.mycv.parsers.CareerJsonParser;
+import net.fabricemk.android.mycv.ui.activities.CareerDetailsActivity;
+import net.fabricemk.android.mycv.ui.activities.SkillDetailsActivity;
 
 import java.util.List;
 
 public class CareerTimelineFragment extends Fragment
-        implements IPageable {
+        implements IPageable, CareerTimelineAdapter.OnItemClickListener {
 
     String title;
 
@@ -65,6 +68,8 @@ public class CareerTimelineFragment extends Fragment
         initData();
 
         adapter = new CareerTimelineAdapter(data);
+        adapter.setOnItemClickListener(this);
+
         recycler.setAdapter(adapter);
     }
 
@@ -74,5 +79,10 @@ public class CareerTimelineFragment extends Fragment
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public void onItemClick(View view, CareerItem career) {
+        CareerDetailsActivity.navigate((AppCompatActivity) getActivity(), view.findViewById(R.id.icon), career);
     }
 }

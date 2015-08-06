@@ -1,13 +1,13 @@
 package net.fabricemk.android.mycv.adapters;
 
 import android.content.Context;
-import android.media.Image;
+import android.os.Handler;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -23,6 +23,8 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
     Context ctxt;
 
     List<CareerItem> careerList;
+
+    private OnItemClickListener onItemClickListener;
 
     public CareerTimelineAdapter(List<CareerItem> list) {
         this.careerList = list;
@@ -45,12 +47,12 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
 
     @Override
     public void onBindViewHolder(CareerItemViewHolder careerItemViewHolder, int i) {
-        CareerItem item = careerList.get(i);
+        final CareerItem item = careerList.get(i);
 
         careerItemViewHolder.company.setText(item.getCompany());
         careerItemViewHolder.position.setText(item.getPosition());
 
-        String date = String.format(ctxt.getString(R.string.skill_date),
+        String date = String.format(ctxt.getString(R.string.career_date),
                 item.getStartDate(), item.getEndDate());
         careerItemViewHolder.date.setText(date);
 
@@ -61,11 +63,30 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
                 .centerCrop()
                 .crossFade()
                 .into(careerItemViewHolder.icon);
+
+        careerItemViewHolder.moreDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                // Give some time to the ripple to finish the effect
+                if (onItemClickListener != null) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            onItemClickListener.onItemClick(v, item);
+                        }
+                    }, 200);
+                }
+            }
+        });
     }
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     public static int mappingIconIdFromName(String name) {
@@ -87,6 +108,7 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
         TextView date;
         TextView description;
         RoundedImageView icon;
+        Button moreDetails;
 
         CareerItemViewHolder(View itemView) {
             super(itemView);
@@ -96,7 +118,13 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
             date        = (TextView)itemView.findViewById(R.id.career_item_date);
             description = (TextView)itemView.findViewById(R.id.career_item_description);
             icon        = (RoundedImageView)itemView.findViewById(R.id.career_item_icon);
+            moreDetails = (Button)itemView.findViewById(R.id.career_item_details_button);
         }
+    }
+
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, CareerItem career);
     }
 
 }

@@ -1,14 +1,10 @@
 package net.fabricemk.android.mycv.ui.activities;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -19,11 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.BitmapImageViewTarget;
-import com.bumptech.glide.request.target.Target;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.SkillListAdapter;
@@ -54,7 +45,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         //initActivityTransitions();
 
-        setContentView(R.layout.activity_skill_details);
+        setContentView(R.layout.skill_details);
 
         //ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), EXTRA_ICON);
         //supportPostponeEnterTransition();

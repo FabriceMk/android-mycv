@@ -17,12 +17,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/spacing_large">
+            android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="96dp"
+                android:layout_marginTop="@dimen/spacing_large"
                 android:id="@+id/career_item_company"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 tools:text="Company"/>
@@ -31,6 +33,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/career_item_company"
+                android:layout_alignLeft="@id/career_item_company"
+                android:layout_alignRight="@id/career_item_company"
                 android:id="@+id/career_item_position"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 tools:text="Position"/>
@@ -39,6 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/career_item_position"
+                android:layout_alignLeft="@id/career_item_company"
+                android:layout_alignRight="@id/career_item_company"
                 android:id="@+id/career_item_date"
                 tools:text="2012"/>
 
@@ -47,9 +53,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/career_item_date"
+                android:layout_alignLeft="@id/career_item_company"
                 android:id="@+id/career_item_description"
-                android:paddingTop="24dp"
-                android:paddingBottom="@dimen/spacing_large"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
                 tools:text="@string/lorem_ipsum"/>
 
             <com.makeramen.roundedimageview.RoundedImageView
@@ -57,6 +65,7 @@
                 android:layout_height="80dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/spacing_large"
                 android:id="@+id/career_item_icon"
                 android:scaleType="fitCenter"
                 app:riv_corner_radius="40dip"
@@ -64,13 +73,15 @@
                 tools:src="@drawable/skill_android"/>
 
             <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/career_item_details_button"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@+id/career_item_description"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:id="@+id/career_item_details_button"
                 android:textColor="@color/primary"
-                style="@style/Widget.AppCompat.Button.Borderless"
                 android:text="@string/details"/>
 
         </RelativeLayout>

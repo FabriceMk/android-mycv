@@ -20,8 +20,13 @@
         <activity
             android:name=".ui.activities.SkillDetailsActivity">
         </activity>
+
         <activity
             android:name=".ui.activities.AboutActivity">
+        </activity>
+
+        <activity
+            android:name=".ui.activities.CareerDetailsActivity">
         </activity>
     </application>
 
