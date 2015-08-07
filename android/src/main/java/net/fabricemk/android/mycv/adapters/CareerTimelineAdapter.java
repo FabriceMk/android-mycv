@@ -15,6 +15,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.CareerItem;
+import net.fabricemk.android.mycv.tools.resources.CareerMapper;
 
 import java.util.List;
 
@@ -59,7 +60,7 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
         careerItemViewHolder.description.setText(item.getDescription());
 
         Glide.with(ctxt)
-                .load(mappingIconIdFromName(item.getIcon()))
+                .load(CareerMapper.mappingIconIdFromName(item.getIcon()))
                 .centerCrop()
                 .crossFade()
                 .into(careerItemViewHolder.icon);
@@ -87,17 +88,6 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
-    }
-
-    public static int mappingIconIdFromName(String name) {
-        int iconId = R.drawable.ic_web; // Temp
-
-        switch (name) {
-            case "appturbo": iconId = R.drawable.company_appturbo; break;
-        }
-
-        return iconId;
-
     }
 
 

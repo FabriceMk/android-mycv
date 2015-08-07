@@ -1,10 +1,15 @@
 package net.fabricemk.android.mycv.ui.activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +21,8 @@ import com.bumptech.glide.Glide;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.CareerTimelineAdapter;
 import net.fabricemk.android.mycv.models.CareerItem;
+import net.fabricemk.android.mycv.tools.CommunicationTools;
+import net.fabricemk.android.mycv.tools.resources.CareerMapper;
 
 /**
  * Activity used to host and display the Details of a Career experience/item
@@ -36,7 +43,11 @@ public class CareerDetailsActivity extends AppCompatActivity {
     private static final String EXTRA_END_DATE = "net.fabricemk.android.mycv.endDate";
     private static final String EXTRA_DESCRIPTION = "net.fabricemk.android.mycv.description";
     private static final String EXTRA_ICON = "net.fabricemk.android.mycv.icon";
+    private static final String EXTRA_HEADER = "net.fabricemk.android.mycv.header";
     private static final String EXTRA_DETAILS = "net.fabricemk.android.mycv.details";
+    private static final String EXTRA_WEBSITE = "net.fabricemk.android.mycv.website";
+
+    private CollapsingToolbarLayout collapsingToolbarLayout;
 
     public static void navigate(AppCompatActivity activity, View transitionImage, CareerItem career) {
         Intent intent = new Intent(activity, CareerDetailsActivity.class);
@@ -46,7 +57,9 @@ public class CareerDetailsActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_END_DATE, career.getEndDate());
         intent.putExtra(EXTRA_DESCRIPTION, career.getDescription());
         intent.putExtra(EXTRA_ICON, career.getIcon());
+        intent.putExtra(EXTRA_HEADER, career.getHeader());
         intent.putExtra(EXTRA_DETAILS, career.getDetails());
+        intent.putExtra(EXTRA_WEBSITE, career.getWebsite());
 
         //ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, transitionImage, EXTRA_ICON);
         //ActivityCompat.startActivity(activity, intent, options.toBundle());
@@ -62,15 +75,22 @@ public class CareerDetailsActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView companyNameView = (TextView) findViewById(R.id.career_details_company);
+        String title = getIntent().getStringExtra(EXTRA_COMPANY);
+
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle(title);
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+
+        int headerId = CareerMapper.mappingHeaderIdFromName(getIntent().getStringExtra(EXTRA_HEADER));
+        collapsingToolbarLayout.setBackgroundResource(headerId);
+
+        TextView companyView = (TextView) findViewById(R.id.career_details_company);
         TextView positionView = (TextView) findViewById(R.id.career_details_position);
         TextView dateView = (TextView) findViewById(R.id.career_details_date);
         TextView descriptionView = (TextView) findViewById(R.id.career_details_description);
 
-        ImageView iconView = (ImageView) findViewById(R.id.career_details_icon);
-
-        String title = getIntent().getStringExtra(EXTRA_COMPANY);
-        companyNameView.setText(title);
+        String company = getIntent().getStringExtra(EXTRA_COMPANY);
+        companyView.setText(company);
 
         String position = getIntent().getStringExtra(EXTRA_POSITION);
         positionView.setText(position);
@@ -84,11 +104,22 @@ public class CareerDetailsActivity extends AppCompatActivity {
         //descriptionView.setText(description);
         descriptionView.setText(getString(R.string.lorem_ipsum));
 
-        Glide.with(this)
-                .load(CareerTimelineAdapter.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON)))
-                .centerCrop()
-                .crossFade()
-                .into(iconView);
+        final String website = getIntent().getStringExtra(EXTRA_WEBSITE);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        if (website != null && ! website.isEmpty()) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CommunicationTools.launchURL(CareerDetailsActivity.this, website);
+                }
+            });
+        } else {
+            CoordinatorLayout.LayoutParams p = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
+            p.setAnchorId(View.NO_ID);
+            fab.setLayoutParams(p);
+            fab.setVisibility(View.GONE);
+        }
+
     }
 
 

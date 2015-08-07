@@ -16,6 +16,10 @@ public class CareerItem {
 
     String icon;
 
+    String header;
+
+    String website;
+
 
 
     public String getCompany() {
@@ -72,5 +76,21 @@ public class CareerItem {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
     }
 }

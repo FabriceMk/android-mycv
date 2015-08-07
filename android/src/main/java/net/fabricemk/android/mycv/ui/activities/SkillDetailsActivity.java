@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.SkillListAdapter;
 import net.fabricemk.android.mycv.models.Skill;
+import net.fabricemk.android.mycv.tools.resources.SkillMapper;
 
 public class SkillDetailsActivity extends AppCompatActivity {
 
@@ -63,7 +64,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
         TextView titleView = (TextView) findViewById(R.id.title);
         TextView descriptionView = (TextView) findViewById(R.id.description);
 
-        int resourceId = SkillListAdapter.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
+        int resourceId = SkillMapper.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
 
         Glide.with(this)
                 .load(resourceId)
