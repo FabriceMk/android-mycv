@@ -40,8 +40,9 @@ public class MainActivity extends AppCompatActivity implements
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
         // load saved navigation state if present
         if (null == savedInstanceState) {
