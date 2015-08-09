@@ -104,12 +104,12 @@ public class CareerDetailsActivity extends AppCompatActivity {
                 getIntent().getStringExtra(EXTRA_END_DATE));
         dateView.setText(date);
 
-        String description = getIntent().getStringExtra(EXTRA_DESCRIPTION);
-        //descriptionView.setText(description);
-        descriptionView.setText(getString(R.string.lorem_ipsum));
+        String details = getIntent().getStringExtra(EXTRA_DETAILS);
+        descriptionView.setText(details);
 
         final String website = getIntent().getStringExtra(EXTRA_WEBSITE);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         if (website != null && ! website.isEmpty()) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
