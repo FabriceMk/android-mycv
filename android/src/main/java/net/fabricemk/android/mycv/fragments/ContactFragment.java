@@ -1,9 +1,7 @@
 package net.fabricemk.android.mycv.fragments;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +11,11 @@ import android.widget.TextView;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.tools.CommunicationTools;
+import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 
 public class ContactFragment extends Fragment {
+
+    Toolbar mToolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class ContactFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
+
+        ((IToolbarable)getActivity()).setupToolbar(mToolbar);
     }
 
     /**
@@ -42,10 +45,7 @@ public class ContactFragment extends Fragment {
      * @param v
      */
     private void initViewInfos(View v) {
-        //TODO to move later in a superclass
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        // need to interact with the activity to refresh the drawerToggle
+        mToolbar = (Toolbar) v.findViewById(R.id.toolbar);
 
         // Name
         View subView = v.findViewById(R.id.name_item);

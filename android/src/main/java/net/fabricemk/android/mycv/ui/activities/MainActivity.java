@@ -3,7 +3,6 @@ package net.fabricemk.android.mycv.ui.activities;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Handler;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +12,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
-import android.view.View;
-import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.fragments.CareerFragment;
@@ -22,9 +19,10 @@ import net.fabricemk.android.mycv.fragments.ContactFragment;
 import net.fabricemk.android.mycv.fragments.SkillFragment;
 
 public class MainActivity extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener {
+        NavigationView.OnNavigationItemSelectedListener,
+        IToolbarable {
 
-    private static final long DRAWER_CLOSE_DELAY_MS = 250;
+    private static final long DRAWER_CLOSE_DELAY_MS = 300;
     private static final String NAV_ITEM_ID = "navItemId";
 
     private final Handler mDrawerActionHandler = new Handler();
@@ -38,11 +36,6 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_drawer);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
 
         // load saved navigation state if present
         if (null == savedInstanceState) {
@@ -58,17 +51,24 @@ public class MainActivity extends AppCompatActivity implements
         // select the correct nav menu item
         navigationView.getMenu().findItem(mNavItemId).setChecked(true);
 
-        // set up the hamburger icon to open and close the drawer
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open,
-                R.string.close);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-        mDrawerToggle.syncState();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setupToolbar(toolbar);
 
         navigate(mNavItemId);
     }
 
-    private void initToolbar() {
+    @Override
+    public void setupToolbar(Toolbar toolbar) {
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
+        // Set up the hamburger icon to open and close the drawer
+        // if a toolbar is present
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open,
+                R.string.close);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
     }
 
     /**
