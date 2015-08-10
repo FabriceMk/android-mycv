@@ -1,6 +1,7 @@
 package net.fabricemk.android.mycv.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -16,6 +17,8 @@ import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 public class ContactFragment extends Fragment {
 
     Toolbar mToolbar;
+
+    private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,12 @@ public class ContactFragment extends Fragment {
      */
     private void initViewInfos(View v) {
         mToolbar = (Toolbar) v.findViewById(R.id.toolbar);
+
+        mCollapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
+        mCollapsingToolbarLayout.setTitle(getString(R.string.my_full_name_short));
+
+        ImageView header = (ImageView)v.findViewById(R.id.header);
+        header.setImageResource(R.drawable.mwa);
 
         // Name
         View subView = v.findViewById(R.id.name_item);

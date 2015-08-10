@@ -17,7 +17,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.SkillListAdapter;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.tools.resources.SkillMapper;
 
@@ -27,7 +26,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
     private static final String EXTRA_DESCRIPTION = "net.fabricemk.android.mycv.description";
     private static final String EXTRA_ICON = "net.fabricemk.android.mycv.icon";
 
-    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
     public static void navigate(AppCompatActivity activity, View transitionImage, Skill skill) {
         Intent intent = new Intent(activity, SkillDetailsActivity.class);
@@ -56,9 +55,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
 
         String itemTitle = getIntent().getStringExtra(EXTRA_TITLE);
-        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle(itemTitle);
-        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+        mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        mCollapsingToolbarLayout.setTitle(itemTitle);
+        mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
         ImageView iconView = (ImageView) findViewById(R.id.icon);
         TextView titleView = (TextView) findViewById(R.id.title);
@@ -91,8 +90,8 @@ public class SkillDetailsActivity extends AppCompatActivity {
     private void applyPalette(Palette palette) {
         int primaryDark = getResources().getColor(R.color.primary_dark);
         int primary = getResources().getColor(R.color.primary);
-        collapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
-        collapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
+        mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
+        mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
         //supportStartPostponedEnterTransition();
     }
 

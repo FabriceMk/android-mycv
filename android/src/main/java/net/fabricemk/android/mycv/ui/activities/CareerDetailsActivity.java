@@ -1,25 +1,19 @@
 package net.fabricemk.android.mycv.ui.activities;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.CareerTimelineAdapter;
 import net.fabricemk.android.mycv.models.CareerItem;
 import net.fabricemk.android.mycv.tools.CommunicationTools;
 import net.fabricemk.android.mycv.tools.resources.CareerMapper;
@@ -47,7 +41,7 @@ public class CareerDetailsActivity extends AppCompatActivity {
     private static final String EXTRA_DETAILS = "net.fabricemk.android.mycv.details";
     private static final String EXTRA_WEBSITE = "net.fabricemk.android.mycv.website";
 
-    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
     public static void navigate(AppCompatActivity activity, View transitionImage, CareerItem career) {
         Intent intent = new Intent(activity, CareerDetailsActivity.class);
@@ -77,12 +71,12 @@ public class CareerDetailsActivity extends AppCompatActivity {
 
         String title = getIntent().getStringExtra(EXTRA_COMPANY);
 
-        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle(title);
-        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+        mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        mCollapsingToolbarLayout.setTitle(title);
+        mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
         int headerId = CareerMapper.mappingHeaderIdFromName(getIntent().getStringExtra(EXTRA_HEADER));
-        //collapsingToolbarLayout.setBackgroundResource(headerId);
+        //mCollapsingToolbarLayout.setBackgroundResource(headerId);
 
         ImageView headerView = (ImageView) findViewById(R.id.header);
         TextView companyView = (TextView) findViewById(R.id.career_details_company);
