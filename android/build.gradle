@@ -43,4 +43,7 @@ dependencies {
     compile 'com.github.bumptech.glide:volley-integration:1.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.5'
 
+    // Enable Wear app packaging when generating production APK
+    wearApp project(':wear')
+
 }
