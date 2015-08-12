@@ -11,11 +11,14 @@
     <string name="my_google">FabriceMongkhoune</string>
     <string name="my_linkedin_id">102427224</string>
 
+    <string name="about_me_short">"I'm an Android and Web Developer.\nTech enthusiast, I have been a CTO of a successful startup in Paris for 3 years.\nI've also an interest into Artificial Intelligence et Problems Solving."</string>
+
 
     <string name="swipe_more">Swipe for more details</string>
 
     <string name="contact">Contact</string>
     <string name="email">Email</string>
+    <string name="about">About me</string>
 
     <string name="lorem_ipsum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper accumsan velit, ac iaculis elit consectetur interdum. Maecenas ullamcorper lectus odio, eu eleifend orci feugiat id. Aenean non magna ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas purus metus, hendrerit non elementum ac, mattis a risus. Aenean lacus erat, blandit nec laoreet quis, dignissim sed lorem. Pellentesque auctor ornare velit aliquam mollis. Aenean a nunc velit. Pellentesque et accumsan eros, sit amet posuere purus. Cras ut nunc tincidunt, blandit lorem in, mattis lorem. Vivamus mi eros, ultricies ac porttitor non, maximus at erat. Morbi semper laoreet dolor id placerat.
 

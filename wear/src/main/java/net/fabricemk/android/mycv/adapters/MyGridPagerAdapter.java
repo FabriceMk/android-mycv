@@ -9,7 +9,6 @@ import android.support.wearable.view.FragmentGridPagerAdapter;
 import android.view.Gravity;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.fragments.ContactFragment;
 import net.fabricemk.android.mycv.fragments.ImageFragment;
 
 import java.util.ArrayList;
@@ -62,10 +61,18 @@ public class MyGridPagerAdapter extends FragmentGridPagerAdapter {
 
         firstRow.add(fragment2);
 
+        // ter
+        title = mContext.getString(R.string.about);
+        text = mContext.getString(R.string.about_me_short);;
+        iconId = R.drawable.ic_responsive;
 
-        // Second card
-        ContactFragment contactFragment = new ContactFragment();
-        firstRow.add(contactFragment);
+        CardFragment fragment3 = CardFragment.create(title, text, iconId);
+        //fragment3.setCardGravity(Gravity.BOTTOM);
+        fragment3.setExpansionEnabled(true);
+        fragment3.setExpansionDirection(CardFragment.EXPAND_DOWN);
+        fragment3.setExpansionFactor(MAXIMUM_CARD_EXPANSION_FACTOR);
+
+        firstRow.add(fragment3);
 
         // Third card
         ImageFragment imageFragment = ImageFragment.create(R.drawable.qr_mysite);
@@ -115,7 +122,7 @@ public class MyGridPagerAdapter extends FragmentGridPagerAdapter {
 
         if (row == 0) {
             switch (column) {
-                case 1: backgroundId = R.drawable.skill_android; break;
+                case 2: backgroundId = R.drawable.skill_android; break;
             }
         }
 
