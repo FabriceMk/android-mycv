@@ -6,19 +6,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import net.fabricemk.android.mycv.R;
 
+import org.w3c.dom.Text;
+
 public class ImageFragment extends Fragment {
 
+    public static final String KEY_TITLE_RESOURCE = "ImageFragment_title";
     public static final String KEY_IMAGE_RESOURCE = "ImageFragment_image";
 
-    public static ImageFragment create(int imageRes) {
+    public static ImageFragment create(int imageRes, String title) {
         ImageFragment fragment = new ImageFragment();
         Bundle args = new Bundle();
 
         if(imageRes != 0) {
             args.putInt(KEY_IMAGE_RESOURCE, imageRes);
+        }
+
+        if(! title.isEmpty()) {
+            args.putString(KEY_TITLE_RESOURCE, title);
         }
 
         fragment.setArguments(args);
@@ -33,14 +41,21 @@ public class ImageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.layout_image_fragment, container, false);
+        View v = inflater.inflate(R.layout.layout_image_card, container, false);
 
         ImageView image = (ImageView) v.findViewById(R.id.image);
+        TextView title = (TextView) v.findViewById(R.id.title);
 
         Bundle args = this.getArguments();
 
         if(args.containsKey(KEY_IMAGE_RESOURCE)) {
             image.setImageResource(args.getInt(KEY_IMAGE_RESOURCE));
+        }
+
+        if(args.containsKey(KEY_TITLE_RESOURCE)) {
+            title.setText(args.getString(KEY_TITLE_RESOURCE));
+        } else {
+            title.setVisibility(View.GONE);
         }
 
         return v;
