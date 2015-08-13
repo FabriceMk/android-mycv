@@ -1,0 +1,38 @@
+<android.support.wearable.view.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_box="left|top|right"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/action_button"
+            android:layout_width="@dimen/action_button_size"
+            android:layout_height="@dimen/action_button_size"
+            tools:src="@drawable/action_email"
+            android:background="@drawable/action_button"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/action_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            style="@style/FontAction"
+            android:layout_below="@+id/action_button"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.wearable.view.BoxInsetLayout>

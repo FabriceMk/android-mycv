@@ -71,7 +71,7 @@ public class MyGridPagerAdapter extends FragmentGridPagerAdapter {
 
         if (row == 0) {
             switch (column) {
-                case 2: backgroundId = R.drawable.skill_android; break;
+                //case 2: backgroundId = R.drawable.skill_android; break;
             }
         }
 

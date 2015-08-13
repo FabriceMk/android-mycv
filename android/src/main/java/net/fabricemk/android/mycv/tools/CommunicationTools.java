@@ -11,11 +11,17 @@ public class CommunicationTools {
     public static void sendEmail(Context ctxt, String recipient, String message) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 "mailto", recipient, null));
-        ctxt.startActivity(Intent.createChooser(emailIntent, "Send email..."));
+        emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        Intent chooser = Intent.createChooser(emailIntent, "Send email...");
+        chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        ctxt.startActivity(chooser);
     }
 
     public static void launchURL(Context ctxt, String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(url));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctxt.startActivity(intent);
     }
 

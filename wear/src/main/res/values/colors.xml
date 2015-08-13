@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Blacks and Whites recommended by Google guidelines
+
+    http://www.google.com/design/spec/style/color.html#color-ui-color-application
+
+    Google suggests different variations of blacks and whites when working with Material Design.
+    This file serves as a reference as the opacity percentages used in the guidelines have been here
+    directly converted into the correct alpha values.
+    -->
+
+    <!--
+    Black :
+    - 87% opacity is used for texts on a white background
+    - 54% opacity is used for secondary text and icons
+    - 26% opacity is used for disabled or hint texts
+    - 12% opacity is used for dividers
+    -->
+    <color name="black">#000000</color>
+    <color name="black_alpha87">#D6000000</color>
+    <color name="black_alpha54">#8A000000</color>
+    <color name="black_alpha26">#42000000</color>
+    <color name="black_alpha12">#1E000000</color>
+
+    <!--
+    White :
+    - 100% opacity is used for text and icons
+    - 70% opacity is used for secondary text
+    - 30% opacity is used for disabled or hint texts
+    - 12% opacity is used for dividers
+    -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha70">#B2FFFFFF</color>
+    <color name="white_alpha30">#4DFFFFFF</color>
+    <color name="white_alpha12">#1EFFFFFF</color>
+
+
+    <color name="blue_action">#2878ff</color>
+    <color name="blue_action_dark">#2955C5</color>
+    <color name="action_overlay">@color/black_alpha54</color>
+
+
+
+
+</resources>

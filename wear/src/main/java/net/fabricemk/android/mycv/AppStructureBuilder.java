@@ -6,6 +6,7 @@ import android.support.wearable.view.CardFragment;
 import android.view.Gravity;
 
 import net.fabricemk.android.mycv.fragments.ImageFragment;
+import net.fabricemk.android.mycv.fragments.SendMessageToMobileFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,11 @@ public class AppStructureBuilder {
 
         row1.add(fragment2);
 
+        SendMessageToMobileFragment sendMessageToMobileFragment =
+                SendMessageToMobileFragment
+                        .create(ctxt.getString(R.string.my_site));
+
+        row1.add(sendMessageToMobileFragment);
 
 
         // Row 2
