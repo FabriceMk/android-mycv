@@ -5,35 +5,37 @@ import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
 import android.support.wearable.view.DotsPageIndicator;
 import android.support.wearable.view.GridViewPager;
-import android.view.View;
-import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.wearable.CapabilityApi;
+import com.google.android.gms.wearable.CapabilityInfo;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
 import net.fabricemk.android.mycv.adapters.MyGridPagerAdapter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class MainActivity extends WearableActivity
         implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         IHandheldCommunication {
 
-    private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
-            new SimpleDateFormat("HH:mm", Locale.US);
-
     private BoxInsetLayout mContainerView;
 
-    Node mNode; // the connected device to send the message to
+    Node mNode; // the best device to send the message to
+
     GoogleApiClient mGoogleApiClient;
     private boolean mResolvingError=false;
+
+    private static final long CONNECTION_TIME_OUT_MS = 2000;
+
+    private static final String SEND_ME_EMAIL = "send_me_email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,20 +93,70 @@ public class MainActivity extends WearableActivity
         }
     }
 
+    private void setupEmailCapabilities() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                CapabilityApi.GetCapabilityResult result =
+                        Wearable.CapabilityApi.getCapability(
+                                mGoogleApiClient, SEND_ME_EMAIL,
+                                CapabilityApi.FILTER_REACHABLE).await();
+
+                updateEmailCapability(result.getCapability());
+
+                CapabilityApi.CapabilityListener capabilityListener =
+                        new CapabilityApi.CapabilityListener() {
+                            @Override
+                            public void onCapabilityChanged(CapabilityInfo capabilityInfo) {
+                                updateEmailCapability(capabilityInfo);
+                            }
+                        };
+
+                Wearable.CapabilityApi.addCapabilityListener(
+                        mGoogleApiClient,
+                        capabilityListener,
+                        SEND_ME_EMAIL);
+
+            }
+        }).start();
+
+    }
+
+    private void updateEmailCapability(CapabilityInfo capabilityInfo) {
+        Set<Node> connectedNodes = capabilityInfo.getNodes();
+        mNode = pickBestNode(connectedNodes);
+    }
+
+    private Node pickBestNode(Set<Node> nodes) {
+        Node bestNode = null;
+        // Find a nearby node or pick one arbitrarily
+        for (Node node : nodes) {
+            if (node.isNearby()) {
+                return node;
+            }
+            bestNode = node;
+        }
+        return bestNode;
+    }
+
     /*
      * Google API Client related
      */
     @Override
     public void onConnected(Bundle bundle) {
-        Wearable.NodeApi.getConnectedNodes(mGoogleApiClient).setResultCallback(new ResultCallback<NodeApi.GetConnectedNodesResult>() {
-            @Override
-            public void onResult(NodeApi.GetConnectedNodesResult nodes) {
-                for (Node node : nodes.getNodes()) {
-                    // Will handle multiples nodes later
-                    mNode = node;
-                }
-            }
-        });
+        setupEmailCapabilities();
+
+
+//        Wearable.NodeApi.getConnectedNodes(mGoogleApiClient).setResultCallback(new ResultCallback<NodeApi.GetConnectedNodesResult>() {
+//            @Override
+//            public void onResult(NodeApi.GetConnectedNodesResult nodes) {
+//                for (Node node : nodes.getNodes()) {
+//                    allNodes = new ArrayList<Node>();
+//                    allNodes.add(node);
+//                }
+//            }
+//        });
     }
 
     @Override
