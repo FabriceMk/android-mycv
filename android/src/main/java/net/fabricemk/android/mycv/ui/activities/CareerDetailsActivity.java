@@ -93,7 +93,7 @@ public class CareerDetailsActivity extends AppCompatActivity {
         String position = getIntent().getStringExtra(EXTRA_POSITION);
         positionView.setText(position);
 
-        String date = String.format(getString(R.string.career_date),
+        String date = String.format(getString(R.string.date_career),
                 getIntent().getStringExtra(EXTRA_START_DATE),
                 getIntent().getStringExtra(EXTRA_END_DATE));
         dateView.setText(date);

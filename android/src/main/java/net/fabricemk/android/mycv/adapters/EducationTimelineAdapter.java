@@ -45,7 +45,7 @@ public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTime
         educationItemViewHolder.school.setText(item.getSchool());
         educationItemViewHolder.diploma.setText(item.getDiploma());
 
-        String date = String.format(ctxt.getString(R.string.school_date),
+        String date = String.format(ctxt.getString(R.string.date_school),
                 item.getStartDate(), item.getEndDate());
         educationItemViewHolder.date.setText(date);
 

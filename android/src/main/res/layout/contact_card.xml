@@ -19,10 +19,24 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_me"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_marginBottom="@dimen/spacing_medium"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_me_description_short"
+                />
+
+            <include layout="@layout/layout_vertical_divider"/>
+
+            <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
                 android:text="@string/contact"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 

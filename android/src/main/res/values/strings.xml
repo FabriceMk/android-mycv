@@ -26,6 +26,8 @@
     <string name="settings">Settings</string>
     <string name="about">About</string>
 
+    <string name="about_me">About me</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -45,8 +47,10 @@ Aliquam non euismod nibh, nec varius nunc. Mauris vel turpis imperdiet, tincidun
 
     <string name="no_title">No Title</string>
 
-    <string name="career_date">%1$s until %2$s</string>
-    <string name="school_date">%1$s - %2$s</string>
+    <string name="date_career">%1$s until %2$s</string>
+    <string name="date_school">%1$s - %2$s</string>
 
     <string name="details">More details</string>
+
+    <string name="about_me_description_short">"I'm french IT Engineer, an Android &amp; Web Developer and a tech enthusiast. I love all the good things internet, smartphones and applications brought to us.\n\nI have been a CTO/Lead Developer of a successful startup in Paris for 3 years and I currently live in Tokyo.\n\nI've also an interest into Artificial Intelligence et Problems Solving."</string>
 </resources>

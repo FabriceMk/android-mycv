@@ -53,7 +53,7 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
         careerItemViewHolder.company.setText(item.getCompany());
         careerItemViewHolder.position.setText(item.getPosition());
 
-        String date = String.format(ctxt.getString(R.string.career_date),
+        String date = String.format(ctxt.getString(R.string.date_career),
                 item.getStartDate(), item.getEndDate());
         careerItemViewHolder.date.setText(date);
 
