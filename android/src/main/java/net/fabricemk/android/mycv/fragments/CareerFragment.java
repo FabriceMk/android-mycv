@@ -47,6 +47,7 @@ public class CareerFragment extends Fragment {
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
 
+        mToolbar.setTitle(getString(R.string.career));
         ((IToolbarable)getActivity()).setupToolbar(mToolbar);
 
         mViewPager.setAdapter(new CareerPagerAdapter(getActivity(), getFragmentManager()));

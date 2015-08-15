@@ -59,6 +59,7 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
 
+        mToolbar.setTitle(getString(R.string.skills));
         ((IToolbarable)getActivity()).setupToolbar(mToolbar);
 
         initData();
