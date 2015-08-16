@@ -33,10 +33,10 @@
     </group>
 
     <group android:id="@+id/grp4">
-        <item
-            android:id="@+id/drawer_settings"
-            android:icon="@drawable/ic_settings"
-            android:title="@string/settings"/>
+        <!--<item-->
+            <!--android:id="@+id/drawer_settings"-->
+            <!--android:icon="@drawable/ic_settings"-->
+            <!--android:title="@string/settings"/>-->
 
         <item
             android:id="@+id/drawer_about"
