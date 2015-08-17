@@ -10,21 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.CareerTimelineAdapter;
+import net.fabricemk.android.mycv.adapters.CareerTimelineListAdapter;
 import net.fabricemk.android.mycv.models.CareerItem;
 import net.fabricemk.android.mycv.parsers.CareerJsonParser;
 import net.fabricemk.android.mycv.ui.activities.CareerDetailsActivity;
-import net.fabricemk.android.mycv.ui.activities.SkillDetailsActivity;
 
 import java.util.List;
 
 public class CareerTimelineFragment extends Fragment
-        implements IPageable, CareerTimelineAdapter.OnItemClickListener {
+        implements IPageable, CareerTimelineListAdapter.OnItemClickListener {
 
     String title;
 
     RecyclerView recycler;
-    CareerTimelineAdapter adapter;
+    CareerTimelineListAdapter adapter;
 
     List<CareerItem> data;
 
@@ -67,7 +66,7 @@ public class CareerTimelineFragment extends Fragment
         // TEMP
         initData();
 
-        adapter = new CareerTimelineAdapter(data);
+        adapter = new CareerTimelineListAdapter(data);
         adapter.setOnItemClickListener(this);
 
         recycler.setAdapter(adapter);

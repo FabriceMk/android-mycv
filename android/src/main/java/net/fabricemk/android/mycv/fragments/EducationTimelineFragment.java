@@ -9,11 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.EducationTimelineAdapter;
+import net.fabricemk.android.mycv.adapters.EducationTimelineListAdapter;
 import net.fabricemk.android.mycv.models.EducationItem;
 import net.fabricemk.android.mycv.parsers.EducationJsonParser;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EducationTimelineFragment extends Fragment
@@ -22,7 +21,7 @@ public class EducationTimelineFragment extends Fragment
     String title;
 
     RecyclerView recycler;
-    EducationTimelineAdapter adapter;
+    EducationTimelineListAdapter adapter;
 
     List<EducationItem> data;
 
@@ -65,7 +64,7 @@ public class EducationTimelineFragment extends Fragment
         // TEMP
         initData();
 
-        adapter = new EducationTimelineAdapter(data);
+        adapter = new EducationTimelineListAdapter(data);
         recycler.setAdapter(adapter);
     }
 

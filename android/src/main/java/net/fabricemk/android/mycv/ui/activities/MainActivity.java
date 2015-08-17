@@ -17,6 +17,7 @@ import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.fragments.CareerFragment;
 import net.fabricemk.android.mycv.fragments.ContactFragment;
 import net.fabricemk.android.mycv.fragments.SkillFragment;
+import net.fabricemk.android.mycv.fragments.TripFragment;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
@@ -94,6 +95,11 @@ public class MainActivity extends AppCompatActivity implements
                     Fragment skillFragment = new SkillFragment();
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content, skillFragment).commit();
+                    return;
+                case R.id.drawer_trips:
+                    Fragment tripFragment = new TripFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content, tripFragment).commit();
                     return;
                 case R.id.drawer_about:
                     Intent intent = new Intent(this, AboutActivity.class);

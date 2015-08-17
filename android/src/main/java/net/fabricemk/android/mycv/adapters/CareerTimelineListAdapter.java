@@ -19,7 +19,7 @@ import net.fabricemk.android.mycv.tools.resources.CareerMapper;
 
 import java.util.List;
 
-public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAdapter.CareerItemViewHolder> {
+public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimelineListAdapter.CareerItemViewHolder> {
 
     Context ctxt;
 
@@ -27,7 +27,7 @@ public class CareerTimelineAdapter extends RecyclerView.Adapter<CareerTimelineAd
 
     private OnItemClickListener onItemClickListener;
 
-    public CareerTimelineAdapter(List<CareerItem> list) {
+    public CareerTimelineListAdapter(List<CareerItem> list) {
         this.careerList = list;
     }
 

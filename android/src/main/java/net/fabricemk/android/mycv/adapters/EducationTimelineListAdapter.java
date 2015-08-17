@@ -13,13 +13,13 @@ import net.fabricemk.android.mycv.models.EducationItem;
 
 import java.util.List;
 
-public class EducationTimelineAdapter extends RecyclerView.Adapter<EducationTimelineAdapter.EducationItemViewHolder> {
+public class EducationTimelineListAdapter extends RecyclerView.Adapter<EducationTimelineListAdapter.EducationItemViewHolder> {
 
     Context ctxt;
 
     List<EducationItem> educationList;
 
-    public EducationTimelineAdapter(List<EducationItem> list) {
+    public EducationTimelineListAdapter(List<EducationItem> list) {
         this.educationList = list;
     }
 
