@@ -33,5 +33,10 @@
     <dimen name="std_expanded_title_margin_start">48dp</dimen>
     <dimen name="std_expanded_title_margin_end">64dp</dimen>
     <dimen name="header_image_max_height">256dp</dimen>
+
+    <!-- Double sized toolbar stuff -->
+    <dimen name="toolbar_size_x2">128dp</dimen>
+    <dimen name="title_margin_top">14dp</dimen>
+    <dimen name="breaking_edge_content_margin_top">72dp</dimen>
 </resources>
 
