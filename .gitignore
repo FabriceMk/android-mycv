@@ -32,3 +32,6 @@ proguard/
 
 # Windows stuff
 *Thumbs.db
+
+# Misc files
+credentials.xml
