@@ -18,6 +18,8 @@ import java.util.List;
 public class EducationTimelineFragment extends Fragment
         implements IPageable {
 
+    private static final String KEY_TITLE = "EducationTimelineFragment.title";
+
     String title;
 
     RecyclerView recycler;
@@ -28,7 +30,7 @@ public class EducationTimelineFragment extends Fragment
     public static EducationTimelineFragment newInstance(String title) {
         EducationTimelineFragment fragment = new EducationTimelineFragment();
         Bundle args = new Bundle();
-        args.putString("TITLE", title);
+        args.putString(KEY_TITLE, title);
         fragment.setArguments(args);
         return fragment;
     }
@@ -36,7 +38,7 @@ public class EducationTimelineFragment extends Fragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getArguments().getString("TITLE");
+        title = getArguments().getString(KEY_TITLE);
     }
 
     @Override

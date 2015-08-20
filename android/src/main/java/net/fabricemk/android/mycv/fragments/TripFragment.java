@@ -4,13 +4,18 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.adapters.TripPagerAdapter;
+import net.fabricemk.android.mycv.models.TripItem;
+import net.fabricemk.android.mycv.parsers.TripJsonParser;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
+
+import java.util.List;
 
 public class TripFragment extends Fragment {
 
@@ -32,6 +37,9 @@ public class TripFragment extends Fragment {
         mToolbar = (Toolbar) v.findViewById(R.id.toolbar);
         mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
 
+        int margin = (int)getResources().getDimension(R.dimen.viewpager_special_margin);
+        mViewPager.setPageMargin(-margin);
+
         return v;
     }
 
@@ -42,7 +50,8 @@ public class TripFragment extends Fragment {
         mToolbar.setTitle(getString(R.string.trips));
         ((IToolbarable)getActivity()).setupToolbar(mToolbar);
 
-        mViewPager.setAdapter(new TripPagerAdapter(getActivity(), getFragmentManager()));
+        List<TripItem> trips = TripJsonParser.parseLocal(getActivity());
+        mViewPager.setAdapter(new TripPagerAdapter(getActivity(), getFragmentManager(), trips));
 
     }
 

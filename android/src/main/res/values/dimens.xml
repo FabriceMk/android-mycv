@@ -38,5 +38,9 @@
     <dimen name="toolbar_size_x2">128dp</dimen>
     <dimen name="title_margin_top">14dp</dimen>
     <dimen name="breaking_edge_content_margin_top">72dp</dimen>
+
+    <!-- ViewPager stuff to allow preview of next and previous page -->
+    <dimen name="viewpager_special_margin">40dp</dimen>
+    <dimen name="viewpager_content_special_padding">20dp</dimen>
 </resources>
 
