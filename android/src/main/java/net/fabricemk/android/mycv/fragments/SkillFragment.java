@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
+import net.fabricemk.android.mycv.adapters.SectionedGridRecyclerViewAdapter;
 import net.fabricemk.android.mycv.adapters.SkillListAdapter;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.models.SkillSubset;
@@ -18,6 +19,8 @@ import net.fabricemk.android.mycv.parsers.SkillJsonParser;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 import net.fabricemk.android.mycv.ui.activities.SkillDetailsActivity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class SkillFragment extends Fragment implements SkillListAdapter.OnItemClickListener {
@@ -67,7 +70,32 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
         adapter = new SkillListAdapter(data);
         adapter.setOnItemClickListener(this);
 
-        recycler.setAdapter(adapter);
+        /*
+         * Setting up the different sections headers
+         */
+        List<SectionedGridRecyclerViewAdapter.Section> sections =
+                new ArrayList<SectionedGridRecyclerViewAdapter.Section>();
+
+        int headersPosition = 0;
+
+        for (Map.Entry<String, SkillSubset> entry : data.entrySet()) {
+            sections.add(new SectionedGridRecyclerViewAdapter.Section(headersPosition, entry.getKey()));
+            headersPosition += entry.getValue().getSkills().size();
+        }
+
+        SectionedGridRecyclerViewAdapter.Section[] dummy = new SectionedGridRecyclerViewAdapter.Section[sections.size()];
+        SectionedGridRecyclerViewAdapter mSectionedAdapter = new
+                SectionedGridRecyclerViewAdapter(getActivity(),
+                R.layout.skill_section,
+                R.id.section_text,
+                recycler,
+                adapter);
+        mSectionedAdapter.setSections(sections.toArray(dummy));
+
+        //Apply this adapter to the RecyclerView
+        recycler.setAdapter(mSectionedAdapter);
+
+        //recycler.setAdapter(adapter);
     }
 
     private void initData() {
