@@ -2,8 +2,6 @@ package net.fabricemk.android.mycv.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +9,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -25,12 +23,12 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
 
     TripItem trip;
 
-    SupportMapFragment mSupportMapFragment;
     GoogleMap googleMap;
 
     TextView eventNameView;
     TextView dateView;
     TextView descriptionView;
+    MapView mapView;
 
     private boolean needsInit = false;
 
@@ -62,14 +60,9 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
         dateView.setText(trip.getDates());
         descriptionView.setText(trip.getDescription());
 
-        mSupportMapFragment = (SupportMapFragment) getFragmentManager().findFragmentById(R.id.map);
-        if (mSupportMapFragment == null) {
-            FragmentManager fragmentManager = getFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            mSupportMapFragment = SupportMapFragment.newInstance();
-            fragmentTransaction.replace(R.id.map, mSupportMapFragment).commit();
-        }
-
+        mapView = (MapView) v.findViewById(R.id.map);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
 
         return v;
     }
@@ -82,25 +75,32 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
             needsInit = true;
         }
 
-        if (mSupportMapFragment != null) {
-            mSupportMapFragment.getMapAsync(this);
-        }
     }
 
     @Override
     public void onResume() {
+        mapView.onResume();
         super.onResume();
     }
 
     @Override
     public void onPause() {
+        mapView.onPause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
+        mapView.onDestroy();
         super.onDestroy();
     }
+
+    @Override
+    public final void onLowMemory() {
+        mapView.onLowMemory();
+        super.onLowMemory();
+    }
+
 
     @Override
     public void onMapReady(GoogleMap map) {
