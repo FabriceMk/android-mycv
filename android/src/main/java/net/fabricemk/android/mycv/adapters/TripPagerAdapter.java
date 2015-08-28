@@ -33,8 +33,4 @@ public class TripPagerAdapter extends FragmentStatePagerAdapter {
         return TripItemFragment.newInstance(tripList.get(position));
     }
 
-    @Override
-    public int getItemPosition(Object item) {
-        return POSITION_NONE;
-    }
 }
