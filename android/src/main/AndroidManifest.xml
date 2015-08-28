@@ -7,10 +7,7 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="net.fabricemk.android.mycv.permission.MAPS_RECEIVE" />
-
-
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:allowBackup="true"
@@ -26,34 +23,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".ui.activities.SkillDetailsActivity">
+        <activity android:name=".ui.activities.SkillDetailsActivity" >
+        </activity>
+        <activity android:name=".ui.activities.AboutActivity" >
+        </activity>
+        <activity android:name=".ui.activities.CareerDetailsActivity" >
         </activity>
 
-        <activity
-            android:name=".ui.activities.AboutActivity">
-        </activity>
-
-        <activity
-            android:name=".ui.activities.CareerDetailsActivity">
-        </activity>
-
-
-        <service android:name=".services.ListenerServiceFromWear">
+        <service android:name=".services.ListenerServiceFromWear" >
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
 
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_api_key"/>
-
+            android:value="@string/google_maps_api_key" />
     </application>
+
 </manifest>

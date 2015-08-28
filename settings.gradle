@@ -1,1 +1,1 @@
-include ':android', ':wear'
+include ':android', ':wear', ':backend'
