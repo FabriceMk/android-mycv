@@ -6,7 +6,7 @@
       "latitude": 37.783879,
       "longitude": -122.4012538
     },
-    "description": "I have attended to the 2014 edition of the Google I/O in San Francisco as the CTO of Appturbo.\n\nThis year, Android 5.0 Lollipop and Material Design have been unveiled. It was also the debuts of Android Wear and Android TV.\n\nI have mainly followed Android and Google Cloud Computing sessions.",
+    "description": "I have attended to the 2014 edition of the Google I/O in San Francisco as the CTO of Appturbo.\n\nThis year, Android 5.0 Lollipop and Material Design have been unveiled. It was also the debuts of Android Wear and Android TV.\n\nI have mainly followed Android and Google Cloud Computing sessions. I used what I learned there to improve our Android App of the Day application with Material Design a few months later and we also started building a new iOS/Android application powered by a Google AppEngine scalable backend.",
     "pictures": []
   }
   ,
@@ -17,7 +17,7 @@
       "latitude": 41.3547228,
       "longitude": 2.1246499
     },
-    "description": "I have attended to the 2013, 2014 and 2015 editions of the Mobile World Congress in Barcelona which is the biggest exhibition dedicated to the Mobile.\n\nI've attended as the CTO of Appturbo and helped on the Appturbo's booth to explain the App of the Day concept to potential clients. I've also been in relation with different technical partners to improve Appturbo's architecture and solutions.",
+    "description": "I have attended to the 2013, 2014 and 2015 editions of the Mobile World Congress in Barcelona which is the biggest exhibition dedicated to the Mobile.\n\nAs the CTO of Appturbo I helped on the Appturbo's booth to explain the App of the Day concept to potential clients. I've also been in relation with different technical partners to improve Appturbo's internal architecture and solutions.",
     "pictures": []
   }
 ]

@@ -59,11 +59,15 @@ public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimeli
 
         careerItemViewHolder.description.setText(item.getDescription());
 
-        Glide.with(ctxt)
-                .load(CareerMapper.mappingIconIdFromName(item.getIcon()))
-                .centerCrop()
-                .crossFade()
-                .into(careerItemViewHolder.icon);
+        int iconId = CareerMapper.mappingIconIdFromName(item.getIcon());
+
+        if (iconId != 0) {
+            Glide.with(ctxt)
+                    .load(iconId)
+                    .centerCrop()
+                    .crossFade()
+                    .into(careerItemViewHolder.icon);
+        }
 
         careerItemViewHolder.moreDetails.setOnClickListener(new View.OnClickListener() {
             @Override

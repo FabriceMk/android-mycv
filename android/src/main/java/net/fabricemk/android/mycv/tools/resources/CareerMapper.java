@@ -5,7 +5,7 @@ import net.fabricemk.android.mycv.R;
 public class CareerMapper {
 
     public static int mappingIconIdFromName(String name) {
-        int iconId = R.drawable.ic_web; // Temp
+        int iconId = 0;
 
         switch (name) {
             case "appturbo": iconId = R.drawable.company_appturbo; break;
