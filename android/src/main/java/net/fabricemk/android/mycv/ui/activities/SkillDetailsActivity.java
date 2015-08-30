@@ -5,6 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -34,8 +36,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_DESCRIPTION, skill.getDescription());
         intent.putExtra(EXTRA_ICON, skill.getIcon());
 
-        //ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, transitionImage, EXTRA_ICON);
-        //ActivityCompat.startActivity(activity, intent, options.toBundle());
+        ActivityOptionsCompat options = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(activity, transitionImage, EXTRA_ICON);
+//        ActivityCompat.startActivity(activity, intent, options.toBundle());
         ActivityCompat.startActivity(activity, intent, null);
     }
 
@@ -43,12 +46,12 @@ public class SkillDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //initActivityTransitions();
+//        initActivityTransitions();
 
         setContentView(R.layout.skill_details);
 
-        //ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), EXTRA_ICON);
-        //supportPostponeEnterTransition();
+//        ViewCompat.setTransitionName(findViewById(R.id.icon), EXTRA_ICON);
+//        supportPostponeEnterTransition();
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
