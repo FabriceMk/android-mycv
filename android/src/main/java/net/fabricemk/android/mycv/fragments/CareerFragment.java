@@ -52,18 +52,7 @@ public class CareerFragment extends Fragment {
 
         mViewPager.setAdapter(new CareerPagerAdapter(getActivity(), getFragmentManager()));
 
-//        mTabLayout.setupWithViewPager(mViewPager);
-
-        /* Temporary fix because of a bug in Android Support Design Library
-         * 22.2.1 with TabLayout
-         * https://code.google.com/p/android/issues/detail?id=180462
-         */
-        mTabLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                mTabLayout.setupWithViewPager(mViewPager);
-            }
-        });
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
 }
