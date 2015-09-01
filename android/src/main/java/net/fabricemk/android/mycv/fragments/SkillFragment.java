@@ -1,6 +1,7 @@
 package net.fabricemk.android.mycv.fragments;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -25,6 +26,8 @@ import java.util.Map;
 
 public class SkillFragment extends Fragment implements SkillListAdapter.OnItemClickListener {
 
+    private static final String KEY_RECYCLER_SCROLL_STATE = "RecyclerScrollState";
+
     Toolbar mToolbar;
 
     RecyclerView recycler;
@@ -35,7 +38,6 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setRetainInstance(true);
     }
 
     @Override
@@ -55,15 +57,6 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 3);
         recycler.setLayoutManager(layoutManager);
 
-        return v;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedState) {
-        super.onActivityCreated(savedState);
-
-        mToolbar.setTitle(getString(R.string.skills));
-        ((IToolbarable)getActivity()).setupToolbar(mToolbar);
 
         initData();
 
@@ -95,7 +88,15 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
         //Apply this adapter to the RecyclerView
         recycler.setAdapter(mSectionedAdapter);
 
-        //recycler.setAdapter(adapter);
+        return v;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedState) {
+        super.onActivityCreated(savedState);
+
+        mToolbar.setTitle(getString(R.string.skills));
+        ((IToolbarable)getActivity()).setupToolbar(mToolbar);
     }
 
     private void initData() {
@@ -105,6 +106,11 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
     @Override
     public void onItemClick(View view, Skill skill) {
         SkillDetailsActivity.navigate((AppCompatActivity) getActivity(), view.findViewById(R.id.icon), skill);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
     }
 
 }
