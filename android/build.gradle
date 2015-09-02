@@ -10,6 +10,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -47,4 +48,27 @@ dependencies {
     compile 'com.github.bumptech.glide:volley-integration:1.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.5'
     compile project(path: ':backend', configuration: 'android-endpoints')
+
+
+    // Testing Libraries
+
+    // Unit testing dependencies
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.+"
+
+    androidTestCompile('com.android.support.test:runner:0.3') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    }
+    // Set this dependency to use JUnit 4 rules
+    androidTestCompile('com.android.support.test:rules:0.3') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    }
+    // Set this dependency to build and run Espresso tests
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    }
+
 }
