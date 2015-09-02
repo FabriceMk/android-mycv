@@ -2,6 +2,7 @@ package net.fabricemk.android.mycv.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SkillSubset {
@@ -12,6 +13,13 @@ public class SkillSubset {
     private List<Skill> skills;
 
     private int order;
+
+    public void addSkill(Skill skill) {
+        if (skills == null) {
+            skills = new ArrayList<>();
+        }
+        skills.add(skill);
+    }
 
     public String getSubsetName() {
         return subsetName;
