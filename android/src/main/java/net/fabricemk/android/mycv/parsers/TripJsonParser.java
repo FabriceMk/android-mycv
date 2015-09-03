@@ -13,11 +13,13 @@ public class TripJsonParser {
 
     public static List<TripItem> parseLocal(Context ctxt) {
         String localJson = JsonTools.readLocal(ctxt.getResources(), R.raw.trips);
+        return parse(ctxt, localJson);
+    }
 
-        TripItem[] temp = JsonTools.constructUsingGson(TripItem[].class, localJson);
 
+    public static List<TripItem> parse(Context ctxt, String json) {
+        TripItem[] temp = JsonTools.constructUsingGson(TripItem[].class, json);
         List<TripItem> trips = Arrays.asList(temp);
-
         return trips;
     }
 }

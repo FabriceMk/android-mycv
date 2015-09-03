@@ -5,8 +5,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -16,6 +19,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.TripItem;
+
+import java.util.List;
 
 public class TripItemFragment extends Fragment implements OnMapReadyCallback {
 
@@ -29,6 +34,7 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
     TextView dateView;
     TextView descriptionView;
     MapView mapView;
+    ImageView photoView;
 
     private boolean needsInit = false;
 
@@ -64,6 +70,15 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
+        photoView = (ImageView) v.findViewById(R.id.photo);
+
+        String[] pictures = trip.getPictures();
+        if (pictures != null && pictures.length > 0) {
+            Glide.with(getActivity())
+                    .load(pictures[0])
+                    .placeholder(R.drawable.placeholder)
+                    .into(photoView);
+        }
         return v;
     }
 
