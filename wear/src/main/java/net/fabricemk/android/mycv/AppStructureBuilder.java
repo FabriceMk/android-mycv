@@ -5,8 +5,8 @@ import android.content.Context;
 import android.support.wearable.view.CardFragment;
 import android.view.Gravity;
 
-import net.fabricemk.android.mycv.fragments.ImageFragment;
-import net.fabricemk.android.mycv.fragments.SendMessageToMobileFragment;
+import net.fabricemk.android.mycv.ui.fragments.ImageFragment;
+import net.fabricemk.android.mycv.ui.fragments.SendMessageToMobileFragment;
 
 import java.util.ArrayList;
 import java.util.List;

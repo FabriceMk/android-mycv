@@ -13,17 +13,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A class dedicated to the parsing of the JSON data files related to Career
+ */
 public class CareerJsonParser {
 
     public static List<CareerItem> parseLocal(Context ctxt) {
-        List<CareerItem> results;
-
         String localJson = JsonTools.readLocal(ctxt.getResources(), R.raw.career_timeline);
 
-        CareerItem[] temp = JsonTools.constructUsingGson(CareerItem[].class, localJson);
+        return parse(localJson);
+    }
 
-        results = Arrays.asList(temp);
-
+    public static List<CareerItem> parse(String json) {
+        CareerItem[] temp = JsonTools.constructUsingGson(CareerItem[].class, json);
+        List<CareerItem> results = Arrays.asList(temp);
         return results;
     }
 

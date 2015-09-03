@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv.adapters;
+package net.fabricemk.android.mycv.ui.adapters;
 
 import android.content.Context;
 import android.os.Handler;
@@ -14,7 +14,6 @@ import com.bumptech.glide.Glide;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.models.SkillSubset;
-import net.fabricemk.android.mycv.tools.AndroidTools;
 import net.fabricemk.android.mycv.tools.resources.SkillMapper;
 
 import java.util.ArrayList;

@@ -2,6 +2,9 @@ package net.fabricemk.android.mycv.models;
 
 import java.io.Serializable;
 
+/**
+ * Represents a GPS coordinate
+ */
 public class Location implements Serializable {
 
     float latitude;

@@ -5,15 +5,31 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a group of skills of the same nature (e.g: web development, languages...)
+ */
 public class SkillSubset {
 
+    /**
+     * The name of the subset
+     */
     @SerializedName("type")
     private String subsetName;
 
+    /**
+     * The list of all the skills of the subset
+     */
     private List<Skill> skills;
 
+    /**
+     * An int which can serve as an index order to compare SkillSubsts between them
+     */
     private int order;
 
+    /**
+     * Adds a skill to the subset. Doesn't check for duplicates.
+     * @param skill
+     */
     public void addSkill(Skill skill) {
         if (skills == null) {
             skills = new ArrayList<>();

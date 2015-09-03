@@ -1,15 +1,11 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +18,11 @@ import com.android.volley.toolbox.StringRequest;
 
 import net.fabricemk.android.mycv.AppController;
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.TripPagerAdapter;
-import net.fabricemk.android.mycv.extensions.volley.JsonUTF8ObjectRequest;
+import net.fabricemk.android.mycv.ui.adapters.TripPagerAdapter;
 import net.fabricemk.android.mycv.models.TripItem;
 import net.fabricemk.android.mycv.parsers.TripJsonParser;
 import net.fabricemk.android.mycv.tools.AndroidTools;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
-
-import org.json.JSONObject;
 
 import java.util.List;
 
@@ -114,7 +107,7 @@ public class TripFragment extends Fragment {
     }
 
     private void onlineMode(String json) {
-        List<TripItem> trips = TripJsonParser.parse(getActivity(), json);
+        List<TripItem> trips = TripJsonParser.parse(json);
 
         mViewPager.setAdapter(new TripPagerAdapter(getActivity(), getFragmentManager(), trips));
     }

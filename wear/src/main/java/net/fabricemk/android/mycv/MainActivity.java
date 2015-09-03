@@ -8,17 +8,13 @@ import android.support.wearable.view.GridViewPager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.wearable.CapabilityApi;
 import com.google.android.gms.wearable.CapabilityInfo;
 import com.google.android.gms.wearable.Node;
-import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
-import net.fabricemk.android.mycv.adapters.MyGridPagerAdapter;
+import net.fabricemk.android.mycv.ui.adapters.MyGridPagerAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends WearableActivity

@@ -14,15 +14,24 @@ import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.fragments.CareerFragment;
-import net.fabricemk.android.mycv.fragments.ContactFragment;
-import net.fabricemk.android.mycv.fragments.SkillFragment;
-import net.fabricemk.android.mycv.fragments.TripFragment;
+import net.fabricemk.android.mycv.ui.fragments.CareerFragment;
+import net.fabricemk.android.mycv.ui.fragments.ContactFragment;
+import net.fabricemk.android.mycv.ui.fragments.SkillFragment;
+import net.fabricemk.android.mycv.ui.fragments.TripFragment;
 
+/**
+ * The main activity of the application.
+ * Is used to navigate through a {@link NavigationView} on phones
+ * Will use a dedicated layout later on tablets.
+ *
+ * Implements the {@link IToolbarable} interface to let the fragments change the title of the main
+ * toolbar
+ */
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         IToolbarable {
 
+    // NavigationView related constants
     private static final long DRAWER_CLOSE_DELAY_MS = 300;
     private static final String NAV_ITEM_ID = "navItemId";
 
@@ -34,42 +43,47 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
+        setContentView(R.layout.activity_main);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        // load saved navigation state if present
-        if (null == savedInstanceState) {
-            mNavItemId = R.id.drawer_contact;
-        } else {
-            mNavItemId = savedInstanceState.getInt(NAV_ITEM_ID);
+        if (mDrawerLayout != null) {
+            // Load saved navigation state if present
+            if (null == savedInstanceState) {
+                mNavItemId = R.id.drawer_contact;
+            } else {
+                mNavItemId = savedInstanceState.getInt(NAV_ITEM_ID);
+            }
+
+            // Listen for navigation events
+            NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+            navigationView.setNavigationItemSelectedListener(this);
+
+            // Select the correct nav menu item
+            navigationView.getMenu().findItem(mNavItemId).setChecked(true);
+
+            // Initialize the Toolbar
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setupToolbar(toolbar);
+
+            // Load the selected fragment
+            navigate(mNavItemId);
         }
 
-        // listen for navigation events
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        // select the correct nav menu item
-        navigationView.getMenu().findItem(mNavItemId).setChecked(true);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setupToolbar(toolbar);
-
-        navigate(mNavItemId);
     }
 
     @Override
     public void setupToolbar(Toolbar toolbar) {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
-        }
 
-        // Set up the hamburger icon to open and close the drawer
-        // if a toolbar is present
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open,
-                R.string.close);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-        mDrawerToggle.syncState();
+            // Set up the hamburger icon to open and close the drawer
+            // if a toolbar is present
+            mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open,
+                    R.string.close);
+            mDrawerLayout.setDrawerListener(mDrawerToggle);
+            mDrawerToggle.syncState();
+        }
     }
 
     /**

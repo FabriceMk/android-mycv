@@ -1,21 +1,16 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.CareerPagerAdapter;
-import net.fabricemk.android.mycv.parsers.SkillJsonParser;
+import net.fabricemk.android.mycv.ui.adapters.CareerPagerAdapter;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 
 public class CareerFragment extends Fragment {

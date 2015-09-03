@@ -14,7 +14,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Subclass of JsonObjectRequest with UTF-8 as default charset
+ * Subclass of JsonObjectRequest with UTF-8 as default charset in case the server
+ * doesn't set the correct encoding in the headers
  */
 public class JsonUTF8ObjectRequest extends JsonObjectRequest {
 

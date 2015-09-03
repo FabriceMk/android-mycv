@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- All the URLs of the different endpoints used by the application -->
     <string name="url_endpoint_trip">http://mycv.android.fabricemongkhoune.net/trips.json</string>
 </resources>

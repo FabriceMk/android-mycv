@@ -9,15 +9,17 @@ import net.fabricemk.android.mycv.tools.JsonTools;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A class dedicated to the parsing of the JSON data files related to Trips
+ */
 public class TripJsonParser {
 
     public static List<TripItem> parseLocal(Context ctxt) {
         String localJson = JsonTools.readLocal(ctxt.getResources(), R.raw.trips);
-        return parse(ctxt, localJson);
+        return parse(localJson);
     }
 
-
-    public static List<TripItem> parse(Context ctxt, String json) {
+    public static List<TripItem> parse(String json) {
         TripItem[] temp = JsonTools.constructUsingGson(TripItem[].class, json);
         List<TripItem> trips = Arrays.asList(temp);
         return trips;

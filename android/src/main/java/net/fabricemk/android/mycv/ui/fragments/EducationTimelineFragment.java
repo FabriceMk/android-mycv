@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.EducationTimelineListAdapter;
+import net.fabricemk.android.mycv.ui.adapters.EducationTimelineListAdapter;
 import net.fabricemk.android.mycv.models.EducationItem;
 import net.fabricemk.android.mycv.parsers.EducationJsonParser;
 

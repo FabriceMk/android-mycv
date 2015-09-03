@@ -9,7 +9,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import net.fabricemk.android.mycv.tools.DrawingTools;
 
 /**
- * Transformation class for the Glide library for having rounded images
+ * Transformation class for the Glide library to have rounded images
  */
 public class GlideCircleTransform extends BitmapTransformation {
     public GlideCircleTransform(Context context) {

@@ -1,7 +1,6 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -12,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.adapters.SectionedGridRecyclerViewAdapter;
-import net.fabricemk.android.mycv.adapters.SkillListAdapter;
+import net.fabricemk.android.mycv.ui.adapters.SectionedGridRecyclerViewAdapter;
+import net.fabricemk.android.mycv.ui.adapters.SkillListAdapter;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.models.SkillSubset;
 import net.fabricemk.android.mycv.parsers.SkillJsonParser;

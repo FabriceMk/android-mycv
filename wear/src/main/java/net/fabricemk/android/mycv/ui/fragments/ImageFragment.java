@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.fabricemk.android.mycv.R;
-
-import org.w3c.dom.Text;
 
 public class ImageFragment extends Fragment {
 

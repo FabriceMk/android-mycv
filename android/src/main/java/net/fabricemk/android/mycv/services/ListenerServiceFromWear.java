@@ -1,12 +1,11 @@
 package net.fabricemk.android.mycv.services;
 
-import android.content.Intent;
-
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.WearableListenerService;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.tools.CommunicationTools;
+import net.fabricemk.android.mycv.tools.StringTools;
 
 public class ListenerServiceFromWear extends WearableListenerService {
 
@@ -24,7 +23,7 @@ public class ListenerServiceFromWear extends WearableListenerService {
         }
 
         if (messageEvent.getPath().equals(SEND_EMAIL_WEAR_PATH)) {
-            CommunicationTools.sendEmail(this, getString(R.string.my_mail), "");
+            CommunicationTools.sendEmail(this, StringTools.buildMailAddress(this), "");
         }
 
     }

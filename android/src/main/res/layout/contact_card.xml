@@ -40,7 +40,6 @@
                 android:text="@string/contact"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
-            <!-- TEMP -->
             <!-- Name -->
             <include layout="@layout/contact_item"
                 android:layout_width="match_parent"

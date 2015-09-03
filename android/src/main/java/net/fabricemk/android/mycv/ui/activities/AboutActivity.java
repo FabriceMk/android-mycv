@@ -7,6 +7,9 @@ import android.view.MenuItem;
 
 import net.fabricemk.android.mycv.R;
 
+/**
+ * An activity which shows the About informations of the application
+ */
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -23,7 +26,6 @@ public class AboutActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();

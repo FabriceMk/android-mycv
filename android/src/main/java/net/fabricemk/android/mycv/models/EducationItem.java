@@ -1,15 +1,33 @@
 package net.fabricemk.android.mycv.models;
 
+/**
+ * A POJO which represents a formation or a diploma obtained in a specific school
+ */
 public class EducationItem {
 
+    /**
+     * The school name
+     */
     String school;
 
+    /**
+     * The diploma's name or the formation name
+     */
     String diploma;
 
+    /**
+     * The string representation of the formation start date , doesn't follow any specific format
+     */
     String startDate;
 
+    /**
+     * The string representation of the formation end date , doesn't follow any specific format
+     */
     String endDate;
 
+    /**
+     * A description of the formation, diploma
+     */
     String description;
 
     public String getSchool() {

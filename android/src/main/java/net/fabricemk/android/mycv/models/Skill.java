@@ -1,11 +1,23 @@
 package net.fabricemk.android.mycv.models;
 
+/**
+ * A POJO which represents a certain skill
+ */
 public class Skill {
 
+    /**
+     * The skill's name
+     */
     private String name;
 
+    /**
+     * A description of the skill
+     */
     private String description;
 
+    /**
+     * A code for the resource to be used as the skill logo
+     */
     private String icon;
 
     public String getName() {

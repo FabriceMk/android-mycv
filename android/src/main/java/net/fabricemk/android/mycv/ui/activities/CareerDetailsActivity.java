@@ -22,7 +22,7 @@ import net.fabricemk.android.mycv.tools.resources.CareerMapper;
  * Activity used to host and display the Details of a Career experience/item
  *
  * Note: We fetch the infos directly from the Intent Extras.
- * The fields count is not too high and they are all simple.
+ * as the fields count is not too high and the fields are all simple.
  *
  * For more complicated objects, a implementation of the Parcelable interface
  * {@link android.os.Parcelable} or Serializable {@link java.io.Serializable}
@@ -104,6 +104,10 @@ public class CareerDetailsActivity extends AppCompatActivity {
         final String website = getIntent().getStringExtra(EXTRA_WEBSITE);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
+        /*
+         * If the website URL of the company is provided, a FAB is displayed to go to that URL
+         * Otherwise the FAB is not shown
+         */
         if (website != null && ! website.isEmpty()) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -122,11 +126,8 @@ public class CareerDetailsActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        // Handle item selection
-        switch (item.getItemId())
-        {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;

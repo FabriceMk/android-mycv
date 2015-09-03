@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv.fragments;
+package net.fabricemk.android.mycv.ui.fragments;
 
 public interface IPageable {
 

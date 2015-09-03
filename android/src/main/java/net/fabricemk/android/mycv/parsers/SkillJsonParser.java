@@ -10,17 +10,23 @@ import net.fabricemk.android.mycv.tools.JsonTools;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A class dedicated to the parsing of the JSON data files related to Skills
+ */
 public class SkillJsonParser {
 
     public static SkillList parseLocal(Context ctxt) {
-        SkillList result = new SkillList();
-
         String localJson = JsonTools.readLocal(ctxt.getResources(), R.raw.skills);
 
-        SkillSubset[] temp = JsonTools.constructUsingGson(SkillSubset[].class, localJson);
+        return parse(localJson);
+    }
+
+    public static SkillList parse(String json) {
+        SkillSubset[] temp = JsonTools.constructUsingGson(SkillSubset[].class, json);
 
         List<SkillSubset> subsets = Arrays.asList(temp);
 
+        SkillList result = new SkillList();
         result.buildFromList(subsets);
 
         return result;

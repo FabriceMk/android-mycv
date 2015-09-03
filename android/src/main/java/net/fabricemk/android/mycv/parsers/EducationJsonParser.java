@@ -12,17 +12,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A class dedicated to the parsing of the JSON data files related to Education
+ */
 public class EducationJsonParser {
 
     public static List<EducationItem> parseLocal(Context ctxt) {
-        List<EducationItem> results;
-
         String localJson = JsonTools.readLocal(ctxt.getResources(), R.raw.education_timeline);
 
-        EducationItem[] temp = JsonTools.constructUsingGson(EducationItem[].class, localJson);
+        return parse(localJson);
+    }
 
-        results = Arrays.asList(temp);
-
+    public static List<EducationItem> parse(String json) {
+        EducationItem[] temp = JsonTools.constructUsingGson(EducationItem[].class, json);
+        List<EducationItem> results = Arrays.asList(temp);
         return results;
     }
 

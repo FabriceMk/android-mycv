@@ -1,4 +1,4 @@
-package net.fabricemk.android.mycv.adapters;
+package net.fabricemk.android.mycv.ui.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.fragments.CareerTimelineFragment;
-import net.fabricemk.android.mycv.fragments.EducationTimelineFragment;
+import net.fabricemk.android.mycv.ui.fragments.CareerTimelineFragment;
+import net.fabricemk.android.mycv.ui.fragments.EducationTimelineFragment;
 
 public class CareerPagerAdapter extends FragmentStatePagerAdapter {
 

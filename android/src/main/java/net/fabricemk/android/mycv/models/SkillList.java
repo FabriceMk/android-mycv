@@ -5,6 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * An object wich contains a dictionary of {@link SkillSubset}
+ * Serves just as a container but could do more on the {@link SkillSubset} and the {@link Skill}
+ */
 public class SkillList {
 
     /**

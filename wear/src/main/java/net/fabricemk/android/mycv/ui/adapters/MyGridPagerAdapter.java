@@ -1,18 +1,14 @@
-package net.fabricemk.android.mycv.adapters;
+package net.fabricemk.android.mycv.ui.adapters;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.wearable.view.CardFragment;
 import android.support.wearable.view.FragmentGridPagerAdapter;
-import android.view.Gravity;
 
 import net.fabricemk.android.mycv.AppStructureBuilder;
 import net.fabricemk.android.mycv.R;
-import net.fabricemk.android.mycv.fragments.ImageFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MyGridPagerAdapter extends FragmentGridPagerAdapter {

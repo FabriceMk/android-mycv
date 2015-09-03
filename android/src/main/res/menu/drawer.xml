@@ -25,19 +25,7 @@
             android:title="@string/trips"/>
     </group>
 
-    <!--<group android:id="@+id/grp3">-->
-        <!--<item-->
-            <!--android:id="@+id/drawer_hobbies"-->
-            <!--android:icon="@drawable/ic_gamepad_variant"-->
-            <!--android:title="@string/hobbies"/>-->
-    <!--</group>-->
-
     <group android:id="@+id/grp4">
-        <!--<item-->
-            <!--android:id="@+id/drawer_settings"-->
-            <!--android:icon="@drawable/ic_settings"-->
-            <!--android:title="@string/settings"/>-->
-
         <item
             android:id="@+id/drawer_about"
             android:icon="@drawable/ic_information"
