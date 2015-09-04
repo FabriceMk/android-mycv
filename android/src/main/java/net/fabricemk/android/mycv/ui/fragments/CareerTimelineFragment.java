@@ -17,6 +17,11 @@ import net.fabricemk.android.mycv.ui.activities.CareerDetailsActivity;
 
 import java.util.List;
 
+/**
+ * A fragment which shows the Job Career as a Timeline (for now just a vertical list)
+ *
+ * We can click on a Job Career to see more details
+ */
 public class CareerTimelineFragment extends Fragment
         implements IPageable, CareerTimelineListAdapter.OnItemClickListener {
 
@@ -63,7 +68,6 @@ public class CareerTimelineFragment extends Fragment
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
 
-        // TEMP
         initData();
 
         adapter = new CareerTimelineListAdapter(data);

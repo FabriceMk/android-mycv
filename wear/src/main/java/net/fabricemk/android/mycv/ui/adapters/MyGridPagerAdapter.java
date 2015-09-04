@@ -11,6 +11,9 @@ import net.fabricemk.android.mycv.R;
 
 import java.util.List;
 
+/**
+ * An adapter which holds all the logic to navigate in the matrix of fragments
+ */
 public class MyGridPagerAdapter extends FragmentGridPagerAdapter {
 
     private static final float MAXIMUM_CARD_EXPANSION_FACTOR = 3.0f;

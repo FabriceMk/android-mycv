@@ -23,6 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The fragment which displays all the skills in a RecyclerView using a special GridLayout
+ * with sections and sections headers
+ */
 public class SkillFragment extends Fragment implements SkillListAdapter.OnItemClickListener {
 
     private static final String KEY_RECYCLER_SCROLL_STATE = "RecyclerScrollState";
@@ -56,7 +60,6 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 3);
         recycler.setLayoutManager(layoutManager);
 
-
         initData();
 
         adapter = new SkillListAdapter(data);
@@ -84,7 +87,7 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
                 adapter);
         mSectionedAdapter.setSections(sections.toArray(dummy));
 
-        //Apply this adapter to the RecyclerView
+        // Apply this adapter to the RecyclerView
         recycler.setAdapter(mSectionedAdapter);
 
         return v;

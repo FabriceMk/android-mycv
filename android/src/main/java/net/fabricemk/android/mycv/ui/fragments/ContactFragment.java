@@ -17,6 +17,19 @@ import net.fabricemk.android.mycv.tools.CommunicationTools;
 import net.fabricemk.android.mycv.tools.StringTools;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 
+/**
+ * A Fragment which shows the Contact card.
+ * Uses a CollapsingToolbar with a Hero image.
+ *
+ * Several social interactions can be done from this fragment like:
+ * - emailing me
+ * - adding me in the contact book (with confirmation)
+ * - go to my website
+ * - go to see my different social networks profiles like LinkedIn, G+ or Github
+ *
+ * Everything is done with Intents to avoid unnecessary permissions and provide a standard
+ * and predictible behavior as I don't need any custom interactions. That's the Android way :p
+ */
 public class ContactFragment extends Fragment {
 
     Toolbar mToolbar;

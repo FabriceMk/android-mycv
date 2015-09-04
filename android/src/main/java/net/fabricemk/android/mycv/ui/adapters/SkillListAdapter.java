@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This is the adapter for the RecyclerView used to display the Skills List
+ */
 public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.SkillItemViewHolder>
     implements View.OnClickListener {
 
@@ -99,9 +102,7 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
     }
 
 
-
     public static class SkillItemViewHolder extends RecyclerView.ViewHolder {
-
         ImageView icon;
         TextView text;
 

@@ -19,6 +19,9 @@ import net.fabricemk.android.mycv.tools.resources.CareerMapper;
 
 import java.util.List;
 
+/**
+ * This is the adapter for the RecyclerView used to display the Career timeline
+ */
 public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimelineListAdapter.CareerItemViewHolder> {
 
     Context ctxt;

@@ -19,6 +19,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.TripItem;
 
+/**
+ * A fragment which displays all the informations about a specific trip/exhibition
+ *
+ * Depending of the availability of some data like photos, it may hide some views
+ */
 public class TripItemFragment extends Fragment implements OnMapReadyCallback {
 
     private static final String TRIP_ITEM_KEY = "TripItemFragment.trip";
@@ -69,12 +74,18 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
 
         photoView = (ImageView) v.findViewById(R.id.photo);
 
+        /*
+         * If some pictures URL are provided, we try to load them with Glide
+         * otherwise we hide the view
+         */
         String[] pictures = trip.getPictures();
         if (pictures != null && pictures.length > 0) {
             Glide.with(getActivity())
                     .load(pictures[0])
                     .placeholder(R.drawable.placeholder)
                     .into(photoView);
+        } else {
+            photoView.setVisibility(View.GONE);
         }
         return v;
     }
@@ -88,6 +99,8 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
         }
 
     }
+
+    // As we are using a MapView, we need to override a lot of Lifecycle methods
 
     @Override
     public void onResume() {
@@ -117,13 +130,6 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap map) {
         googleMap = map;
-
-//        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-//            @Override
-//            public void onMapClick(LatLng point) {
-//                //TODO: your onclick stuffs
-//            }
-//        });
 
         // Config markers
         if (needsInit) {

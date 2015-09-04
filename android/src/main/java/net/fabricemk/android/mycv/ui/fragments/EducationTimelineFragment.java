@@ -15,6 +15,12 @@ import net.fabricemk.android.mycv.parsers.EducationJsonParser;
 
 import java.util.List;
 
+/**
+ * A fragment which shows the Education background as a Timeline (for now just a vertical list)
+ *
+ * Each diploma/formation is represented by a card with all the details and no deeper interactions
+ * are possible
+ */
 public class EducationTimelineFragment extends Fragment
         implements IPageable {
 
@@ -63,7 +69,6 @@ public class EducationTimelineFragment extends Fragment
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
 
-        // TEMP
         initData();
 
         adapter = new EducationTimelineListAdapter(data);

@@ -26,6 +26,17 @@ import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 
 import java.util.List;
 
+/**
+ * A fragment which displays the different trips/exhibitions
+ * It uses a ViewPager where each trip/exhibition is in a specific fragment
+ *
+ * This fragment uses some network capabilities if available:
+ * If an Internet connection is detected, it tries to load a remote JSON with Volley
+ * as the data source and it also uses a MapView to display the location of the trip
+ *
+ * If no connection is detected, it fallbacks on a local JSON file and a Snackbar notify the user
+ * that he is in a offline mode
+ */
 public class TripFragment extends Fragment {
     ViewGroup mRoot;
 
@@ -49,6 +60,7 @@ public class TripFragment extends Fragment {
         mToolbar = (Toolbar) v.findViewById(R.id.toolbar);
         mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
 
+        // Small hack to have cards which break the edge of the Toolbar
         int margin = (int)getResources().getDimension(R.dimen.viewpager_special_margin);
         mViewPager.setPageMargin(-margin);
 
@@ -102,6 +114,9 @@ public class TripFragment extends Fragment {
             // Adding request to request queue
             AppController.getInstance().addToRequestQueue(stringRequest);
         } else {
+            /*
+             * No connection, we use the offline mode with local data source
+             */
             offlineMode();
         }
     }
@@ -121,12 +136,12 @@ public class TripFragment extends Fragment {
 
         Snackbar
             .make(mRoot, R.string.maps_no_connection, Snackbar.LENGTH_LONG)
-            .setAction(R.string.snackbar_turn_on_connection, new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AndroidTools.launchWirelessSettings(getActivity());
-                }
-            })
+//            .setAction(R.string.snackbar_turn_on_connection, new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    AndroidTools.launchWirelessSettings(getActivity());
+//                }
+//            })
             .show();
 
         mViewPager.setAdapter(new TripPagerAdapter(getActivity(), getFragmentManager(), trips));

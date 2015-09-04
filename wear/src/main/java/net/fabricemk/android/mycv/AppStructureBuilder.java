@@ -11,6 +11,10 @@ import net.fabricemk.android.mycv.ui.fragments.SendMessageToMobileFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tool class which build all the fragments of the application and put it in a matrix
+ * ready to be used by a GridViewPager Adapter
+ */
 public class AppStructureBuilder {
 
     private static final float MAXIMUM_CARD_EXPANSION_FACTOR = 3.0f;

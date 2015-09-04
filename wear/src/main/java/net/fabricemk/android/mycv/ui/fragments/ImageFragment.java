@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import net.fabricemk.android.mycv.R;
 
+/**
+ * A fragment used to display a centered full screen image with an optional description
+ */
 public class ImageFragment extends Fragment {
 
     public static final String KEY_TITLE_RESOURCE = "ImageFragment_title";

@@ -13,6 +13,13 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
+ * This is a special ViewAdapter created by Gabriele Mariotti
+ *
+ * It's an adapter which uses a {@link GridLayoutManager} but allows the creation of sections
+ * and allow a header layout for each of those sections
+ *
+ * Comes from this gist: https://gist.github.com/gabrielemariotti/e81e126227f8a4bb339c
+ *
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
 public class SectionedGridRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

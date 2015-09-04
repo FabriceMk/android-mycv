@@ -13,6 +13,10 @@ import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.ui.adapters.CareerPagerAdapter;
 import net.fabricemk.android.mycv.ui.activities.IToolbarable;
 
+/**
+ * A fragment which actually displays the Job Career and the Education timeline with a ViewPager and
+ * tabs
+ */
 public class CareerFragment extends Fragment {
 
     Toolbar mToolbar;
@@ -47,6 +51,7 @@ public class CareerFragment extends Fragment {
 
         mViewPager.setAdapter(new CareerPagerAdapter(getActivity(), getFragmentManager()));
 
+        // Populate the Tabs with the informations of the ViewPager
         mTabLayout.setupWithViewPager(mViewPager);
     }
 

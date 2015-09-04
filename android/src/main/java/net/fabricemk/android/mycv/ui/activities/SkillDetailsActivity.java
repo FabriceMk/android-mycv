@@ -21,6 +21,11 @@ import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.tools.resources.SkillMapper;
 
+/**
+ * The activity shows the details of a specific skill
+ *
+ * For now the Lollipop transitions are deactivated
+ */
 public class SkillDetailsActivity extends AppCompatActivity {
 
     private static final String EXTRA_TITLE = "net.fabricemk.android.mycv.title";
@@ -98,11 +103,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;

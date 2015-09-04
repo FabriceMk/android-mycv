@@ -9,6 +9,9 @@ import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.ui.fragments.CareerTimelineFragment;
 import net.fabricemk.android.mycv.ui.fragments.EducationTimelineFragment;
 
+/**
+ * The adapter class which displays both Career Fragment and Education Fragment in a ViewPager
+ */
 public class CareerPagerAdapter extends FragmentStatePagerAdapter {
 
     Context ctxt = null;
@@ -37,14 +40,6 @@ public class CareerPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public String getPageTitle(int position) {
-//        String title;
-//        try {
-//            title = ((IPageable) getItem(position)).getTitle();
-//        } catch (ClassCastException e) {
-//            title = ctxt.getString(R.string.no_title);
-//        }
-//
-//        return title;
         String title;
         switch (position) {
             case 0:

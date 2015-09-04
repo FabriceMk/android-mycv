@@ -19,6 +19,9 @@ import net.fabricemk.android.mycv.IHandheldCommunication;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.tools.UITools;
 
+/**
+ * A fragment which only shows an action button to request a mail send to the best paired device
+ */
 public class SendMessageToMobileFragment extends Fragment {
 
     private static final String GO_WEBSITE_WEAR_PATH = "/go-website-wear";
@@ -65,9 +68,13 @@ public class SendMessageToMobileFragment extends Fragment {
         return v;
     }
 
+    /**
+     * Tries to send an intent for email sending to the best paired device
+     */
     private void sendMessage() {
         IHandheldCommunication provider = (IHandheldCommunication) getActivity();
 
+        // Get all the needed stuff to communicate with the paired device
         Node mNode = provider.getNode();
         GoogleApiClient mGoogleApiClient = provider.getGoogleApiClient();
 

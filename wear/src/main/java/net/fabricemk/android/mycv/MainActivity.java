@@ -17,6 +17,9 @@ import net.fabricemk.android.mycv.ui.adapters.MyGridPagerAdapter;
 
 import java.util.Set;
 
+/*
+ * The main activity of the Wear companion app
+ */
 public class MainActivity extends WearableActivity
         implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -31,6 +34,8 @@ public class MainActivity extends WearableActivity
 
     private static final long CONNECTION_TIME_OUT_MS = 2000;
 
+    // A code used by both the wear companion app and the mobile app to authorize
+    // the Wear app to do some actions on the paired mobile
     private static final String SEND_ME_EMAIL = "send_me_email";
 
     @Override
@@ -44,6 +49,7 @@ public class MainActivity extends WearableActivity
         final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
         pager.setAdapter(new MyGridPagerAdapter(this, getFragmentManager()));
 
+        // We use a dots indicator as we have several columns
         DotsPageIndicator dots = (DotsPageIndicator) findViewById(R.id.indicator);
         dots.setPager(pager);
 
@@ -89,6 +95,9 @@ public class MainActivity extends WearableActivity
         }
     }
 
+    /*
+     * Analyzes if the Wear app can use a paired devide to send mails
+     */
     private void setupEmailCapabilities() {
 
         new Thread(new Runnable() {
@@ -119,11 +128,18 @@ public class MainActivity extends WearableActivity
 
     }
 
+    /**
+     * Lists all the paired devices and launch the selection of the best one
+     * @param capabilityInfo
+     */
     private void updateEmailCapability(CapabilityInfo capabilityInfo) {
         Set<Node> connectedNodes = capabilityInfo.getNodes();
         mNode = pickBestNode(connectedNodes);
     }
 
+    /**
+     * Select the best paired device able to send a mail
+     */
     private Node pickBestNode(Set<Node> nodes) {
         Node bestNode = null;
         // Find a nearby node or pick one arbitrarily
@@ -142,17 +158,6 @@ public class MainActivity extends WearableActivity
     @Override
     public void onConnected(Bundle bundle) {
         setupEmailCapabilities();
-
-
-//        Wearable.NodeApi.getConnectedNodes(mGoogleApiClient).setResultCallback(new ResultCallback<NodeApi.GetConnectedNodesResult>() {
-//            @Override
-//            public void onResult(NodeApi.GetConnectedNodesResult nodes) {
-//                for (Node node : nodes.getNodes()) {
-//                    allNodes = new ArrayList<Node>();
-//                    allNodes.add(node);
-//                }
-//            }
-//        });
     }
 
     @Override

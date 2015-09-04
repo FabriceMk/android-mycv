@@ -10,6 +10,9 @@ import net.fabricemk.android.mycv.models.TripItem;
 
 import java.util.List;
 
+/**
+ * This is the adapter for the ViewPager used to display the different trips/exhibitions
+ */
 public class TripPagerAdapter extends FragmentStatePagerAdapter {
 
     Context ctxt = null;
