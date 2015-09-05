@@ -9,7 +9,7 @@ android {
         applicationId "net.fabricemk.android.mycv"
         minSdkVersion 22
         targetSdkVersion 22
-        versionCode 1
+        versionCode 100
         versionName "1.0"
     }
     buildTypes {

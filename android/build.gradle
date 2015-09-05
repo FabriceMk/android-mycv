@@ -8,7 +8,7 @@ android {
         applicationId "net.fabricemk.android.mycv"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 1
+        versionCode 100
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -95,5 +95,9 @@ dependencies {
 
     androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
 
+}
 
+if(project.hasProperty("MyCV.signing")
+        && new File(project.property("MyCV.signing") + ".gradle").exists()) {
+    apply from: project.property("MyCV.signing") + ".gradle";
 }
