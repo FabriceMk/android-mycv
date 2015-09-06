@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/details_list_item_height"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/details_list_item_height"
     android:paddingLeft="@dimen/spacing_medium"
     android:background="@drawable/item_white_background"
     android:clickable="true">
@@ -22,7 +23,8 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:id="@+id/row_1"
         android:layout_toRightOf="@+id/icon"

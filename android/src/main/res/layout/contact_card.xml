@@ -43,21 +43,21 @@
             <!-- Name -->
             <include layout="@layout/contact_item"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/details_list_item_height"
+                android:layout_height="wrap_content"
                 android:id="@+id/name_item"
                 />
 
             <!-- Mail -->
             <include layout="@layout/contact_item"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/details_list_item_height"
+                android:layout_height="wrap_content"
                 android:id="@+id/mail_item"
                 />
 
             <!-- Site -->
             <include layout="@layout/contact_item"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/details_list_item_height"
+                android:layout_height="wrap_content"
                 android:id="@+id/site_item"
                 />
 
