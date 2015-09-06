@@ -7,7 +7,7 @@
               {
                 "name": "Android Development",
                 "icon": "android",
-                "description": "I've started Android development since 2010 as a hobby and while I haven't been a full time Android developer for long periods of time, I have continued to follow the Android development scene.\n\nMy first real Android project was a 6 months long prototype development in 2010-2011 for an application able to help students to organize their homework schedule. At that time, Android latest version was only Gingerbread and the tools were far from being as powerful as today's. They were a lot of limitations in the APIs too.\n\nDuring my three years as the CTO at Appturbo, I was also in charge of developing and maintaining the Android version of App of the Day. I used the power of the Android platform to not only port the iOS version but to also add powerful custom analytics suited to the Appturbo business (which couldn't be done on iOS due to the SDK limitations). The application received a major update in 2015 with a brand new Material Design, integration of other analytics SDKs like Facebook, Fabric...\n\nI watch the Google I/O every year and I follow a lot of Android development communities on Google+\n\nSkills:\n- Android Studio and gradle build system\n- Android SDK (Java)\n- Lot of sensibility on design and UX (lot of interest in Google Material Design)\n- Knowledge of popular useful third-party libraries like Glide, Volley, Picasso, Gson...\n- Android Testing with JUnit and Espresso\n- Google Cloud Messenging and AppEngine Backend"
+                "description": "I've started Android development since 2010 as a hobby and while I haven't been a full time Android developer for long periods of time, I have continued to follow the Android development scene.\n\nMy first real Android project was a 6 months long prototype development in 2010-2011 for an application able to help students to organize their homework schedule. At that time, Android latest version was only Gingerbread and the tools were far from being as powerful as today's. They were a lot of limitations in the APIs too.\n\nDuring my three years as the CTO at Appturbo, I was also in charge of developing and maintaining the Android version of App of the Day. I used the power of the Android platform to not only port the iOS version but to also add powerful custom analytics suited to the Appturbo business (which couldn't be done on iOS due to the SDK limitations). The application received a major update in 2015 with a brand new Material Design, a lot of new functionalities for the user and the integration of other analytics SDKs like Facebook, Fabric...\n\nI watch the Google I/O every year and I follow a lot of Android development communities on Google+\n\nSkills:\n- Android Studio and gradle build system\n- Android SDK (Java)\n- Lot of sensibility on design and UX (lot of interest in Google Material Design)\n- Knowledge of popular useful third-party libraries like Glide, Volley, Picasso, Gson...\n- Android Testing with JUnit and Espresso\n- Google Cloud Messenging and AppEngine Backend"
               }
             ]
   }
@@ -20,7 +20,7 @@
               {
                 "name": "Java",
                 "icon": "java",
-                "description": "I have developed in Java since University where Java was the main programming language. At first it was mainly for Java SE applications but since 2010 I use it mainly for Android development or AppEngine development."
+                "description": "I have developed in Java since University where it was the main programming language in classes. At first it was for Java SE applications but since 2010 I use it mainly for Android development"
               },
               {
                 "name": "Ruby",
@@ -52,22 +52,22 @@
               {
                 "name": "Sinatra",
                 "icon": "sinatra",
-                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It lightweight, less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I have currently a blog powered by Sinatra, using the Slim templating engine, Sass which parses all the data from markdown files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\n https://github.com/FabriceMk/sinatra-noribento"
+                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It lightweight, less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I have currently a blog powered by Sinatra,  which parses all the data from markdown files. It also uses the Slim templating engine and an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
               },
               {
                 "name": "CodeIgniter",
                 "icon": "codeigniter",
-                "description": "CodeIgniter was a very popular PHP framework several years ago before Symfony, Laravel, FuelPHP became popular. It's a bit outdated now but it served its purpose during the first 2 years of Appturbo where I worked with it by having a quick learning curve and by being by far better than using flat PHP or building a custom framework."
+                "description": "CodeIgniter was a very popular PHP framework several years ago before Symfony or Laravel became widely used. It's a bit outdated now but it served its purpose during the first 2 years of Appturbo by having a quick learning curve and by being by far more maintenable than using from scratch PHP or building a custom framework."
               },
               {
                 "name": "HTML",
                 "icon": "html",
-                "description": "I'm not a front developer but of course I had to manipulate HTML when building our internal tools/CRM.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
+                "description": "I'm not a front developer but of course I have to manipulate HTML when building  internal tools/CRMs.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
               },
               {
                 "name": "Javascript",
                 "icon": "javascript",
-                "description": "As for HTML, being mainly a back-end developer I have not used Javascript a lot except for some jQuery before. I have broken the ice with it a little bit with a small Polymer application but I still need to learn more. I would like to try some things with node.js someday."
+                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery. I have broken the ice with it a little bit with a small Polymer application but I still need to learn more. I would like to try some things with node.js someday."
               },
               {
                 "name": "Sass",
@@ -77,12 +77,12 @@
               {
                 "name": "Amazon Web Services",
                 "icon": "aws",
-                "description": "Amazon offers a large panel of Web Services. For Appturbo, we began using AWS for hosting some of our tools and backends on Elastic Beanstalk in order to decrease the number of our own dedicated servers which too much needed maintenance. We also used DynamoDB to store all the analytics collected by our Android application."
+                "description": "Amazon offers a large panel of Web Services. At Appturbo, we began using AWS and hosting some of our tools and backends on Elastic Beanstalk in order to decrease the number of our own dedicated servers which needed too much maintenance. We also used DynamoDB to store all the analytics collected by our Android application."
               },
               {
                 "name": "Google App Engine",
                 "icon": "gae",
-                "description": "I have used AppEngine with both Java and Python for some Proof of Concepts and benchmarking at Appturbo. The main usage I have now with AppEngine is through the AppEngine Backend and Android Studio to create a REST API and automatically generate the Android client compatible with it."
+                "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the AppEngine Backend and Android Studio to create a REST API and automatically generate the Android client compatible with it."
               }
             ]
   }
@@ -122,12 +122,12 @@
               {
                 "name": "Artificial Intelligence",
                 "icon": "ai",
-                "description": "Artificial Intelligence has a lot of different fields and during my Master in University of Paris 6 I had the occasion to study some of them. My favourites are Multi-agent systems, Constraint Programming and Natural Language Processing.\n\nThe internship of my last year was about a conversational agent which had a powerful syntaxic and semantic parser using differents tools from Knowledge Engineering and NLP (like OWL, RDF).\n\nAlso the first Android application I had to create at ILObjects was for a scheduling problem and was solved by implementing a custom Constraint Solver."
+                "description": "Artificial Intelligence has a lot of different fields and during my Master in University of Paris 6 I had the occasion to study some of them. My favourites are Constraint Programming and Natural Language Processing.\n\nThe internship of my last year was about a conversational agent which had a powerful syntaxic and semantic parser using differents tools from Knowledge Engineering and NLP (like OWL, RDF).\n\nAlso the first Android application I had to create at ILObjects was for a scheduling problem and was solved by implementing a custom Constraint Solver."
               },
               {
                 "name": "Linux System Administration",
                 "icon": "sysadmin",
-                "description": "I'm not a full sysadmin but I have managed dedicated Linux servers for several years for basic use-cases like Apache/SQL, FTP.\n\nAt Appturbo, before switching to Amazon AWS I had to manage 10 dedicated servers for our architecture. From installing new servers, securing them to some extent, configuring the backup solutions and doing their maintenance."
+                "description": "I'm not a full sysadmin but I have managed dedicated Linux servers for several years for basic use-cases like Apache/SQL and FTP.\n\nAt Appturbo, before switching to Amazon AWS I had to manage 10 dedicated servers for our architecture. From installing new servers, securing them to some extent, configuring the backup solutions and doing their maintenance."
               }
             ]
   },
@@ -149,7 +149,7 @@
       {
         "name": "Japanese",
         "icon": "jp",
-        "description": "JLPT N4 officially obtained in 2013, currently JLPT N3 level.\n\nFrom April 2015 to September 2015, I have attended the Coto Language Academy school in Iidabashi (Tokyo) following a 6 months intensive course with 3 hours every weekday in small classes of 5 people."
+        "description": "JLPT N4 officially obtained in 2013, currently JLPT N3 level.\n\nFrom April 2015 to September 2015, I have attended the Coto Language Academy school in Iidabashi (Tokyo) for a 6 months intensive course with 3 hours every weekday in small classes of 5 people."
       }
     ]
   }
