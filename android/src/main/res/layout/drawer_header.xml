@@ -39,6 +39,7 @@
         android:layout_marginStart="@dimen/spacing_large"
         android:layout_marginBottom="@dimen/spacing_large"
         android:text="@string/my_mail"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
