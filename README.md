@@ -33,7 +33,7 @@ This application is another way to show my own CV. As it is also a playground I 
 * Supports device orientation changes
 * Compatible with API level 14+ (Android 4.0 Ice Cream Sandwich)
 * Material Design
-* Avoid unnecessary permissions when possible by using Intents when possible
+* Avoid unnecessary permissions when possible by using Intents when possible, the only permissions required are INTERNET_CONNECTION and WRITE_EXTERNAL_STORAGE. The latest is a requirement for the Google Maps API for caching tiles on external storage but the app in itself won't use the external storage or read/write in the media folders
 * Works mainly offline without internet connection (but some parts of the app may have a better experience when connected)
 
 #### Usage of different Google Support Libraries like Design Support Library and AppCompat
