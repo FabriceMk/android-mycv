@@ -24,6 +24,8 @@ More about the application
 
 This application is another way to show my own CV. As it is also a playground I put different stuff in it even if it was not mandatory.
 
+![screen1](static/screen1.png) ![screen2](static/screen2.png) ![screen3](static/screen3.png)
+
 ### What's inside
 
 #### Overview
@@ -55,6 +57,12 @@ This application is another way to show my own CV. As it is also a playground I 
 #### Android Wear Companion app
 
 A small companion app has also been developed. It's very simple and should work on square and round screens.
+
+![round1](/static/round1.png)![square1](/static/square1.png)
+![round2](/static/round2.png)![square1](/static/square2.png)
+![round3](/static/round3.png)![square1](/static/square3.png)
+![round4](/static/round4.png)![square1](/static/square4.png)
+
 
 #### Google Maps API
 
