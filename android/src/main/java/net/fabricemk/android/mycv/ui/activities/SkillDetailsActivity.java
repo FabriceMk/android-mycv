@@ -1,5 +1,6 @@
 package net.fabricemk.android.mycv.ui.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,13 +12,17 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
-import android.transition.Slide;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.Skill;
@@ -57,6 +62,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         setContentView(R.layout.skill_details);
 
+        // Delay the transition
+        supportPostponeEnterTransition();
+
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -78,8 +86,22 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         int resourceId = SkillMapper.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
 
+
         Glide.with(this)
                 .load(resourceId)
+                .listener(new RequestListener<Object, GlideDrawable>() {
+
+                    @Override
+                    public boolean onException(Exception e, Object model, Target<GlideDrawable> target, boolean isFirstResource) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(GlideDrawable resource, Object model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        supportStartPostponedEnterTransition();
+                        return false;
+                    }
+                })
                 .centerCrop()
                 .crossFade()
                 .into(iconView);
@@ -94,11 +116,6 @@ public class SkillDetailsActivity extends AppCompatActivity {
     private void initActivityTransitions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 //            ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
-
-//            Slide transition = new Slide();
-//            transition.excludeTarget(android.R.id.statusBarBackground, true);
-//            getWindow().setEnterTransition(transition);
-//            getWindow().setReturnTransition(transition);
         }
     }
 
@@ -121,6 +138,4 @@ public class SkillDetailsActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 }
