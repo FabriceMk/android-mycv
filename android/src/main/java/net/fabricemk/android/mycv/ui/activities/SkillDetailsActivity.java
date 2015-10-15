@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -32,6 +34,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
     private static final String EXTRA_DESCRIPTION = "net.fabricemk.android.mycv.description";
     private static final String EXTRA_ICON = "net.fabricemk.android.mycv.icon";
 
+    // View name of the header image. Used for activity scene transitions
+    public static final String VIEW_NAME_HEADER_IMAGE = "detail:header:image";
+
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
     public static void navigate(AppCompatActivity activity, View transitionImage, Skill skill) {
@@ -41,21 +46,16 @@ public class SkillDetailsActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_ICON, skill.getIcon());
 
         ActivityOptionsCompat options = ActivityOptionsCompat
-                .makeSceneTransitionAnimation(activity, transitionImage, EXTRA_ICON);
-//        ActivityCompat.startActivity(activity, intent, options.toBundle());
-        ActivityCompat.startActivity(activity, intent, null);
+                .makeSceneTransitionAnimation(activity, new Pair<View, String>(transitionImage, VIEW_NAME_HEADER_IMAGE));
+        ActivityCompat.startActivity(activity, intent, options.toBundle());
+//        ActivityCompat.startActivity(activity, intent, null);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        initActivityTransitions();
-
         setContentView(R.layout.skill_details);
-
-//        ViewCompat.setTransitionName(findViewById(R.id.icon), EXTRA_ICON);
-//        supportPostponeEnterTransition();
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -69,6 +69,12 @@ public class SkillDetailsActivity extends AppCompatActivity {
         ImageView iconView = (ImageView) findViewById(R.id.icon);
         TextView titleView = (TextView) findViewById(R.id.title);
         TextView descriptionView = (TextView) findViewById(R.id.description);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ViewCompat.setTransitionName(iconView, VIEW_NAME_HEADER_IMAGE);
+        }
+
+//        initActivityTransitions();
 
         int resourceId = SkillMapper.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
 
@@ -87,10 +93,12 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
     private void initActivityTransitions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Slide transition = new Slide();
-            transition.excludeTarget(android.R.id.statusBarBackground, true);
-            getWindow().setEnterTransition(transition);
-            getWindow().setReturnTransition(transition);
+//            ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
+
+//            Slide transition = new Slide();
+//            transition.excludeTarget(android.R.id.statusBarBackground, true);
+//            getWindow().setEnterTransition(transition);
+//            getWindow().setReturnTransition(transition);
         }
     }
 
