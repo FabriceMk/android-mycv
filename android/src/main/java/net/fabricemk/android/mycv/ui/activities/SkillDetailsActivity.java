@@ -13,6 +13,8 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
+import android.transition.Fade;
+import android.transition.Transition;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -54,7 +56,6 @@ public class SkillDetailsActivity extends AppCompatActivity {
         ActivityOptionsCompat options = ActivityOptionsCompat
                 .makeSceneTransitionAnimation(activity, new Pair<View, String>(transitionImage, VIEW_NAME_HEADER_IMAGE));
         ActivityCompat.startActivity(activity, intent, options.toBundle());
-//        ActivityCompat.startActivity(activity, intent, null);
     }
 
     @Override
@@ -62,6 +63,14 @@ public class SkillDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.skill_details);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Transition fade = new Fade();
+            fade.excludeTarget(android.R.id.statusBarBackground, true);
+            fade.excludeTarget(android.R.id.navigationBarBackground, true);
+            getWindow().setExitTransition(fade);
+            getWindow().setEnterTransition(fade);
+        }
 
         // Delay the transition
         supportPostponeEnterTransition();
