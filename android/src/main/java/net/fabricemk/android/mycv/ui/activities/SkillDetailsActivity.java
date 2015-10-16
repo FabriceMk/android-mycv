@@ -2,6 +2,7 @@ package net.fabricemk.android.mycv.ui.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -89,21 +90,21 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .load(resourceId)
-                .listener(new RequestListener<Object, GlideDrawable>() {
+                .asBitmap()
+                .listener(new RequestListener<Object, Bitmap>() {
 
                     @Override
-                    public boolean onException(Exception e, Object model, Target<GlideDrawable> target, boolean isFirstResource) {
+                    public boolean onException(Exception e, Object model, Target<Bitmap> target, boolean isFirstResource) {
                         return false;
                     }
 
                     @Override
-                    public boolean onResourceReady(GlideDrawable resource, Object model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                    public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
                         supportStartPostponedEnterTransition();
                         return false;
                     }
                 })
-                .centerCrop()
-                .crossFade()
+                .dontTransform()
                 .into(iconView);
 
         String title = getIntent().getStringExtra(EXTRA_TITLE);
