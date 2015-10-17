@@ -47,6 +47,7 @@ This application is another way to show my own CV. As it is also a playground I 
     * Auto-hide Toolbar when the content scrolls
     * Collapsible Toolbar with hero image when the content scrolls
 * Usage of ViewPager with and without Tabs indicator
+* Activity Transitions for the Skills screen
 
 #### Usage of popular third-party libraries
 
@@ -83,6 +84,5 @@ For now only simple tests are present but more will come soon
 * Usage of the database with an ORM like [SugarCRM](http://satyan.github.io/sugar/)
 * Usage of View injection library like [Butterknife](https://github.com/JakeWharton/butterknife)
 * Implement a Preference screen
-* Implement Lollipop transitions animations
 * More complex testing
 

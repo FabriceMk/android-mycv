@@ -9,23 +9,10 @@
     android:fitsSystemWindows="false"
     tools:context=".MainActivity">
 
-    <!-- A Coordinator Layout used as a super-powered FrameLayout
-     with a lot of handy stuff for handling Material Design scrolling -->
-    <android.support.design.widget.CoordinatorLayout
+    <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:fitsSystemWindows="false">
-
-
-        <FrameLayout
-            android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-
-    </android.support.design.widget.CoordinatorLayout>
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"

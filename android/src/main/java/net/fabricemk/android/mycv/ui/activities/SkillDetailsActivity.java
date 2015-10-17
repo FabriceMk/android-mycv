@@ -64,16 +64,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         setContentView(R.layout.skill_details);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Transition fade = new Fade();
-            fade.excludeTarget(android.R.id.statusBarBackground, true);
-            fade.excludeTarget(android.R.id.navigationBarBackground, true);
-            getWindow().setExitTransition(fade);
-            getWindow().setEnterTransition(fade);
-        }
 
-        // Delay the transition
-        supportPostponeEnterTransition();
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -88,14 +79,9 @@ public class SkillDetailsActivity extends AppCompatActivity {
         TextView titleView = (TextView) findViewById(R.id.title);
         TextView descriptionView = (TextView) findViewById(R.id.description);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ViewCompat.setTransitionName(iconView, VIEW_NAME_HEADER_IMAGE);
-        }
-
-//        initActivityTransitions();
+        initActivityTransitions(iconView);
 
         int resourceId = SkillMapper.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
-
 
         Glide.with(this)
                 .load(resourceId)
@@ -123,9 +109,16 @@ public class SkillDetailsActivity extends AppCompatActivity {
         descriptionView.setText(description);
     }
 
-    private void initActivityTransitions() {
+    private void initActivityTransitions(View iconView) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
+            Transition fade = new Fade();
+            fade.excludeTarget(android.R.id.statusBarBackground, true);
+            fade.excludeTarget(android.R.id.navigationBarBackground, true);
+            getWindow().setExitTransition(fade);
+            getWindow().setEnterTransition(fade);
+            // Delay the transition
+            supportPostponeEnterTransition();
+            ViewCompat.setTransitionName(iconView, VIEW_NAME_HEADER_IMAGE);
         }
     }
 
@@ -134,7 +127,6 @@ public class SkillDetailsActivity extends AppCompatActivity {
         int primary = getResources().getColor(R.color.primary);
         mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
         mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
-        //supportStartPostponedEnterTransition();
     }
 
     @Override
