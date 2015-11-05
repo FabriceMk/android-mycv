@@ -12,10 +12,19 @@ import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
 
+/**
+ * Tools related to JSON reading, processing...
+ */
 public class JsonTools {
 
     private static String LOGTAG = JsonTools.class.getSimpleName();
 
+    /**
+     * Reads a JSON resource file
+     * @param resources
+     * @param id
+     * @return
+     */
     public static String readLocal(Resources resources, int id) {
         InputStream resourceReader = resources.openRawResource(id);
         Writer writer = new StringWriter();
@@ -40,6 +49,13 @@ public class JsonTools {
     }
 
 
+    /**
+     * Builds an object from a JSON string using GSON mapping
+     * @param type
+     * @param jsonString
+     * @param <T>
+     * @return
+     */
     public static <T> T constructUsingGson(Class<T> type, String jsonString) {
         Gson gson = new GsonBuilder().create();
         return gson.fromJson(jsonString, type);

@@ -4,6 +4,9 @@ import android.content.Context;
 
 import net.fabricemk.android.mycv.R;
 
+/**
+ * Tools related to string manipulation
+ */
 public class StringTools {
 
     public static String buildMailAddress(Context ctxt) {

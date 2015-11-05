@@ -8,6 +8,9 @@ import android.graphics.Paint;
 
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 
+/**
+ * Misc tools related with drawing, colors...
+ */
 public class DrawingTools {
 
     public static int getDarkerColor(int color) {
@@ -17,6 +20,12 @@ public class DrawingTools {
         return (Color.HSVToColor(hsv));
     }
 
+    /**
+     * Fast function to create a circular version of a bitmap (inner circle)
+     * @param pool
+     * @param source
+     * @return
+     */
     public static Bitmap getCircularBitmapImage(BitmapPool pool, Bitmap source) {
         if (source == null) return null;
 

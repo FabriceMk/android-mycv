@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.provider.ContactsContract;
 
-
+/**
+ * Tools to interact with communications means (email, launch browser with a specified URL)
+ */
 public class CommunicationTools {
 
     public static void sendEmail(Context ctxt, String recipient, String message) {

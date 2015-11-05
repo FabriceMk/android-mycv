@@ -33,8 +33,6 @@ import net.fabricemk.android.mycv.tools.resources.SkillMapper;
 
 /**
  * The activity shows the details of a specific skill
- *
- * For now the Lollipop transitions are deactivated
  */
 public class SkillDetailsActivity extends AppCompatActivity {
 
@@ -53,6 +51,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_DESCRIPTION, skill.getDescription());
         intent.putExtra(EXTRA_ICON, skill.getIcon());
 
+        // Prepare the views for activity transitions
         ActivityOptionsCompat options = ActivityOptionsCompat
                 .makeSceneTransitionAnimation(activity, new Pair<View, String>(transitionImage, VIEW_NAME_HEADER_IMAGE));
         ActivityCompat.startActivity(activity, intent, options.toBundle());
@@ -64,8 +63,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         setContentView(R.layout.skill_details);
 
-
-
+        // Setup Toolbar
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -79,6 +77,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
         TextView titleView = (TextView) findViewById(R.id.title);
         TextView descriptionView = (TextView) findViewById(R.id.description);
 
+        // Init all activity transitions processing
         initActivityTransitions(iconView);
 
         int resourceId = SkillMapper.mappingIconIdFromName(getIntent().getStringExtra(EXTRA_ICON));
@@ -109,6 +108,10 @@ public class SkillDetailsActivity extends AppCompatActivity {
         descriptionView.setText(description);
     }
 
+    /**
+     * Apply activity transitions for API > Lollipop
+     * @param iconView
+     */
     private void initActivityTransitions(View iconView) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Transition fade = new Fade();
