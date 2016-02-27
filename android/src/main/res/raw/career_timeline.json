@@ -1,5 +1,16 @@
 [
   {
+    "company": "Rakuten",
+    "position": "Software Engineer",
+    "startDate": "2016-02-15",
+    "endDate": "Now",
+    "icon": "rakuten",
+    "header": "rakuten_header",
+    "description": "",
+    "details": "",
+    "website": "http://www.rakuten.com"
+  },
+  {
     "company": "Appturbo",
     "position": "CTO/Lead Developer",
     "startDate": "2012-03-05",
