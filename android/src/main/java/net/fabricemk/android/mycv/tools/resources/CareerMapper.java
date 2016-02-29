@@ -9,6 +9,7 @@ public class CareerMapper {
 
         switch (name) {
             case "appturbo": iconId = R.drawable.company_appturbo; break;
+            case "rakuten": iconId = R.drawable.company_rakuten; break;
         }
 
         return iconId;
@@ -20,6 +21,7 @@ public class CareerMapper {
 
         switch (name) {
             case "appturbo_header": iconId = R.drawable.appturbo_header; break;
+            case "rakuten_header": iconId = R.drawable.rakuten_header; break;
         }
 
         return iconId;
