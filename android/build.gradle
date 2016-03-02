@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "net.fabricemk.android.mycv"
@@ -42,8 +42,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     // Google Play Services
-    compile 'com.google.android.gms:play-services-wearable:7.8.0'
-    compile 'com.google.android.gms:play-services-maps:7.8.0'
+    compile 'com.google.android.gms:play-services-wearable:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
     // Third-party libraries
     compile 'com.makeramen:roundedimageview:2.1.1'
     compile 'com.google.code.gson:gson:2.3.+'
