@@ -1,6 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:id="@+id/grp1">
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_contact"
             android:checked="true"
@@ -8,7 +10,9 @@
             android:title="@string/contact"/>
     </group>
 
-    <group android:id="@+id/grp2">
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_career"
             android:icon="@drawable/ic_school"
@@ -25,7 +29,9 @@
             android:title="@string/trips"/>
     </group>
 
-    <group android:id="@+id/grp4">
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_about"
             android:icon="@drawable/ic_information"

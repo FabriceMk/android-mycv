@@ -22,6 +22,7 @@ public class CareerMapper {
         switch (name) {
             case "appturbo_header": iconId = R.drawable.appturbo_header; break;
             case "rakuten_header": iconId = R.drawable.rakuten_header; break;
+            default: iconId = R.drawable.bg_header3;
         }
 
         return iconId;

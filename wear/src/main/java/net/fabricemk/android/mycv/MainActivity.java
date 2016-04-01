@@ -25,6 +25,8 @@ public class MainActivity extends WearableActivity
         GoogleApiClient.OnConnectionFailedListener,
         IHandheldCommunication {
 
+    public static final int PAGER_MARGIN = 24;
+
     private BoxInsetLayout mContainerView;
 
     Node mNode; // the best device to send the message to
@@ -48,6 +50,7 @@ public class MainActivity extends WearableActivity
 
         final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
         pager.setAdapter(new MyGridPagerAdapter(this, getFragmentManager()));
+        pager.setPageMargins(PAGER_MARGIN, PAGER_MARGIN);
 
         // We use a dots indicator as we have several columns
         DotsPageIndicator dots = (DotsPageIndicator) findViewById(R.id.indicator);

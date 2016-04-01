@@ -8,7 +8,7 @@
     android:layout_height="@dimen/navigation_drawer_header_height"
     android:orientation="vertical"
     android:paddingTop="@dimen/status_bar_height"
-    android:background="@drawable/bg_header"
+    android:background="@drawable/drawer_header_background"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <com.makeramen.roundedimageview.RoundedImageView

@@ -76,7 +76,6 @@ public class CareerDetailsActivity extends AppCompatActivity {
         mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
         int headerId = CareerMapper.mappingHeaderIdFromName(getIntent().getStringExtra(EXTRA_HEADER));
-        //mCollapsingToolbarLayout.setBackgroundResource(headerId);
 
         ImageView headerView = (ImageView) findViewById(R.id.header);
         TextView companyView = (TextView) findViewById(R.id.career_details_company);
