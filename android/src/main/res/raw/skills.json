@@ -40,7 +40,7 @@
               {
                 "name": "Python",
                 "icon": "python",
-                "description": "I have learned Python during the internship of my last year in University and immediately loved it. I have used it intensively for those 6 months when I was working on a semantic and syntaxic parser. Lately I didn't have the chance to use it except for one backend project on Google AppEngine when I was at Appturbo. I also use it sometimes for small sysadmin tools."
+                "description": "I have learned Python during the internship of my last year in University and immediately loved it. I have used it intensively for those 6 months when I was working on a semantic and syntaxic parser. I still use it for AppEngine backends and sometimes for small sysadmin tools."
               }
             ]
   },
@@ -52,17 +52,17 @@
               {
                 "name": "Ruby on Rails",
                 "icon": "ror",
-                "description": "I only learned Ruby on Rails recently on a personal project. I already used an equivalent framework in PHP: Symfony2 but learning Rails is important for me as I would like to switch my Web Development skills to Ruby."
+                "description": "I use Ruby on Rails for most of my recent personal web projects."
               },
               {
                 "name": "Sinatra",
                 "icon": "sinatra",
-                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It lightweight, less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I have currently a blog powered by Sinatra,  which parses all the data from markdown files. It also uses the Slim templating engine and an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
+                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It's lightweight, has less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I currently have a blog powered by Sinatra which parses all the data from markdown files. It also uses the Slim templating engine and an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
               },
               {
-                "name": "ASP.NET MVC",
+                "name": "ASP.NET MVC/API",
                 "icon": "asp",
-                "description": ""
+                "description": "I work with ASP.NET to build APIs and Websites deployed to Azure at Rakuten. Those applications interact with MSSQL or Azure Table Storage databases, are unit tested with NUnit, FluentAssertions and moq."
               },
               {
                 "name": "CodeIgniter",
@@ -72,17 +72,17 @@
               {
                 "name": "Symfony 2",
                 "icon": "symfony",
-                "description": ""
+                "description": "Symfony 2 was introduced at Appturbo as a plan to rebuild some internal web applications written with CodeIgniter in 2014. The framework was chosen for both its functionalities and its popularity in France. It allowed the developers to build experience with larger Web frameworks, facilitate modularity and testing, use ORM etc... I mainly worked with Symfony 2 on a large REST API which was consumed by a SPA written in Angular.js 1.x"
               },
               {
                 "name": "HTML",
                 "icon": "html",
-                "description": "I'm not a front developer but of course I have to manipulate HTML when building  internal tools/CRMs.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
+                "description": "I'm not a front developer but of course I have to manipulate HTML when building internal tools/CRMs.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
               },
               {
                 "name": "Javascript",
                 "icon": "javascript",
-                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery. I have broken the ice with it a little bit with a small Polymer application but I still need to learn more. I would like to try some things with node.js someday."
+                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery. I have broken the ice with it a little bit with a small Polymer application but I still need to learn more. I recently started building some tools with Node.js at Rakuten"
               },
               {
                 "name": "Sass",
@@ -92,17 +92,17 @@
               {
                 "name": "Amazon Web Services",
                 "icon": "aws",
-                "description": "Amazon offers a large panel of Web Services. At Appturbo, we began using AWS and hosting some of our tools and backends on Elastic Beanstalk in order to decrease the number of our own dedicated servers which needed too much maintenance. We also used DynamoDB to store all the analytics collected by our Android application."
+                "description": "Amazon offers a large panel of Web Services. At Appturbo, we began using AWS and hosting some of our tools and backends on Elastic Beanstalk in order to decrease the number of our own dedicated servers which needed too much maintenance. We also used DynamoDB to store all the analytics collected by our Android application.\n\nI use AWS for most of my personal web projects."
               },
               {
                 "name": "Google App Engine",
                 "icon": "gae",
-                "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the AppEngine Backend and Android Studio to create a REST API and automatically generate the Android client compatible with it."
+                "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the Google Cloud Endpoints and Android Studio to create a REST API and automatically generate the Android client compatible with it."
               },
               {
                 "name": "Microsoft Azure",
                 "icon": "azure",
-                "description": ""
+                "description": "For all ASP.NET related developments, I use the Azure infrastructure: MVC apps, Worker Roles, Scheduler and Azure Table Storage. We use the power of Azure for scalability, Blue-Green deployments etc..."
               }
             ]
   }
@@ -120,17 +120,17 @@
               {
                 "name": "IntelliJ",
                 "icon": "intellij",
-                "description": "I have started using IntelliJ IDEA 2 years ago with additional plugins to give it the same functionalities as RubyMine, PHPStorm, PyCharm and WebStorm. So all the Web development I do is with an IntelliJ IDE. Android Studio is also based on IDEA so I became pretty much familiar with it."
+                "description": "I have started using IntelliJ IDEA in 2013 with additional plugins to give it the same functionalities as RubyMine, PHPStorm, PyCharm and WebStorm. So all the development in Ruby, PHP, Python and Javascript is done with it."
               },
               {
                 "name": "Android Studio",
                 "icon": "androidstudio",
-                "description": ""
+                "description": "Android Studio is based on IDEA so I became familiar with it quickly and I use if for all my Android projects."
               },
               {
                 "name": "Visual Studio",
                 "icon": "visualstudio",
-                "description": ""
+                "description": "I use Visual Studio for all .NET related development mainly ASP.NET. It is used in conjunction with IntelliJ Resharper Ultimate."
               },
               {
                 "name": "Gulp",

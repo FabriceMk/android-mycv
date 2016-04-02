@@ -73,7 +73,7 @@ One of the screen in the application use the Google Maps API to display a MapVie
 
 Currently, two kinds of tests are implemented:
 * Unit Testing with [JUnit 4](http://junit.org/) for the testing of model objects. Will also use Mockito later to test some simple Android functions
-* Instrumentation tests with the [Espresso framework](https://code.google.com/p/android-test-kit/wiki/Espresso)
+* Instrumentation tests with the [Espresso framework](https://google.github.io/android-testing-support-library/)
 
 For now only simple tests are present but more will come soon
 
