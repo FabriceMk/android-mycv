@@ -41,6 +41,7 @@ dependencies {
     compile 'com.android.support:palette-v7:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
     // Google Play Services
     compile 'com.google.android.gms:play-services-wearable:8.4.0'
     compile 'com.google.android.gms:play-services-maps:8.4.0'
@@ -56,6 +57,8 @@ dependencies {
     // Unit testing dependencies
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.+'
+
+
     androidTestCompile('com.android.support.test:runner:0.5') {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs'
@@ -66,7 +69,7 @@ dependencies {
         exclude group: 'com.google.code.findbugs'
     }
     // Set this dependency to build and run Espresso tests
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs'
     }
@@ -82,7 +85,19 @@ dependencies {
         exclude module: 'recyclerview-v7'
     }
     androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
-    compile 'com.android.support:support-v4:23.2.1'
+
+    /*
+        All direct/transitive dependencies shared between your test and production APKs need to be
+        excluded from the test APK! This is necessary because both APKs will contain the same classes. Not
+        excluding these dependencies from your test configuration will result in an dex pre-verifier error
+        at runtime. More info in this tools bug: (https://code.google.com/p/android/issues/detail?id=192497)
+    */
+    configurations.compile.dependencies.each { compileDependency ->
+        println "Excluding compile dependency: ${compileDependency.getName()}"
+        configurations.androidTestCompile.dependencies.each { androidTestCompileDependency ->
+            configurations.androidTestCompile.exclude module: "${compileDependency.getName()}"
+        }
+    }
 }
 
 if(project.hasProperty("MyCV.signing")
