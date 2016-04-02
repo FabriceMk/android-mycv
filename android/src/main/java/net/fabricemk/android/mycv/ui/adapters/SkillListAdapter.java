@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.Skill;
 import net.fabricemk.android.mycv.models.SkillSubset;
-import net.fabricemk.android.mycv.tools.resources.SkillMapper;
+import net.fabricemk.android.mycv.tools.ResourcesMapperTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +70,7 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
 
         holder.text.setText(flatSkillList.get(position).getName());
 
-        int resourceId = SkillMapper.mappingIconIdFromName(skill.getIcon());
+        int resourceId = ResourcesMapperTools.getSkillIconId(ctxt, skill.getIcon());
         Glide.with(ctxt)
                 .load(resourceId)
                 .centerCrop()

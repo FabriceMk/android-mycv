@@ -20,12 +20,17 @@
               {
                 "name": "Java",
                 "icon": "java",
-                "description": "I have developed in Java since University where it was the main programming language in classes. At first it was for Java SE applications but since 2010 I use it mainly for Android development"
+                "description": "I have developed in Java since University where it was the main programming language in classes. At the beginning I used it for Java SE applications but since 2010 I use it mainly for Android development"
               },
               {
                 "name": "Ruby",
                 "icon": "ruby",
                 "description": "I have started to learn Ruby in 2014 in order to build Websites with frameworks like Ruby on Rails or Sinatra because I was looking for an alternative to PHP. While I have no professional experience with it, I have started using it for my personal blog/sites and I want to learn more about it as I find it elegant in many ways."
+              },
+              {
+                "name": "C#",
+                "icon": "csharp",
+                "description": "I started to build C# and .NET Windows applications at University. Since I joined Rakuten in 2016, I use it to build APIs and websites with ASP.NET"
               },
               {
                 "name": "PHP",
@@ -55,9 +60,19 @@
                 "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It lightweight, less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I have currently a blog powered by Sinatra,  which parses all the data from markdown files. It also uses the Slim templating engine and an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
               },
               {
+                "name": "ASP.NET MVC",
+                "icon": "asp",
+                "description": ""
+              },
+              {
                 "name": "CodeIgniter",
                 "icon": "codeigniter",
-                "description": "CodeIgniter was a very popular PHP framework several years ago before Symfony or Laravel became widely used. It's a bit outdated now but it served its purpose during the first 2 years of Appturbo by having a quick learning curve and by being by far more maintenable than using from scratch PHP or building a custom framework."
+                "description": "CodeIgniter was a very popular PHP framework several years ago before Symfony or Laravel became widely used. It's a bit outdated now but it served its purpose during the first 2 years of Appturbo (2012) by having a quick learning curve and by being by far more maintenable than using barebones PHP or building a custom framework."
+              },
+              {
+                "name": "Symfony 2",
+                "icon": "symfony",
+                "description": ""
               },
               {
                 "name": "HTML",
@@ -83,6 +98,11 @@
                 "name": "Google App Engine",
                 "icon": "gae",
                 "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the AppEngine Backend and Android Studio to create a REST API and automatically generate the Android client compatible with it."
+              },
+              {
+                "name": "Microsoft Azure",
+                "icon": "azure",
+                "description": ""
               }
             ]
   }
@@ -101,6 +121,16 @@
                 "name": "IntelliJ",
                 "icon": "intellij",
                 "description": "I have started using IntelliJ IDEA 2 years ago with additional plugins to give it the same functionalities as RubyMine, PHPStorm, PyCharm and WebStorm. So all the Web development I do is with an IntelliJ IDE. Android Studio is also based on IDEA so I became pretty much familiar with it."
+              },
+              {
+                "name": "Android Studio",
+                "icon": "androidstudio",
+                "description": ""
+              },
+              {
+                "name": "Visual Studio",
+                "icon": "visualstudio",
+                "description": ""
               },
               {
                 "name": "Gulp",
@@ -138,18 +168,18 @@
     [
       {
         "name": "French",
-        "icon": "fr",
+        "icon": "lang_fr",
         "description": "Native"
       },
       {
         "name": "English",
-        "icon": "en",
-        "description": "Full Professional Proficiency"
+        "icon": "lang_en",
+        "description": "Full Professional Proficiency. TOEIC score: 990"
       },
       {
         "name": "Japanese",
-        "icon": "jp",
-        "description": "Conversational level. JLPT N3 officially obtained in 2015.\n\nFrom April 2015 to September 2015, I have attended the Coto Language Academy school in Iidabashi (Tokyo) for a 6 months intensive course with 3 hours every weekday in small classes of 5 people."
+        "icon": "lang_jp",
+        "description": "Conversational level. JLPT N3 officially obtained in 2015."
       }
     ]
   }

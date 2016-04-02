@@ -15,7 +15,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.CareerItem;
-import net.fabricemk.android.mycv.tools.resources.CareerMapper;
+import net.fabricemk.android.mycv.tools.ResourcesMapperTools;
 
 import java.util.List;
 
@@ -62,7 +62,7 @@ public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimeli
 
         careerItemViewHolder.description.setText(item.getDescription());
 
-        int iconId = CareerMapper.mappingIconIdFromName(item.getIcon());
+        int iconId = ResourcesMapperTools.getCompanyIconId(ctxt, item.getIcon());
 
         if (iconId != 0) {
             Glide.with(ctxt)

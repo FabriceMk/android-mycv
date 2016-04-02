@@ -16,7 +16,7 @@ import android.widget.TextView;
 import net.fabricemk.android.mycv.R;
 import net.fabricemk.android.mycv.models.CareerItem;
 import net.fabricemk.android.mycv.tools.CommunicationTools;
-import net.fabricemk.android.mycv.tools.resources.CareerMapper;
+import net.fabricemk.android.mycv.tools.ResourcesMapperTools;
 
 /**
  * Activity used to host and display the Details of a Career experience/item
@@ -75,7 +75,7 @@ public class CareerDetailsActivity extends AppCompatActivity {
         mCollapsingToolbarLayout.setTitle(title);
         mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
-        int headerId = CareerMapper.mappingHeaderIdFromName(getIntent().getStringExtra(EXTRA_HEADER));
+        int headerId = ResourcesMapperTools.getHeaderId(this, getIntent().getStringExtra(EXTRA_HEADER));
 
         ImageView headerView = (ImageView) findViewById(R.id.header);
         TextView companyView = (TextView) findViewById(R.id.career_details_company);
