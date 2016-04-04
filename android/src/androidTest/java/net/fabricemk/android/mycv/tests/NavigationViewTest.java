@@ -1,6 +1,7 @@
 package net.fabricemk.android.mycv.tests;
 
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.contrib.DrawerActions;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.TextView;
@@ -41,20 +42,20 @@ public class NavigationViewTest extends ActivityInstrumentationTestCase2<MainAct
      */
     @SmallTest
     public void testNavigationViewItemClick() {
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
 
         onView(withText(R.string.career)).perform(click());
         ToolbarMatcher.matchToolbarTitle(getActivity().getString(R.string.career));
 
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(withText(R.string.skills)).perform(click());
         ToolbarMatcher.matchToolbarTitle(getActivity().getString(R.string.skills));
 
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(withText(R.string.trips)).perform(click());
         ToolbarMatcher.matchToolbarTitle(getActivity().getString(R.string.trips));
 
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(withText(R.string.about)).perform(click());
         ToolbarMatcher.matchToolbarTitle(getActivity().getString(R.string.about));
     }
@@ -65,7 +66,7 @@ public class NavigationViewTest extends ActivityInstrumentationTestCase2<MainAct
      */
     @SmallTest
     public void testNavigationViewBackButton() {
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(allOf(withId(R.id.title), instanceOf(TextView.class), withText(R.string.contact)))
                 .check(matches(withText(R.string.contact)));
         pressBack();
@@ -78,7 +79,7 @@ public class NavigationViewTest extends ActivityInstrumentationTestCase2<MainAct
      */
     @SmallTest
     public void testNavigationViewNotAvailable() {
-        openDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(withText(R.string.about)).perform(click());
         onView(withId(R.id.drawer_layout)).check(doesNotExist());
     }
