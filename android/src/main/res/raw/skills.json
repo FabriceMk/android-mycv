@@ -62,7 +62,7 @@
               {
                 "name": "ASP.NET MVC/API",
                 "icon": "asp",
-                "description": "I work with ASP.NET to build APIs and Websites deployed to Azure at Rakuten. Those applications interact with MSSQL or Azure Table Storage databases, are unit tested with NUnit, FluentAssertions and moq."
+                "description": "I work with ASP.NET to build APIs and Websites deployed to Azure at Rakuten. Those applications typically interact with MSSQL, Azure Table Storage or NoSQL Azure DocumentDB, are unit tested with MSUnit, FluentAssertions and moq."
               },
               {
                 "name": "CodeIgniter",
@@ -80,14 +80,19 @@
                 "description": "I'm not a front developer but of course I have to manipulate HTML when building internal tools/CRMs.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
               },
               {
-                "name": "Javascript",
+                "name": "Javascript / Typescript",
                 "icon": "javascript",
-                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery. I have broken the ice with it a little bit with a small Polymer application but I still need to learn more. I recently started building some tools with Node.js at Rakuten"
+                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery at first. I have since started to develop Web Single Page Applications with Angular 2"
               },
               {
                 "name": "Sass",
                 "icon": "sass",
                 "description": "All the recent web projects I have worked on use Sass for CSS preprocessing, either by an asset pipeline or by a workflow tool like gulp.js"
+              },
+              {
+                "name": "Microsoft Azure",
+                "icon": "azure",
+                "description": "For all ASP.NET related developments, I use the Azure infrastructure: Apps Services, Webjobs, DocumentDB, Azure Storage, API Management, Traffic Manager, Azure Active Directory etc... We use the power of Azure for scalability, Blue-Green deployments, georeplication etc..."
               },
               {
                 "name": "Amazon Web Services",
@@ -98,11 +103,6 @@
                 "name": "Google App Engine",
                 "icon": "gae",
                 "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the Google Cloud Endpoints and Android Studio to create a REST API and automatically generate the Android client compatible with it."
-              },
-              {
-                "name": "Microsoft Azure",
-                "icon": "azure",
-                "description": "For all ASP.NET related developments, I use the Azure infrastructure: MVC apps, Worker Roles, Scheduler and Azure Table Storage. We use the power of Azure for scalability, Blue-Green deployments etc..."
               }
             ]
   }

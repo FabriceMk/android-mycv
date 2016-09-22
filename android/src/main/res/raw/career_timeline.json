@@ -6,8 +6,8 @@
     "endDate": "Now",
     "icon": "rakuten",
     "header": "rakuten",
-    "description": "I have joined Rakuten as a full-stack developer in the Rakuten Mobile Ecosystem Department",
-    "details": "Wanting to discover a new working experience abroad, I joined Rakuten in Tokyo. I integrated the Mobile Ecosystem Department and am currently affected to the Mobile Services Team where I am developping REST services and internal websites\n\nSkills and technologies involved:\n- C# and ASP.NET WebAPI/MVC\n- Node.js with Restify\n- HTML5/jQuery/Sass",
+    "description": "I have joined Rakuten as a full-stack developer in the Rakuten Mobile Ecosystem Department. I am in charge of developing APIs used by the internal SDK embedded within Rakuten mobile applications",
+    "details": "Wanting to discover a new working experience abroad, I joined Rakuten in Tokyo. I integrated the Mobile Ecosystem Department and am currently affected to the Mobile Services Team where I am developping REST services and internal websites\n\nSkills and technologies involved:\n- C# and ASP.NET WebAPI/MVC\n- Angular 2\n- Microsoft Azure",
     "website": "http://www.rakuten.com"
   },
   {
