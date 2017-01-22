@@ -35,7 +35,7 @@ public class AppStructureBuilder {
 
 
         title = ctxt.getString(R.string.contact);
-        text = ctxt.getString(R.string.my_full_name);;
+        text = ctxt.getString(R.string.my_full_name);
         iconId = R.drawable.ic_account;
 
         CardFragment fragment = CardFragment.create(title, text, iconId);
@@ -48,7 +48,7 @@ public class AppStructureBuilder {
 
         // bis
         title = ctxt.getString(R.string.email);
-        text = ctxt.getString(R.string.my_mail);;
+        text = ctxt.getString(R.string.my_mail);
         iconId = R.drawable.ic_email;
 
         CardFragment fragment2 = CardFragment.create(title, text, iconId);
@@ -70,7 +70,7 @@ public class AppStructureBuilder {
         List<Fragment> row2 = new ArrayList<>();
 
         title = ctxt.getString(R.string.about);
-        text = ctxt.getString(R.string.about_me_short);;
+        text = ctxt.getString(R.string.about_me_short);
         iconId = R.drawable.ic_responsive;
 
         CardFragment fragment3 = CardFragment.create(title, text, iconId);

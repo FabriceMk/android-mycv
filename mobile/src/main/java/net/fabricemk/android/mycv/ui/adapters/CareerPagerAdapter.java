@@ -14,7 +14,7 @@ import net.fabricemk.android.mycv.ui.fragments.EducationTimelineFragment;
  */
 public class CareerPagerAdapter extends FragmentStatePagerAdapter {
 
-    Context ctxt = null;
+    private Context ctxt = null;
 
     public CareerPagerAdapter(Context ctxt, FragmentManager mgr) {
         super(mgr);

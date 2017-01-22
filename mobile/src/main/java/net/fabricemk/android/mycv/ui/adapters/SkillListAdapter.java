@@ -26,10 +26,10 @@ import java.util.Map;
 public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.SkillItemViewHolder>
     implements View.OnClickListener {
 
-    Context ctxt;
+    private Context ctxt;
 
-    Map<String, SkillSubset> skillList;
-    List<Skill> flatSkillList;
+    private Map<String, SkillSubset> skillList;
+    private List<Skill> flatSkillList;
 
     private OnItemClickListener onItemClickListener;
 
@@ -102,7 +102,7 @@ public class SkillListAdapter extends RecyclerView.Adapter<SkillListAdapter.Skil
     }
 
 
-    public static class SkillItemViewHolder extends RecyclerView.ViewHolder {
+    static class SkillItemViewHolder extends RecyclerView.ViewHolder {
         ImageView icon;
         TextView text;
 

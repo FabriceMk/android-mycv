@@ -50,7 +50,7 @@ Aliquam non euismod nibh, nec varius nunc. Mauris vel turpis imperdiet, tincidun
 
     <string name="no_title">No Title</string>
 
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
 
     <string name="maps_no_connection">"Connectivity turned off, the Maps may not be displayed properly"</string>
     <string name="snackbar_turn_on_connection">Turn on</string>

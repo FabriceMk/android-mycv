@@ -25,12 +25,12 @@ import java.util.List;
 public class CareerTimelineFragment extends Fragment
         implements IPageable, CareerTimelineListAdapter.OnItemClickListener {
 
-    String title;
+    private String title;
 
-    RecyclerView recycler;
-    CareerTimelineListAdapter adapter;
+    private RecyclerView recycler;
+    private CareerTimelineListAdapter adapter;
 
-    List<CareerItem> data;
+    private List<CareerItem> data;
 
     public static CareerTimelineFragment newInstance(String title) {
         CareerTimelineFragment fragment = new CareerTimelineFragment();

@@ -43,12 +43,12 @@ public class CommunicationTools {
     }
 
     /**
-     * Add a contact through email address with some informations like name pre-set.
+     * Add a contact through email address with some information like name pre-set.
      * This operation does not force the contact creation by default and prompt the user.
      *
-     * @param ctxt
-     * @param name
-     * @param email
+     * @param ctxt an Android context
+     * @param name the name of the contact to be added
+     * @param email the email of the contact to be added
      */
     public static void addAsContact(Context ctxt, String name, String email) {
         Intent intent = new Intent(

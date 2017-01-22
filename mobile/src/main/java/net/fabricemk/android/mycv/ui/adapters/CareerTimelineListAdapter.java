@@ -24,9 +24,9 @@ import java.util.List;
  */
 public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimelineListAdapter.CareerItemViewHolder> {
 
-    Context ctxt;
+    private Context ctxt;
 
-    List<CareerItem> careerList;
+    private List<CareerItem> careerList;
 
     private OnItemClickListener onItemClickListener;
 
@@ -98,7 +98,7 @@ public class CareerTimelineListAdapter extends RecyclerView.Adapter<CareerTimeli
     }
 
 
-    public static class CareerItemViewHolder extends RecyclerView.ViewHolder {
+    static class CareerItemViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView company;
         TextView position;

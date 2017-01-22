@@ -13,7 +13,7 @@ public class AndroidTools {
 
     /**
      * Checks if the device has an Internet connection
-     * @param ctxt
+     * @param ctxt context
      * @return true if connected to Internet, false otherwise
      */
     public static boolean isOnline(Context ctxt) {
@@ -25,7 +25,7 @@ public class AndroidTools {
 
     /**
      * Launches the devices Settings/Wireless network activity
-     * @param ctxt
+     * @param ctxt context
      */
     public static void launchWirelessSettings(Context ctxt) {
         Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
@@ -35,9 +35,9 @@ public class AndroidTools {
 
     /**
      * Gets a drawable from its name (should be a resource)
-     * @param ctxt
-     * @param drawableName
-     * @return
+     * @param ctxt context
+     * @param drawableName the drawable name
+     * @return the resource ID
      */
     public static int getDrawableIdFromName(Context ctxt, String drawableName) {
         return ctxt.getResources().getIdentifier(drawableName , "drawable", ctxt.getPackageName());

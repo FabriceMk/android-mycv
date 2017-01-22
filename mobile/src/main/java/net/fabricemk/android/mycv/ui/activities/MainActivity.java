@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     /**
-     * Navigation logic
-     * @param itemId
+     * Navigation logic. Replaces the main content by a fragment
+     * @param itemId the fragment id to navigate to
      */
     private void navigate(final int itemId) {
 
@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements
                     Intent intent = new Intent(this, AboutActivity.class);
                     startActivity(intent);
                     return;
-
             }
 
         }

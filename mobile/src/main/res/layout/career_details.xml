@@ -32,7 +32,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/header"
                 android:scaleType="centerCrop"
-                android:background="@color/black_alpha54">
+                android:background="@color/black_alpha54"
+                android:contentDescription="Career header">
             </ImageView>
 
 

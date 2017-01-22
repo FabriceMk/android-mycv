@@ -23,7 +23,8 @@
             android:layout_height="128dp"
             android:scaleType="centerCrop"
             android:background="@color/white"
-            tools:src="@drawable/skill_android" />
+            tools:src="@drawable/skill_android"
+            android:contentDescription="Skill icon" />
 
         <LinearLayout
             android:layout_width="match_parent"

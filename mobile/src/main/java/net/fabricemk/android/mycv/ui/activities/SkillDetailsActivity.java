@@ -50,7 +50,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
         // Prepare the views for activity transitions
         ActivityOptionsCompat options = ActivityOptionsCompat
-                .makeSceneTransitionAnimation(activity, new Pair<View, String>(transitionImage, VIEW_NAME_HEADER_IMAGE));
+                .makeSceneTransitionAnimation(activity, new Pair<>(transitionImage, VIEW_NAME_HEADER_IMAGE));
         ActivityCompat.startActivity(activity, intent, options.toBundle());
     }
 
@@ -107,7 +107,7 @@ public class SkillDetailsActivity extends AppCompatActivity {
 
     /**
      * Apply activity transitions for API > Lollipop
-     * @param iconView
+     * @param iconView the icon view that will be animated
      */
     private void initActivityTransitions(View iconView) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

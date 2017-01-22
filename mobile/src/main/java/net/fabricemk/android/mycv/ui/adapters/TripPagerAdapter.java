@@ -15,9 +15,9 @@ import java.util.List;
  */
 public class TripPagerAdapter extends FragmentStatePagerAdapter {
 
-    Context ctxt = null;
+    private Context ctxt = null;
 
-    List<TripItem> tripList;
+    private List<TripItem> tripList;
 
     public TripPagerAdapter(Context ctxt, FragmentManager mgr, List<TripItem> tripList) {
         super(mgr);

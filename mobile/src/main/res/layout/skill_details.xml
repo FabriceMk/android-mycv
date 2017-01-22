@@ -30,7 +30,8 @@
                 android:scaleType="centerCrop"
                 android:background="@color/black_alpha26"
                 android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax"/>
+                app:layout_collapseMode="parallax"
+                android:contentDescription="Skill header" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"

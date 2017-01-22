@@ -10,5 +10,5 @@ import android.support.v7.widget.Toolbar;
  *
  */
 public interface IToolbarable {
-    public void setupToolbar(Toolbar toolbar);
+    void setupToolbar(Toolbar toolbar);
 }

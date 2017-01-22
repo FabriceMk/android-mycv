@@ -26,12 +26,12 @@ public class EducationTimelineFragment extends Fragment
 
     private static final String KEY_TITLE = "EducationTimelineFragment.title";
 
-    String title;
+    private String title;
 
-    RecyclerView recycler;
-    EducationTimelineListAdapter adapter;
+    private RecyclerView recycler;
+    private EducationTimelineListAdapter adapter;
 
-    List<EducationItem> data;
+    private List<EducationItem> data;
 
     public static EducationTimelineFragment newInstance(String title) {
         EducationTimelineFragment fragment = new EducationTimelineFragment();

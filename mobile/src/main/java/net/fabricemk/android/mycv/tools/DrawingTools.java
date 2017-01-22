@@ -22,9 +22,9 @@ public class DrawingTools {
 
     /**
      * Fast function to create a circular version of a bitmap (inner circle)
-     * @param pool
-     * @param source
-     * @return
+     * @param pool the bitmap pool to be used
+     * @param source the source Bitmap
+     * @return a circular bitmap
      */
     public static Bitmap getCircularBitmapImage(BitmapPool pool, Bitmap source) {
         if (source == null) return null;

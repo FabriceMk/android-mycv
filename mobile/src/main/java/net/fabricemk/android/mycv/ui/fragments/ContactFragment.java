@@ -32,7 +32,7 @@ import net.fabricemk.android.mycv.ui.activities.IToolbarable;
  */
 public class ContactFragment extends Fragment {
 
-    Toolbar mToolbar;
+    private Toolbar mToolbar;
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
@@ -61,7 +61,7 @@ public class ContactFragment extends Fragment {
 
     /**
      * Init the views, buttons and create the correct listeners
-     * @param v
+     * @param v the root view
      */
     private void initViewInfos(View v) {
         mToolbar = (Toolbar) v.findViewById(R.id.toolbar);

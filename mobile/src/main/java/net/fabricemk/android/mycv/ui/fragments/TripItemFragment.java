@@ -28,15 +28,15 @@ public class TripItemFragment extends Fragment implements OnMapReadyCallback {
 
     private static final String TRIP_ITEM_KEY = "TripItemFragment.trip";
 
-    TripItem trip;
+    private TripItem trip;
 
-    GoogleMap googleMap;
+    private GoogleMap googleMap;
 
-    TextView eventNameView;
-    TextView dateView;
-    TextView descriptionView;
-    MapView mapView;
-    ImageView photoView;
+    private TextView eventNameView;
+    private TextView dateView;
+    private TextView descriptionView;
+    private MapView mapView;
+    private ImageView photoView;
 
     private boolean needsInit = false;
 

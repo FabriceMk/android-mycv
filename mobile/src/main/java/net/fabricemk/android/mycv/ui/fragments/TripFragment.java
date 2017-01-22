@@ -38,11 +38,11 @@ import java.util.List;
  * that he is in a offline mode
  */
 public class TripFragment extends Fragment {
-    ViewGroup mRoot;
+    private ViewGroup mRoot;
 
-    Toolbar mToolbar;
+    private Toolbar mToolbar;
 
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

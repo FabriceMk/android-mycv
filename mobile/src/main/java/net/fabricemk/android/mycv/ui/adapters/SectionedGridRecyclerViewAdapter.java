@@ -32,7 +32,7 @@ public class SectionedGridRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
     private int mTextResourceId;
     private LayoutInflater mLayoutInflater;
     private RecyclerView.Adapter mBaseAdapter;
-    private SparseArray<Section> mSections = new SparseArray<Section>();
+    private SparseArray<Section> mSections = new SparseArray<>();
     private RecyclerView mRecyclerView;
 
 
@@ -109,7 +109,6 @@ public class SectionedGridRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
         }else{
             mBaseAdapter.onBindViewHolder(sectionViewHolder,sectionedPositionToPosition(position));
         }
-
     }
 
     @Override

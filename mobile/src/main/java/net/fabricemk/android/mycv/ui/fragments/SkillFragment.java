@@ -31,12 +31,11 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
 
     private static final String KEY_RECYCLER_SCROLL_STATE = "RecyclerScrollState";
 
-    Toolbar mToolbar;
+    private Toolbar mToolbar;
+    private RecyclerView recycler;
+    private SkillListAdapter adapter;
 
-    RecyclerView recycler;
-    SkillListAdapter adapter;
-
-    Map<String, SkillSubset> data;
+    private Map<String, SkillSubset> data;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,7 +68,7 @@ public class SkillFragment extends Fragment implements SkillListAdapter.OnItemCl
          * Setting up the different sections headers
          */
         List<SectionedGridRecyclerViewAdapter.Section> sections =
-                new ArrayList<SectionedGridRecyclerViewAdapter.Section>();
+                new ArrayList<>();
 
         int headersPosition = 0;
 

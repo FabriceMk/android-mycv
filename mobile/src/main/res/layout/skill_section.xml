@@ -6,7 +6,7 @@
     android:layout_height="@dimen/magic_value"
     android:gravity="center_vertical"
     android:paddingLeft="@dimen/spacing_large"
-    android:singleLine="true"
     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
     android:textStyle="bold"
-    android:id="@+id/section_text" />
+    android:id="@+id/section_text"
+    android:maxLines="1" />

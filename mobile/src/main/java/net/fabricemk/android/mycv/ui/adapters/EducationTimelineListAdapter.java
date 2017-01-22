@@ -18,9 +18,9 @@ import java.util.List;
  */
 public class EducationTimelineListAdapter extends RecyclerView.Adapter<EducationTimelineListAdapter.EducationItemViewHolder> {
 
-    Context ctxt;
+    private Context ctxt;
 
-    List<EducationItem> educationList;
+    private List<EducationItem> educationList;
 
     public EducationTimelineListAdapter(List<EducationItem> list) {
         this.educationList = list;

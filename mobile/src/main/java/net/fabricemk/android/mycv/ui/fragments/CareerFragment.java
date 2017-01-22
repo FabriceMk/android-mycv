@@ -18,11 +18,9 @@ import net.fabricemk.android.mycv.ui.activities.IToolbarable;
  * tabs
  */
 public class CareerFragment extends Fragment {
-
-    Toolbar mToolbar;
-
-    ViewPager mViewPager;
-    TabLayout mTabLayout;
+    private Toolbar mToolbar;
+    private ViewPager mViewPager;
+    private TabLayout mTabLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
