@@ -7,7 +7,7 @@
               {
                 "name": "Android Development",
                 "icon": "android",
-                "description": "I've started Android development since 2010 as a hobby and while I haven't been a full time Android developer for long periods of time, I have continued to follow the Android development scene.\n\nMy first real Android project was a 6 months long prototype development in 2010-2011 for an application able to help students to organize their homework schedule. At that time, Android latest version was only Gingerbread and the tools were far from being as powerful as today's. They were a lot of limitations in the APIs too.\n\nDuring my three years as the CTO at Appturbo, I was also in charge of developing and maintaining the Android version of App of the Day. I used the power of the Android platform to not only port the iOS version but to also add powerful custom analytics suited to the Appturbo business (which couldn't be done on iOS due to the SDK limitations). The application received a major update in 2015 with a brand new Material Design, a lot of new functionalities for the user and the integration of other analytics SDKs like Facebook, Fabric...\n\nI watch the Google I/O every year and I follow a lot of Android development communities on Google+\n\nSkills:\n- Android Studio and gradle build system\n- Android SDK (Java)\n- Lot of sensibility on design and UX (lot of interest in Google Material Design)\n- Knowledge of popular useful third-party libraries like Glide, Volley, Picasso, Gson...\n- Android Testing with JUnit and Espresso\n- Google Cloud Messenging and AppEngine Backend"
+                "description": "I've started Android development since 2010 as a hobby and while I haven't been a full time Android developer for long periods of time, I have continued to follow the Android development scene.\n\nMy first real Android project was a 6 months long prototype development in 2010-2011 for an application able to help students to organize their homework schedule. At that time, Android latest version was only Gingerbread and the tools were far from being as powerful as today's. There were a lot of limitations in the APIs too.\n\nDuring my three years as the CTO at Appturbo, I was also in charge of developing and maintaining the Android version of App of the Day. I used the power of the Android platform to not only port the iOS version but to also add powerful custom analytics suited to the Appturbo business (which couldn't be done on iOS due to the SDK limitations). The application received a major overhaul in 2015 with a brand new Material Design, a lot of new functionalities for the user and the integration of other analytics SDKs like Facebook, Fabric...\n\nI watch the Google I/O every year and I follow a lot of Android development communities on Google+\n\nSkills:\n- Android Studio and gradle build system\n- Android SDK (Java)\n- Lot of sensibility on design and UX (lot of interest in Google Material Design)\n- Knowledge of popular useful third-party libraries like Glide, Volley, Picasso, Gson...\n- Android Testing with JUnit and Espresso\n- Firebase Cloud Messaging and AppEngine Backend"
               }
             ]
   }
@@ -20,22 +20,23 @@
               {
                 "name": "Java",
                 "icon": "java",
-                "description": "I have developed in Java since University where it was the main programming language in classes. At the beginning I used it for Java SE applications but since 2010 I use it mainly for Android development"
+                "description": "I have started Java development since University as it was the main programming language in my classes. At first, I used it mainly for Java SE applications but since 2010 I use it for Android development"
+              },
+              
+              {
+                "name": "C#",
+                "icon": "csharp",
+                "description": "I started to build C# and .NET Windows applications at University. Since I joined Rakuten in 2016, I use it to build APIs and websites with ASP.NET/ASP.NET Core. It's currently my favourite programming language."
               },
               {
                 "name": "Ruby",
                 "icon": "ruby",
-                "description": "I have started to learn Ruby in 2014 in order to build Websites with frameworks like Ruby on Rails or Sinatra because I was looking for an alternative to PHP. While I have no professional experience with it, I have started using it for my personal blog/sites and I want to learn more about it as I find it elegant in many ways."
-              },
-              {
-                "name": "C#",
-                "icon": "csharp",
-                "description": "I started to build C# and .NET Windows applications at University. Since I joined Rakuten in 2016, I use it to build APIs and websites with ASP.NET"
+                "description": "I have started to learn Ruby in 2014 in order to build Websites with frameworks like Ruby on Rails or Sinatra because I was looking for an alternative to PHP. While I have no professional experience with it, I have started using it for my personal blog/sites."
               },
               {
                 "name": "PHP",
                 "icon": "php",
-                "description": "PHP is the first programming language I have learned to build dynamic websites. I have started using it in a professional environment in 2012 with the CodeIgniter framework and more recently with Symfony 2 and Silex."
+                "description": "PHP is the first programming language I have learned to build dynamic websites. I have used it in a professional environment during 3 years at Appturbo starting in 2012 with the CodeIgniter framework and later with Symfony 2 and Silex."
               },
               {
                 "name": "Python",
@@ -50,19 +51,19 @@
     "skills":
             [
               {
+                "name": "ASP.NET/Core",
+                "icon": "asp",
+                "description": "I work with ASP.NET to build REST APIs and Websites deployed to Microsoft Azure at Rakuten. Those applications often interact with MSSQL, Azure Table Storage, Redis or NoSQL Azure DocumentDB. They are unit tested with xUnit.\nSince 2016, I use ASP.NET Core when possible to be able to run on Linux Servers/Docker containers"
+              },
+              {
                 "name": "Ruby on Rails",
                 "icon": "ror",
-                "description": "I use Ruby on Rails for most of my recent personal web projects."
+                "description": "I use Ruby on Rails for several of my recent personal web projects."
               },
               {
                 "name": "Sinatra",
                 "icon": "sinatra",
-                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It's lightweight, has less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I currently have a blog powered by Sinatra which parses all the data from markdown files. It also uses the Slim templating engine and an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
-              },
-              {
-                "name": "ASP.NET MVC/API",
-                "icon": "asp",
-                "description": "I work with ASP.NET to build APIs and Websites deployed to Azure at Rakuten. Those applications typically interact with MSSQL, Azure Table Storage or NoSQL Azure DocumentDB, are unit tested with MSUnit, FluentAssertions and moq."
+                "description": "Sinatra was my first DSL of choice to discover Web Development in Ruby. It's lightweight, has less 'magic' than Rails which is good when you are a newcomer to Ruby. I use it for small sites and blogs without database.\n\nFor example I currently have a blog powered by Sinatra which parses all the data from markdown files and uses an asset pipeline to process Sass and Javascript files.\n\nI also have a Sinatra boilerplate I reuse and improve which is accessible here:\nhttps://github.com/FabriceMk/sinatra-noribento"
               },
               {
                 "name": "CodeIgniter",
@@ -72,37 +73,27 @@
               {
                 "name": "Symfony 2",
                 "icon": "symfony",
-                "description": "Symfony 2 was introduced at Appturbo as a plan to rebuild some internal web applications written with CodeIgniter in 2014. The framework was chosen for both its functionalities and its popularity in France. It allowed the developers to build experience with larger Web frameworks, facilitate modularity and testing, use ORM etc... I mainly worked with Symfony 2 on a large REST API which was consumed by a SPA written in Angular.js 1.x"
-              },
-              {
-                "name": "HTML",
-                "icon": "html",
-                "description": "I'm not a front developer but of course I have to manipulate HTML when building internal tools/CRMs.\n\nI also have quickly worked on a Google Polymer 0.5 simple application during Summer 2015. The objective was to learn more about the possible future of HTML apps with Web Components (Custom elements, Shadow DOM, HTML imports and HTML templates)."
+                "description": "Symfony 2 was introduced at Appturbo in 2014 to rebuild some internal web applications written with CodeIgniter. The framework was chosen for both its functionalities and its popularity in France. It allowed the developers to build experience with larger Web frameworks, facilitate modularity and testing, usage of ORM etc... I mainly worked with Symfony 2 on a large REST API which was consumed by a SPA written in Angular.js 1.x"
               },
               {
                 "name": "Javascript / Typescript",
                 "icon": "javascript",
-                "description": "Being mainly a back-end developer I have not used Javascript a lot except for some jQuery at first. I have since started to develop Web Single Page Applications with Angular 2"
+                "description": "I use Javascript/Typescript mainly to build Front-end applications in Angular 2 or using Vue.js"
               },
               {
                 "name": "Sass",
                 "icon": "sass",
-                "description": "All the recent web projects I have worked on use Sass for CSS preprocessing, either by an asset pipeline or by a workflow tool like gulp.js"
+                "description": "All the recent web projects I have worked on use Sass for CSS preprocessing, either by an asset pipeline or by a workflow tool like gulp.js or Webpack"
               },
               {
                 "name": "Microsoft Azure",
                 "icon": "azure",
-                "description": "For all ASP.NET related developments, I use the Azure infrastructure: Apps Services, Webjobs, DocumentDB, Azure Storage, API Management, Traffic Manager, Azure Active Directory etc... We use the power of Azure for scalability, Blue-Green deployments, georeplication etc..."
+                "description": "For all ASP.NET related developments, I use the Azure infrastructure: Apps Services, Webjobs, DocumentDB, Azure Storage, API Management, Traffic Manager, Azure Active Directory etc...\nI also use the power of Azure for scalability, Blue-Green deployments, georeplication etc..."
               },
               {
-                "name": "Amazon Web Services",
-                "icon": "aws",
-                "description": "Amazon offers a large panel of Web Services. At Appturbo, we began using AWS and hosting some of our tools and backends on Elastic Beanstalk in order to decrease the number of our own dedicated servers which needed too much maintenance. We also used DynamoDB to store all the analytics collected by our Android application.\n\nI use AWS for most of my personal web projects."
-              },
-              {
-                "name": "Google App Engine",
-                "icon": "gae",
-                "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo. The main usage I have now with AppEngine is through the Google Cloud Endpoints and Android Studio to create a REST API and automatically generate the Android client compatible with it."
+                "name": "Google Cloud Platform",
+                "icon": "gcp",
+                "description": "I have used AppEngine with both Java and Python for some Proofs of Concept and benchmarking at Appturbo.\nI currently mainly use Google Cloud Platform for my personal projects like Google AppEngine in conjunction with Firebase to build Android applications backends"
               }
             ]
   }
@@ -115,27 +106,22 @@
               {
                 "name": "Git",
                 "icon": "git",
-                "description": "Git has become a vital tool for development as an necessity for source code versioning and I really enjoy it when used with powerful platforms like Github and a good team workflow (Pull Requests, Code Review)."
+                "description": "Git has become a vital tool for development as an necessity for source code versioning and I often use it with powerful platforms like Github and a good team workflow (Pull Requests, Code Review)."
               },
               {
-                "name": "IntelliJ",
+                "name": "IntelliJ IDEA",
                 "icon": "intellij",
-                "description": "I have started using IntelliJ IDEA in 2013 with additional plugins to give it the same functionalities as RubyMine, PHPStorm, PyCharm and WebStorm. So all the development in Ruby, PHP, Python and Javascript is done with it."
+                "description": "I have started using IntelliJ IDEA in 2013 with additional plugins to give it the same functionalities as RubyMine, PHPStorm, PyCharm and WebStorm. So all my development in Ruby, PHP, Python or Javascript is done with this IDE."
               },
               {
                 "name": "Android Studio",
                 "icon": "androidstudio",
-                "description": "Android Studio is based on IDEA so I became familiar with it quickly and I use if for all my Android projects."
+                "description": "Android Studio is based on IDEA so I became familiar with it quickly and I use it for all my Android projects."
               },
               {
                 "name": "Visual Studio",
                 "icon": "visualstudio",
-                "description": "I use Visual Studio for all .NET related development mainly ASP.NET. It is used in conjunction with IntelliJ Resharper Ultimate."
-              },
-              {
-                "name": "Gulp",
-                "icon": "gulp",
-                "description": "I use gulp.js to automatize some tasks like generating CSS from Sass files or minify js files for production when not using an asset pipeline for the web projects I work on."
+                "description": "I use Visual Studio for all .NET and C# related development especially ASP.NET/Core."
               },
               {
                 "name": "Photoshop",
@@ -152,7 +138,7 @@
               {
                 "name": "Artificial Intelligence",
                 "icon": "ai",
-                "description": "Artificial Intelligence has a lot of different fields and during my Master in University of Paris 6 I had the occasion to study some of them. My favourites are Constraint Programming and Natural Language Processing.\n\nThe internship of my last year was about a conversational agent which had a powerful syntaxic and semantic parser using differents tools from Knowledge Engineering and NLP (like OWL, RDF).\n\nAlso the first Android application I had to create at ILObjects was for a scheduling problem and was solved by implementing a custom Constraint Solver."
+                "description": "Artificial Intelligence has a lot of different fields and during my Master in University of Paris 6 I had the occasion to study several of them. My favourites are Constraint Programming and Natural Language Processing.\n\nThe internship of my last year was about a conversational agent which had a powerful syntaxic and semantic parser using differents tools from Knowledge Engineering and NLP (like OWL, RDF).\n\nAlso the first Android application I had to create at ILObjects was for a scheduling problem and was solved by implementing a custom Constraint Solver."
               },
               {
                 "name": "Linux System Administration",

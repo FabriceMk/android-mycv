@@ -9,6 +9,4 @@
     <string-array name="android_wear_capabilities">
         <item>send_me_email</item>
     </string-array>
-
-
 </resources>

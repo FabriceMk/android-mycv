@@ -28,7 +28,7 @@ public class CommunicationTools {
     }
 
     public static void launchLinkedIn(Context ctxt, String linkedInID) {
-        String url = "http://www.linkedin.com/profile/view?id=" + linkedInID;
+        String url = "https://www.linkedin.com/profile/view?id=" + linkedInID;
         launchURL(ctxt, url);
     }
 
