@@ -18,7 +18,8 @@
             tools:src="@drawable/action_email"
             android:background="@drawable/action_button"
             android:layout_centerInParent="true"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside"
+            android:contentDescription="Action button" />
 
         <TextView
             android:id="@+id/action_title"

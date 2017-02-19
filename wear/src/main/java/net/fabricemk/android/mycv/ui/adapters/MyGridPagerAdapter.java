@@ -33,8 +33,7 @@ public class MyGridPagerAdapter extends FragmentGridPagerAdapter {
 
     @Override
     public Fragment getFragment(int row, int column) {
-        Fragment fragment = fragmentsMatrix.get(row).get(column);
-        return fragment;
+        return fragmentsMatrix.get(row).get(column);
     }
 
     @Override

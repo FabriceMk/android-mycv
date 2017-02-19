@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">MyCV</string>
+
+    <!-- Personal Informations -->
+    <string name="my_full_name">Fabrice Mongkhoune</string>
+    <string name="my_full_name_short">Fabrice M.</string>
+    <string name="my_name">Fabrice</string>
+    <string name="my_family_name">Mongkhoune</string>
+    <string name="my_mail">f.mongkhoune</string>
+    <string name="my_mail_provider">gmail.com</string>
+    <string name="my_github">FabriceMk</string>
+    <string name="my_site">https://fabricemk.github.io/</string>
+    <string name="my_google">FabriceMongkhoune</string>
+    <string name="my_linkedin_id">fmongkhoune</string>
+
+    <string name="me">Personal Information</string>
+
+    <string name="contact">Contact</string>
+    <string name="experiences">Experiences</string>
+    <string name="skills">Skills</string>
+    <string name="formation">Formation</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="works">Works</string>
+    <string name="trips">Conferences &amp; Exhibitions</string>
+    <string name="cv">CV</string>
+    <string name="career">Career &amp; Education</string>
+
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <string name="about_me">About me</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="lorem_ipsum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper accumsan velit, ac iaculis elit consectetur interdum. Maecenas ullamcorper lectus odio, eu eleifend orci feugiat id. Aenean non magna ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas purus metus, hendrerit non elementum ac, mattis a risus. Aenean lacus erat, blandit nec laoreet quis, dignissim sed lorem. Pellentesque auctor ornare velit aliquam mollis. Aenean a nunc velit. Pellentesque et accumsan eros, sit amet posuere purus. Cras ut nunc tincidunt, blandit lorem in, mattis lorem. Vivamus mi eros, ultricies ac porttitor non, maximus at erat. Morbi semper laoreet dolor id placerat.
+
+Aliquam non euismod nibh, nec varius nunc. Mauris vel turpis imperdiet, tincidunt nisl vitae, dignissim magna. Nam a pulvinar justo, et fermentum orci. Ut mattis dapibus turpis non elementum. Fusce varius ullamcorper lorem. Donec egestas leo massa, eget pretium nisi convallis et. Donec facilisis sem nulla, vel pharetra velit faucibus at. Nunc tortor nibh, ornare nec maximus sit amet, volutpat nec nibh. Nullam in orci vitae turpis auctor ultricies. Ut dapibus sapien quis justo sagittis maximus. Quisque dapibus, risus sed aliquam viverra, sem urna aliquam orci, et placerat elit lectus et quam. Nam lectus neque, commodo in semper nec, bibendum at est. Cras sollicitudin tristique ante, id tristique sapien cursus vel. Vivamus aliquet orci sit amet pulvinar iaculis. Praesent purus lacus, iaculis vitae semper nec, eleifend vitae urna. </string>
+
+    <string name="tab_career">Career</string>
+    <string name="tab_education">Education</string>
+
+    <string name="no_title">No Title</string>
+
+    <string name="loading">Loading…</string>
+
+    <string name="maps_no_connection">"Connectivity turned off, the Maps may not be displayed properly"</string>
+    <string name="snackbar_turn_on_connection">Turn on</string>
+
+    <string name="date_career">%1$s until %2$s</string>
+    <string name="date_school">%1$s - %2$s</string>
+
+    <string name="details">More details</string>
+
+    <string name="about_me_description_short">"I'm french IT Engineer, an Android &amp; Web Developer and a tech enthusiast. I love all the cool things internet, smartphones and applications brought to us.\n\nI have been a CTO/Lead Developer of a successful startup in Paris for 3 years and I currently live and work in Tokyo.\n\nI've also an interest in Artificial Intelligence and Problems Solving."</string>
+
+    <string name="about_content">"This application is a multiple purpose application.
+
+It serves as a showcase of what can I do with the Android framework when it comes to build Android applications. It also acts as a playground for me when I want to test new stuff like new libraries or new APIs. Of course I haven't be able to showcase ALL the things I have experienced with the Android framework in this little app but you can still have a glimpse.
+
+This application is open-sourced and all the source code can be found on Github :
+
+https://github.com/FabriceMk/android-mycv
+
+Fabrice Mongkhoune (FabriceMk)"</string>
+</resources>

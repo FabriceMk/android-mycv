@@ -9,7 +9,15 @@ import com.google.android.gms.wearable.Node;
  */
 public interface IHandheldCommunication {
 
-    public GoogleApiClient getGoogleApiClient();
+    /**
+     * Gets the Google API Client
+     * @return a Google API Client
+     */
+    GoogleApiClient getGoogleApiClient();
 
-    public Node getNode();
+    /**
+     * Gets a paired node
+     * @return a paired node
+     */
+    Node getNode();
 }

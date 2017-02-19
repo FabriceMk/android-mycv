@@ -29,9 +29,9 @@ public class MainActivity extends WearableActivity
 
     private BoxInsetLayout mContainerView;
 
-    Node mNode; // the best device to send the message to
+    private Node mNode; // the best device to send the message to
+    private GoogleApiClient mGoogleApiClient;
 
-    GoogleApiClient mGoogleApiClient;
     private boolean mResolvingError=false;
 
     private static final long CONNECTION_TIME_OUT_MS = 2000;
@@ -99,7 +99,7 @@ public class MainActivity extends WearableActivity
     }
 
     /*
-     * Analyzes if the Wear app can use a paired devide to send mails
+     * Analyzes if the Wear app can use a paired device to send mails
      */
     private void setupEmailCapabilities() {
 
