@@ -99,7 +99,7 @@ public class MainActivity extends WearableActivity
     }
 
     /*
-     * Analyzes if the Wear app can use a paired devide to send mails
+     * Analyzes if the Wear app can use a paired device to send mails
      */
     private void setupEmailCapabilities() {
 

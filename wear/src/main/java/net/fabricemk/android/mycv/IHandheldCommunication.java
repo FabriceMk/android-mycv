@@ -17,7 +17,7 @@ public interface IHandheldCommunication {
 
     /**
      * Gets a paired node
-     * @return a oaired node
+     * @return a paired node
      */
     Node getNode();
 }
